@@ -6,7 +6,7 @@ categories: [Anesthesia, Antibiotics]
 tags: [anesthesia]     # TAG names should always be lowercase
 ---
 
-[Stanford School of Medicine Antibiotic Guide]("https://errolozdalga.com/medicine/pages/OtherPages/AntibioticReview.ChanuRhee.html")
+[Stanford School of Medicine Antibiotic Guide](https://errolozdalga.com/medicine/pages/OtherPages/AntibioticReview.ChanuRhee.html)
 
 # ANTIBACTERIALS
 
