@@ -7,7 +7,7 @@ tags: [machine learning, ai, python, jupyter, kaggle]     # TAG names should alw
 ---
 The following notebook walks through basic EDA and then deploys a machine learning model to correctly determine who survived the Titanic disaster.  
   
-Check out my github for the full code and data! [Titanic Machine Learning Github]("https://github.com/dzauski585/Titanic-Machine-Learning")
+Check out my github for the full code and data! <https://github.com/dzauski585/Titanic-Machine-Learning>
 
 ## Requirements
 
