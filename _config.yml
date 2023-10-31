@@ -9,37 +9,36 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+timezone: America/New_York
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: Dan's Blog # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the sub-title
+tagline: I am a CRNA who enjoys coding in my spare time. This blog's purpose is to allow easy access to important anesthesia information ie. get around the hospital lockdown on google products.    # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  A blog focused on anesthesia and machine learning
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "http://dzauski585.github.io"
 
 github:
-  username: github_username # change to your github username
+  username: dzauski585 # change to your github username
 
-twitter:
-  username: twitter_username # change to your twitter username
+#twitter:
+ #username: twitter_username # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: Dan Zauski
+  email: dzauski585@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your twitter homepage
-    - https://github.com/username # change to your github homepage
+    - https://github.com/dzauski585 # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -73,7 +72,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: assets/img/avatar.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true
