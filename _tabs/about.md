@@ -36,7 +36,7 @@ Finally as this website is evidence I enjoy computer science and coding. My focu
 
 - 📫 How to reach me **dzauski585@gmail.com**
 
-- ⚡ Fun fact **I do astronomy and astrophotography on the side.**
+- ⚡ Fun fact **I do astronomy and astrophotography on the side.** aa
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
