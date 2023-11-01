@@ -16,7 +16,7 @@ timezone: America/New_York
 
 title: Dan's Blog # the main title
 
-tagline: I am a CRNA who enjoys coding in my spare time. This blog's purpose is to allow easy access to important anesthesia information ie. get around the hospital lockdown on google products.    # it will display as the sub-title
+tagline: Welcome to my blog! I'm a CRNA focused on teaching and providing easy to find resources for CRNAs and SRNAs. I enjoy computer programming in my spare time with a focus on python, spcifically AI and machine learning. My wife and I live in NY with our dog. We are avid hikers and are currently working on our New England 115.    # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A blog focused on anesthesia and machine learning
@@ -78,7 +78,7 @@ avatar: assets/img/avatar.png
 toc: true
 
 comments:
-  active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -88,10 +88,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: dzauski585/dzauski585.github.io
+    repo_id: 712506766
+    category: General
+    category_id: DIC_kwDOKnf9js4Cangs
     mapping: # optional, default to 'pathname'
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`

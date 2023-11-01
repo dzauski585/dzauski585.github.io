@@ -4,6 +4,10 @@ author: dz
 date: 2023-10-31
 categories: [Machine Learning, Python]
 tags: [machine learning, ai, python, jupyter, kaggle]     # TAG names should always be lowercase
+pdf_file: "/assets/pdf/vertopal.com_titanic.pdf"
+---
+
+
 ---
 The following notebook walks through basic EDA and then deploys a machine learning model to correctly determine who survived the Titanic disaster.  
   
@@ -38,4 +42,4 @@ for results see: model_output_test.csv
 
 While the jupyter to pdf formatting is not perfect it gives an idea of the simplicity python brings to machine learning.
 
-<iframe width="100%" height="800" src="/assets/pdf/vertopal.com_titanic.pdf">
+{% pdf {{ page.pdf_file }} %}
