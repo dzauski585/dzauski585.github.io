@@ -36,7 +36,7 @@ I enjoy computer science and coding. My focus is in python with a special intere
 <h3 align="left">Connect with me:</h3>
 <a href="https://kaggle.com/ypestis" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="ypestis" height="30" width="40" /></a>
 <a href="https://instagram.com/danzauski" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="danzauski" height="30" width="40" /></a>
-<a href="https://github.com/dzauski585" target="blank"><img  src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
+<a href="https://github.com/dzauski585" target="blank"><img  src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="github"/></a>
 
 
 <h3 align="left">Languages and Tools:</h3>
