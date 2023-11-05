@@ -3,7 +3,7 @@ title: Antibiotic Guide
 author: dz  
 date: 2023-10-31
 categories: [Anesthesia, Antibiotics]
-tags: [anesthesia]     # TAG names should always be lowercase3
+tags: [infection, antibiotics]     # TAG names should always be lowercase3
 ---
 
 [Stanford School of Medicine Antibiotic Guide](https://errolozdalga.com/medicine/pages/OtherPages/AntibioticReview.ChanuRhee.html)
