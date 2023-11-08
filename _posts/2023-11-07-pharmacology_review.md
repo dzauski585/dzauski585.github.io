@@ -17,7 +17,7 @@ Rapid precedex administration can stimulate postsynaptic receptors causing inc B
 
 ## Anticoagulants
 
-See the coagulation cascade in [Anatomy and Physiology](dzauski585.github.io/posts/Anatomy_physiology/)
+See the coagulation cascade in [Anatomy and Physiology](https://dzauski585.github.io/posts/Anatomy_physiology/)
 
 ### Dual Antiplatelet Inhibitors
 
@@ -40,6 +40,7 @@ If these medications are prescribed for drug eluding stents DES, review ACC guid
 
 ![reversal](/assets/img/reversal.png)
 ![emergency](/assets/img/emergencyreversal.png)
+
 ### Other Considerations
 
 #### TXA and Amicar
