@@ -2,8 +2,8 @@
 title: Corneal Abrasion Treatment
 author: dz  
 date: 2023-11-05
-categories: [Anesthesia, Eye]
-tags: [corneal abrasion, pain]     # TAG names should always be lowercase
+categories: [Anesthesia, Complications]
+tags: [anesthesia, complications, pain]     # TAG names should always be lowercase
 ---
 
 ## Diagnosis

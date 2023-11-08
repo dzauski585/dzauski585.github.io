@@ -5,6 +5,7 @@ date: 2023-11-05
 categories: [Anesthesia, Emergency]
 tags: [emergency]     # TAG names should always be lowercase
 pdf_file: "/assets/pdf/SEM_interactive.pdf"
+pin: true
 ---
 
 ## Stanford Emergency Manual

@@ -2,8 +2,8 @@
 title: Titanic Machine Learning Problem
 author: dz  
 date: 2023-10-31
-categories: [Machine Learning, Python]
-tags: [machine learning, ai, python, jupyter, kaggle]     # TAG names should always be lowercase
+categories: [Python, Machine Learning]
+tags: [machine learning, ai, python, kaggle]     # TAG names should always be lowercase
 pdf_file: "/assets/pdf/vertopal.com_titanic.pdf"
 ---
 

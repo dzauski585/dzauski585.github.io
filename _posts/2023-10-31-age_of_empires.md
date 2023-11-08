@@ -2,7 +2,7 @@
 title: Age Of Empires 2 Definitive Edition
 author: dz  
 date: 2023-10-31
-categories: [Video Games, Computer Games, Age of Empires]
+categories: [Video Games, Computer Games]
 tags: [aoe]     # TAG names should always be lowercase
 ---
 

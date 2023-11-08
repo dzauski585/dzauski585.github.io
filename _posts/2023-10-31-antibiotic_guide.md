@@ -1,9 +1,10 @@
 ---
-title: Antibiotic Guide
+title: Antibiotic Review
 author: dz  
 date: 2023-10-31
 categories: [Anesthesia, Antibiotics]
-tags: [infection, antibiotics]     # TAG names should always be lowercase3
+tags: [review, antibiotics]     # TAG names should always be lowercase3
+pin: true
 ---
 
 [Stanford School of Medicine Antibiotic Guide](https://errolozdalga.com/medicine/pages/OtherPages/AntibioticReview.ChanuRhee.html)

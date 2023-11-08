@@ -2,8 +2,8 @@
 title: Goal Directed Fluid Therapy
 author: dz  
 date: 2023-11-05
-categories: [Anesthesia, Fluid]
-tags: [fluid, resuscitation]     # TAG names should always be lowercase
+categories: [Anesthesia, Fluids]
+tags: [fluids, resuscitation]     # TAG names should always be lowercase
 
 ---
 ## General Goals

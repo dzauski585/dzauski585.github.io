@@ -2,8 +2,9 @@
 title: Perioperative Insulin
 author: dz  
 date: 2023-11-05
-categories: [Anesthesia, Insulin, Diabetes]
-tags: [insulin, diabetes]     # TAG names should always be lowercase
+categories: [Anesthesia, Diabetes]
+tags: [anesthesia, insulin, diabetes]     # TAG names should always be lowercase
+pin: true
 ---
 
 ## Subcutaneous vs IV
