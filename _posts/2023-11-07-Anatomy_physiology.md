@@ -143,7 +143,9 @@ tags: [anatomy, physiology]
 ### Pain Pathway
 
 1. Tranduction: injury causes activation of fast A-Delta and slow C fibers. Substance P is released
+   - Target Drugs: Local Anesthetic Cream, NSAIDs, Opioids
 2. Transmission: Signals travel towards the brain via the spinothalamic tract
+   - Target Drugs: Local Anesthetic blockade
 3. Modulation: Within the substantia gelatinosa of the spinal cord
    1. Inhibition via the descending inhibitory pathway: 5HT and NE, effect inc with  antidepressants
    2. Augmentation via central sensitization and wind up: Blocked by ketamine and precedex
@@ -151,6 +153,9 @@ tags: [anatomy, physiology]
    4. Primary Hyperalgesia: PGE2 stimulates free nerve endings
       1. NSAIDs and Steroids block PGE2
       2. Tylenol may antagonise cannabinoid receptors or a possible COX 3
+   - Target Drugs:  NMDA anatagonists, Neruaxial Opioids, Alpha-2 Agonists, SNRIs
+4. Perception
+   - Target Drugs: General Anesthetics, Opioids, Alpha-2 Agonists
 
 ![pain](/assets/img/pain.png)
 
