@@ -2,10 +2,27 @@
 title: Intraoperative TEE Basics
 author: dz  
 date: 2023-11-05
-categories: [Anesthesia, Cardiac]
+categories: [Anesthesia, Echocardiography]
 tags: [anesthesia, cardiac surgery, cardiac anesthesia, echo]     # TAG names should always be lowercase
 pdf_file: "/assets/pdf/surgicalecho.pdf"
 ---
+## Resources
+
+Practical Approach to Transesophageal Echocardiography 4th edition by Scott Reeves and Albert Perrino Jr.
+
+## Ultrasound Physics
+
+The basics of ultrasound:
+
+- Sound waves vibrating off of structures travelling through a media
+- 2-10Mhz (Human hearing < 20,000hz)
+- Electrodes stimulate ceramic pizoelectric crystals which both vibrate and receive incoming vibrations.
+  - Electricity causes trapped polarized molecules to vibrate
+- Better resolution with increased frequency
+- Ultrasound produces reflection, scatter, and refraction which can alter your image or fool you into thinking something is present when it actually is not.
+- Image gets worse with increased distance from the probe and the structure: dispersion
+- Heat is the absorption of the ultrasound waves and with enough time can cause burns
+
 ## TEE in the OR
 
 ### Complications of TEE
@@ -21,16 +38,16 @@ pdf_file: "/assets/pdf/surgicalecho.pdf"
 
 1. Perforated viscous
 2. Esophageal pathology
-3. Active GI Bleed
+3. Active GI bleed
 4. Recent upper GI surgery
-5. Esphophagectomy or gastric bypass surgery
+5. Esophagectomy or gastric bypass surgery
 
 ### Relative Contradindications of TEE
 
 1. Atlantoaxial joint disease
 2. Severe cervical arthritis
 3. Chest radiation
-4. Hiatal Hernia
+4. Hiatal hernia
 5. GI surgery history
 6. Recent GI bleed
 7. Dysphagia or peptic ulcer history
