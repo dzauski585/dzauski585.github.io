@@ -112,4 +112,4 @@ See this pdf for some interesting persecptives on protamine administration such 
 {: .prompt-danger}
 >Binds to hormonal birth control
 {: .prompt-danger}
->Use atropine and neostigmine with pregnant patients due to possibility of sugammadex binding to progesterone. 0.1mg atropine per 1mg neostigmine
+>Use atropine and neostigmine with pregnant patients due to possibility of sugammadex binding to progesterone. 0.1mg atropine per 1mg neostigmine.
