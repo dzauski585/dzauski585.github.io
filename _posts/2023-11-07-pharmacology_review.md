@@ -4,7 +4,7 @@ author: dz
 date: 2023-11-05
 categories: [Anesthesia, Pharmacology]
 tags: [pharm, cardiac, locals, anticoagulants]   
-pdf_file: "assets/pdf/Protamine Administration.pdf"
+pdf_file: "assets/pdf/Protamine_Administration.pdf"
 ---
 
 ## Alpha 2 Agonists
