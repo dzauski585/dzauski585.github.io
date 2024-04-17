@@ -4,6 +4,7 @@ author: dz
 date: 2023-11-05
 categories: [Anesthesia, Pharmacology]
 tags: [pharm, cardiac, locals, anticoagulants]   
+pdf_file: "assets/pdf/Protamine Administration.pdf"
 ---
 
 ## Alpha 2 Agonists
@@ -83,6 +84,7 @@ If these medications are prescribed for drug eluding stents DES, review ACC guid
 - Bupivacaine 3mg/kg
 - Lidocaine 4.5 or 7mg/kg
 - Ropiviciane 3mg/kg
+- Fun math trick: 1mg lidocaine = 3.6mg ropivicaine
 
 ### Do you need to Dilute Locals?
 
@@ -94,6 +96,12 @@ If these medications are prescribed for drug eluding stents DES, review ACC guid
 
 ![milrinone](/assets/img/mil.png)
 
+## Protamine
+
+See this pdf for some interesting persecptives on protamine administration such as the rate of reactions if the patient takes aspirin or does it make sense to give it through a PIV...
+
+{% pdf {{ page.pdf_file }} %}
+
 ## Sugammadex Safety
 
 >Ok in dialysis patients but need special filter
@@ -104,3 +112,4 @@ If these medications are prescribed for drug eluding stents DES, review ACC guid
 {: .prompt-danger}
 >Binds to hormonal birth control
 {: .prompt-danger}
+>Use atropine and neostigmine with pregnant patients due to possibility of sugammadex binding to progesterone. 0.1mg atropine per 1mg neostigmine
