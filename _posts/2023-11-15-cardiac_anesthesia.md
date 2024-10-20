@@ -1,7 +1,7 @@
 ---
 title: Cardiac Anesthesia CVOR Guide
 author: dz  
-date: 2023-11-05
+date: 2024-10-20
 categories: [Anesthesia, Cardiac]
 tags: [anesthesia, cardiac anesthesia, cardiac surgery ]     # TAG names should always be lowercase
 pdf_file: "/assets/pdf/cardiac surgery blocks.pdf"
