@@ -45,6 +45,11 @@ jobs:
           ruby-version: 3
           bundler-cache: true
 
+      - name: Use Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:

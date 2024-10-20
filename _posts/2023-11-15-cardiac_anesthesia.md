@@ -4,7 +4,7 @@ author: dz
 date: 2024-10-20
 categories: [Anesthesia, Cardiac]
 tags: [anesthesia, cardiac anesthesia, cardiac surgery ]     # TAG names should always be lowercase
-pdf_file: "/assets/pdf/cardiac surgery blocks.pdf"
+pdf_file: "/assets/pdf/cardiac_surgery_blocks.pdf"
 ---
 
 ## Resources
