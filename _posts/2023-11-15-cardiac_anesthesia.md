@@ -181,6 +181,18 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 - These are not overly stimulating procedures. It is generally accepted to keep the patient paralyzed and keep the anesthetics to a minimum. Any movement can prove deadly due to the intracardiac devices present in the heart.
 - Emergence: Smooth with minimal coughing. Be mindful of the access points. Patients should not move their legs etc.
 
+### PFA Pulse Frequency Ablations
+
+- https://consultqd.clevelandclinic.org/pulsed-field-ablation-a-new-highly-selective-catheter-ablation-method-for-heart-arrhythmias
+- https://www.sciencedirect.com/science/article/pii/S2405500X2300213X?via%3Dihub
+- These are not cryo or RFA ablations : 
+- No arterial line required
+- Dr Ali will have you inject 12000 unit of heparin and 1mg of atropine IV once he crosses the septum. The dose is 10000 units if the pt is on coumadin. 
+- Dr. Mageed will have you inject 10000 units of heparin only as he uses the catheter to pace if the patients become asystolic. I give atropine or glyco depending on their age on induction. I don't like asystole.
+- These cases last around 30-40min
+- There may be a need to administer 2mg or more of nitroglycerin : https://www.sciencedirect.com/science/article/abs/pii/S2405500X24000112?via%3Dihub
+
+
 ### TAVR
 
 - Antibioitcs are usually ancef.
