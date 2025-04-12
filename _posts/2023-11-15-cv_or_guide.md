@@ -59,10 +59,13 @@ One last key to success is to save the charting for when you are on pump. Pay at
 
 - If the case calls for a heartport (minimally invasive thoracotomy) You may be placing a ESP block immediately upon entering the room.
 - We always do a pre-induction arterial line and we start on the right side. The right side because this is the same side as the swan, the same side of the monitoring equipment in the OR and the ICU, and there is less pulling on the lines when you transfer.
+- [Ultrasound Arterial Line Youtube](https://www.youtube.com/watch?v=UQpouFxoxa8)
+- [Arrow Catheter Arterial Line](https://www.youtube.com/watch?v=VtoVavr0W9k)
 - Next will be induction and intubation.
 - Then the neck will be prepped usually on the right side but sometimes both sides and the patient will be placed in a slight T-berg. You will use the avoguard hand wash in the room to “scrub”. Then you will get your gown and gloves on for the central line.
   - If you are new at central lines, talk through what you are doing and this will instill confidence in others you do know what you are doing. ‘I see IJ lateral to the carotid, the IJ is collapsible when I press down with the probe, I am going down with my needle at a steep angle towards the ipsilateral nipple as I aspirate’ etc etc. Once the attendings get to know you, they won’t hover as much, they just want to be confident you know what you are doing… and you do! At the beginning, silence and performing incorrect actions is more scary than narrating exactly what you are doing. Make sure you can see your needle tip as you are entering the IJ.
   - A major key to success in any central line placement is to never, ever lose sight of your wire. You don’t need to bury or hub your wire or needle, and you’ll likely see ectopy if you do. Once you thread the introducer over the central line, make sure you see the wire popping out the back before you begin to push in the dilator.
+  - [IJ Cordis and Swan Insertion](https://www.youtube.com/watch?v=5TbRGZ2-YNs)
   - It would be highly suggested to practice suturing at home before you come into the CVOR. No one is expecting you to be perfect, but others may be tempted to take over the line procedure if you are fumbling with suturing. Use an orange, watch youtube videos, and practice with a needle driver on how to suture. This skill should not be overlooked.
   - You will take the swan from your anesthesia tech still sterile, and place the swan cover ~80cm and lock the distal end in place. (Little hole to the little swan) When inserting the swan, there is no reason to look down at the swan after you hit 20cm (and say ‘balloon up’), this is the time where you look at the monitor and watch the waveform change.
   - Remember when putting on your swan cover proximal to the patient there are two locks, one to lock the cover to the introducer and one lock to lock the swan in place so it doesn’t move inside the cover.
@@ -75,6 +78,13 @@ One last key to success is to save the charting for when you are on pump. Pay at
 - At this point if sternotomy you may be performing a sternal block and possibly a bilateral rectus sheath block. More information on those below.
 
 - Start the amicar drip at 1g/hr and then add a bolus of 5g over 30min.
+
+### Off Pump
+
+- Fluids and pressers
+- Do not give albumin until the IMA are done being taken down...otherwise you have expensive urine and no real help to your preload/CO
+- May need higher doses of pressers  and pushes during the times when the heart is being manipulated or held in an abnormal position. Look in the chest!
+- Usually do not need amicar. Ok to ask the surgeon. 
 
 ## Ultrasound and Trigonometry
 
@@ -212,6 +222,18 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 - These are not overly stimulating procedures. It is generally accepted to keep the patient paralyzed and keep the anesthetics to a minimum. Any movement can prove deadly due to the intracardiac devices present in the heart.
 - Emergence: Smooth with minimal coughing. Be mindful of the access points. Patients should not move their legs etc.
 
+### PFA Pulse Frequency Ablations
+
+- [Intro to PFA from the Cleveland Clinic](https://consultqd.clevelandclinic.org/pulsed-field-ablation-a-new-highly-selective-catheter-ablation-method-for-heart-arrhythmias)
+- [Scietific Study PFA](https://www.sciencedirect.com/science/article/pii/S2405500X2300213X?via%3Dihub)
+- These are not cryo or RFA ablations : 
+- No arterial line required
+- Dr Ali will have you inject 12000 unit of heparin and 1mg of atropine IV once he crosses the septum. The dose is 10000 units if the pt is on coumadin. 
+- Dr. Mageed will have you inject 10000 units of heparin only as he uses the catheter to pace if the patients become asystolic. I give atropine or glyco depending on their age on induction. I don't like asystole.
+- These cases last around 30-40min
+- There may be a need to administer 2mg or more of nitroglycerin : [Nitro Protocol PFA](https://www.sciencedirect.com/science/article/abs/pii/S2405500X24000112?via%3Dihub)
+
+
 ### TAVR
 
 - Antibioitcs are usually ancef.
@@ -255,6 +277,12 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 ## Cardiac Aneshesia Nerve Blocks
 
 ### Parasternal Intercostal Fascial Plane Block (PIFB)
+
+### Rectus Sheath Block
+
+### ESP Block
+
+### Serratus Anterior BLock
 
 See the PDF regarding the blocks as it covers all of the blocks that we do!
 
