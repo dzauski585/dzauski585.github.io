@@ -61,6 +61,15 @@ One last key to success is to save the charting for when you are on pump. Pay at
 - We always do a pre-induction arterial line and we start on the right side. The right side because this is the same side as the swan, the same side of the monitoring equipment in the OR and the ICU, and there is less pulling on the lines when you transfer.
 - [Ultrasound Arterial Line Youtube](https://www.youtube.com/watch?v=UQpouFxoxa8)
 - [Arrow Catheter Arterial Line](https://www.youtube.com/watch?v=VtoVavr0W9k)
+- New to ultrasound lines? Here is another way to see/think about using this tool:
+  - The ultasound sound image depth represents a. If you start your needle insertion a distance of a from the probe and insert at a 45 degree angle your tip will be in plane at the depth a. A triangle illustrates this below. If you want to see your needle   tip before say the center or the superior edge of a vascular structure start your puncture closer to the probe. !
+
+![angle](/assets/img/angle.png)
+
+<img src="/assets/img/angle.png" alt="placeholder" width="50%" height="50%">
+
+![creep probe](/assets/img/creep.png)
+
 - Next will be induction and intubation.
 - Then the neck will be prepped usually on the right side but sometimes both sides and the patient will be placed in a slight T-berg. You will use the avoguard hand wash in the room to “scrub”. Then you will get your gown and gloves on for the central line.
   - If you are new at central lines, talk through what you are doing and this will instill confidence in others you do know what you are doing. ‘I see IJ lateral to the carotid, the IJ is collapsible when I press down with the probe, I am going down with my needle at a steep angle towards the ipsilateral nipple as I aspirate’ etc etc. Once the attendings get to know you, they won’t hover as much, they just want to be confident you know what you are doing… and you do! At the beginning, silence and performing incorrect actions is more scary than narrating exactly what you are doing. Make sure you can see your needle tip as you are entering the IJ.
