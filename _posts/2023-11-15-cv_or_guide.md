@@ -22,8 +22,8 @@ One last key to success is to save the charting for when you are on pump. Pay at
 ## Morning Setup
 
 - Normal machine check, size 8 ett for women and 8.5 for men especially if bronchial blocker is used
-- OGT, pacemaker box on top of the pyxis and check for calcium, magnesium, potassium, milrinone, and at least two albumin available in the bottom drawer.  
-- Arterial line set up on rolling table llido in insulin/TB syringe for pre-induction line and whatever flavor of arterial catheter you like. Do not forget ultrasound jelly.
+- OGT, pacemaker box on top of the pyxis, check for calcium, magnesium, potassium, milrinone, and at least two albumin available in the bottom drawer.  
+- Arterial line set up on rolling table lido in insulin/TB syringe for pre-induction line and whatever flavor of arterial catheter you like. Do not forget ultrasound jelly.
   - The anesthesia techs should have this mostly set up for you. They will set up the swan, cables, eye tegaderms, transcranial oximetry if needed, bronchoscope, etc.
 - Make sure you tell the tech your glove and gown size for the central line.
   - They will prepare your tray and have your equipment on top.
@@ -32,20 +32,24 @@ One last key to success is to save the charting for when you are on pump. Pay at
 ### Cardiac Tower (all drips programmed but on standby)
 
 - Amicar 1g/hr (except off pump CABG)
-- Norepinephrine @ 0.04 mcg/kg/min
+- Norepinephrine 0.04 mcg/kg/min
 - Propofol 100mg vial dosing is age and situation dependent around 30mcg/kg/min
-- Precdex dosing see propofol around 0.3 mcg/kg/min
+- Precdex dosing is age and situation dependent around 0.3 mcg/kg/min
+- Insulin 2-4un/hr if blood sugar is greater than 150 preop
+- Nicardipine 5mg/hr for isolated CABG, AVR, and patients less than 70.
+- Milrinone for mitral, tricuspid, and multiple combination surgery 0.25mcg/kg/hr
+- Epi in the room/ready for low ef, sick, multiple combination surgery (check with preceptor before preparing) 0.02mcg/kg/min
 
 ### Syringes
 
-- Midazolam, 5mg
+- Midazolam, 5-10mg
 - Fentanyl, 500mcg
 - Propofol, 200mg
 - Rocuronium 100mg
 - Cefazolin 2-3g
 - Epinephrine, 10mcg/mL in 10cc (mix 1mg in 100cc bag)
 - Norepinephrine, 16mcg/mL in 10cc (draw 5cc out of norepi bag and add 5cc saline to syringe)
-- Nitroglycerin draw up vial without dilution for Dr. Velez. Others draw up 1 or 2 cc and add 9 or 8cc of saline to make 40-80mcg/cc
+- Nitroglycerin draw up vial without dilution for Dr. Velez. Others draw up 1cc and add 9cc of saline to make 40mcg/cc
 - Ketamine case dependent. Not for bicuspid AV, MS, dissection
 - 2-4g of magnesium bags ready for infusion after induction
 
@@ -62,14 +66,40 @@ One last key to success is to save the charting for when you are on pump. Pay at
   - It would be highly suggested to practice suturing at home before you come into the CVOR. No one is expecting you to be perfect, but others may be tempted to take over the line procedure if you are fumbling with suturing. Use an orange, watch youtube videos, and practice with a needle driver on how to suture. This skill should not be overlooked.
   - You will take the swan from your anesthesia tech still sterile, and place the swan cover ~80cm and lock the distal end in place. (Little hole to the little swan) When inserting the swan, there is no reason to look down at the swan after you hit 20cm (and say ‘balloon up’), this is the time where you look at the monitor and watch the waveform change.
   - Remember when putting on your swan cover proximal to the patient there are two locks, one to lock the cover to the introducer and one lock to lock the swan in place so it doesn’t move inside the cover.
-- Next will be TEE insertion. 
+
+- Next will be TEE insertion.
 - And finally a bronchial blocker if needed.
 
-- If the case is a sternotomy then the last step is to help with the monster. THis is a large metal tray to help protect the patient’s head and allow for supplies storage during the case.
+- If the case is a sternotomy then the last step is to help with the monster. This is a large metal tray to help protect the patient’s head and allow for supplies storage during the case.
 
 - At this point if sternotomy you may be performing a sternal block and possibly a bilateral rectus sheath block. More information on those below.
 
 - Start the amicar drip at 1g/hr and then add a bolus of 5g over 30min.
+
+## Ultrasound and Trigonometry
+
+The ultasound sound image depth represents a. If you start your needle insertion a distance of a from the probe and insert at a 45 degree angle your tip will be in plane at the depth a. A triangle illustrates this below. If you want to see your needle tip before say the center or the superior edge of a vascular structure start your puncture closer to the probe. !
+
+![angle](/assets/img/angle.png)
+
+![creep probe](/assets/img/creep.png)
+
+### Minimally Invasive Surgery
+
+## Robotic CABG
+
+- On vs off pump or pump assist
+- Amicar not  needed if not going on bypass
+- Groin cannulation if on pump
+- Left thorocotomy
+- ESP block before arterial line
+
+## Robotic Mitral, Isolated valve repair/replacement, Dr. Zhou ascending aorta replacement
+
+- Right thorocotomy
+- ESP block before arterial line
+- Bronchial blocker after central line
+- Groin cannulation rather than central
 
 ### Pre-CPB Time
 
@@ -158,6 +188,7 @@ One last key to success is to save the charting for when you are on pump. Pay at
 ### Protamine
 
 Large dose in a relatively short time frame. Consider using calcium and/or vaso to help with protamine hemodynamic shifts/protamine reaction. Once the protamine is in, wait five minutes and draw abg/act  and coags.
+![alt text](../assets/img/protamine.png)
 
 ## Chest Closure and Transport
 
@@ -190,7 +221,7 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 - Once the valve is in, keep the BP <160. You may need to turn off or titrate up/down some vasoactives.
 - Rapid pacing and valve deployment can cause rhythm disturbances after the valve is in. This is partly due to the proximity of the aortic valve annulus and the conduction system. Have two pacer boxes ready so that you can quickly pace at a rate of 60-80bpm if the patient is in heart block or asystole.
 
-### Watchmans
+### Watchman
 
 - These normally require arterial lines. Usually post induction. These can go fast so stay efficient.
 - Standard GETA tailored to the patient
@@ -219,6 +250,7 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 
 - These patients often are intubated with drips and lines but you may need to add something. Drips will be different depending on if the device is being inserted or removed.
 - Some impella removals are done with just local/light mac. It is good practice to have all lines, GETA things ready to go in case things do not proceed according to plan.
+- [Ecmo circuit review](2023-11-15-ECMO.md)
 
 ## Cardiac Aneshesia Nerve Blocks
 
@@ -227,3 +259,11 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 See the PDF regarding the blocks as it covers all of the blocks that we do!
 
 {% pdf {{ page.pdf_file }} %}
+
+## Important Links
+
+### [CV Pharmacology Review](2025-04-12-CVPharm.md)
+
+### [Novel teatment of intractable post cardiac surgery bleeding by our own surgeons!](2023-10-30-pericardial_baffle.md)
+
+### [Cardiac Physiology Revew](2023-11-07-cardiac_physiology.md)

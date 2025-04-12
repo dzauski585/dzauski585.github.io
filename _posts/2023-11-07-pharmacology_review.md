@@ -42,13 +42,6 @@ If these medications are prescribed for drug eluding stents DES, review ACC guid
 ![reversal](/assets/img/reversal.png)
 ![emergency](/assets/img/emergencyreversal.png)
 
-### Other Considerations
-
-#### TXA and Amicar
-
-![amicar](/assets/img/amicar.png)
-
-
 ## Beta Blocker Classifications
 
 - A-M Selective B1 
@@ -89,18 +82,6 @@ If these medications are prescribed for drug eluding stents DES, review ACC guid
 ### Do you need to Dilute Locals?
 
 ![mixing](/assets/img/mixlocal.png)
-
-## PDE Inhibitors
-
-- Milrinone (PDEIII)
-
-![milrinone](/assets/img/mil.png)
-
-## Protamine
-
-See this pdf for some interesting persecptives on protamine administration such as the rate of reactions if the patient takes aspirin or does it make sense to give it through a PIV...
-
-{% pdf {{ page.pdf_file }} %}
 
 ## Sugammadex Safety
 

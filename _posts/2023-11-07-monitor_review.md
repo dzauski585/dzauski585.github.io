@@ -19,40 +19,9 @@ math: true
 > Sitting Position: BP decreases by 0.74mmHg per cm
 {: .prompt-danger }
 
-## CVP
-
-![cvp](/assets/img/cvp.png)
-
-- Loss of a Wave: 
-  - A fib or V pacing without atrial contraction
-- Large a Wave: 
-  - Atria emptying against high resistance
-  - Tricuspid stenosis, diastolic dysfx, ischemic heart, RVH, AV dissociation, junctional, V paced, PVC
-- Large v Wave:
-  - Tricuspid regurg
-
 ## EKG
 
 ![ekg](/assets/img/ekg.png)
-
-## PA Catheter 
-
-![PA](/assets/img/pap1.png)
-
-### When PAOP Does NOT Predict LVEDV
-
-- Overestimates
-  - Impaired LV compliance ie. ischemia
-  - Mitral valve disease
-  - Left to right cardiac shunt
-  - Tachycardia
-  - PPV
-  - PEEP
-  - COPD
-  - Pulmonary hypertension
-  - Non west zone III placement of PAC
-- Underestimates
-  - Aortic insufficiency
 
 ## Pulse Oximetry and the Beer Lambert Law
 
