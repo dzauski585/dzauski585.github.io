@@ -230,7 +230,6 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 - These cases last around 30-40min
 - There may be a need to administer 2mg or more of nitroglycerin : [Nitro Protocol PFA](https://www.sciencedirect.com/science/article/abs/pii/S2405500X24000112?via%3Dihub)
 
-
 ### TAVR
 
 - Antibioitcs are usually ancef.
@@ -273,14 +272,30 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 
 ## Cardiac Aneshesia Nerve Blocks
 
+Draw up 2-3 30cc syringes with 0.25% ropi. This is done by mixing 15cc of 0.5% ropi with 15cc of saline. You can also prepare a set of sterile gloves, prep stick, ultrasound cover/gel, and a needle(2-3.5in based on pt)
+
 ### Parasternal Intercostal Fascial Plane Block (PIFB)
+
+
+T4 is approximately the nipple line so start there and aim for spreading above and below this level
+![alt text](../assets/img/parasteranl.png)
 
 ### Rectus Sheath Block
 
+For sternotomy
+Chest tube pain is often referred and difficult to treat so I do not use this block as much but you can do it.
+![alt text](../assets/img/rectussheath.png)
+
 ### ESP Block
 
-### Serratus Anterior BLock
+For thoracotomy
 
+T4 is approximately the ridge of the scupla and T6 is the tip of the scapula. Aim for T4.
+![alt text](../assets/img/esp.png)
+
+### Serratus Anterior BL
+
+For thoracotomy if pt cannot sit
 See the PDF regarding the blocks as it covers all of the blocks that we do!
 
 {% pdf {{ page.pdf_file }} %}
