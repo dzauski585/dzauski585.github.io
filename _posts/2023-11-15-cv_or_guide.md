@@ -61,14 +61,7 @@ One last key to success is to save the charting for when you are on pump. Pay at
 - We always do a pre-induction arterial line and we start on the right side. The right side because this is the same side as the swan, the same side of the monitoring equipment in the OR and the ICU, and there is less pulling on the lines when you transfer.
 - [Ultrasound Arterial Line Youtube](https://www.youtube.com/watch?v=UQpouFxoxa8)
 - [Arrow Catheter Arterial Line](https://www.youtube.com/watch?v=VtoVavr0W9k)
-- New to ultrasound lines? Here is another way to see/think about using this tool:
-  - The ultasound sound image depth represents a. If you start your needle insertion a distance of a from the probe and insert at a 45 degree angle your tip will be in plane at the depth a. A triangle illustrates this below. If you want to see your needle   tip before say the center or the superior edge of a vascular structure start your puncture closer to the probe. !
-
-![angle](/assets/img/angle.png)
-
-<img src="/assets/img/angle.png" alt="placeholder" width="50%" height="50%">
-
-![creep probe](/assets/img/creep.png)
+- [New to ultrasound lines?](2025-04-12-ultrasound)
 
 - Next will be induction and intubation.
 - Then the neck will be prepped usually on the right side but sometimes both sides and the patient will be placed in a slight T-berg. You will use the avoguard hand wash in the room to “scrub”. Then you will get your gown and gloves on for the central line.
@@ -78,9 +71,10 @@ One last key to success is to save the charting for when you are on pump. Pay at
   - It would be highly suggested to practice suturing at home before you come into the CVOR. No one is expecting you to be perfect, but others may be tempted to take over the line procedure if you are fumbling with suturing. Use an orange, watch youtube videos, and practice with a needle driver on how to suture. This skill should not be overlooked.
   - You will take the swan from your anesthesia tech still sterile, and place the swan cover ~80cm and lock the distal end in place. (Little hole to the little swan) When inserting the swan, there is no reason to look down at the swan after you hit 20cm (and say ‘balloon up’), this is the time where you look at the monitor and watch the waveform change.
   - Remember when putting on your swan cover proximal to the patient there are two locks, one to lock the cover to the introducer and one lock to lock the swan in place so it doesn’t move inside the cover.
-
+  - [Review of CVP and Swan catheters](2023-11-07-cardiac_physiology.md#CV)
 - Next will be TEE insertion.
 - And finally a bronchial blocker if needed.
+- [EZ Blocker insertion](https://www.youtube.com/watch?v=HM12Zcu-DQ8)
 
 - If the case is a sternotomy then the last step is to help with the monster. This is a large metal tray to help protect the patient’s head and allow for supplies storage during the case.
 
@@ -93,15 +87,7 @@ One last key to success is to save the charting for when you are on pump. Pay at
 - Fluids and pressers
 - Do not give albumin until the IMA are done being taken down...otherwise you have expensive urine and no real help to your preload/CO
 - May need higher doses of pressers  and pushes during the times when the heart is being manipulated or held in an abnormal position. Look in the chest!
-- Usually do not need amicar. Ok to ask the surgeon. 
-
-## Ultrasound and Trigonometry
-
-The ultasound sound image depth represents a. If you start your needle insertion a distance of a from the probe and insert at a 45 degree angle your tip will be in plane at the depth a. A triangle illustrates this below. If you want to see your needle tip before say the center or the superior edge of a vascular structure start your puncture closer to the probe. !
-
-![angle](/assets/img/angle.png)
-
-![creep probe](/assets/img/creep.png)
+- Usually do not need amicar. Ok to ask the surgeon.
 
 ### Minimally Invasive Surgery
 
@@ -125,6 +111,8 @@ The ultasound sound image depth represents a. If you start your needle insertion
 - Be mindful of your IV fluids and limit these as much as possible. Perfusion does do retrograde autologous priming, but we need to preserve the Hct as much as possible. Before pump it would be ideal to have less than a liter in, so be mindful when you are pushing drugs and leaving drip lines open.
 
 - Some of the surgeons will ask anesthesia ‘OK to start?’, so before this time you should be prepared for the high blood pressure that will come with incision. Some of the surgeons don’t say anything at all and just make an incision. The 3 most stimulating portions of the procedure: incision, sternotomy, and cutting through the pericardium. You want to get ahead of this response before they make incision- many of us give fentanyl prior to incision as we are finishing draping and turn up the gas. You also have propofol and nitroglycerin at your disposal. But do not let the pressure hit 190 as the case starts, be vigilant and prepared for the next steps of the case.
+- This is the time to do a TEE exam
+- [Intro and Advanced TEE](2025-04-12-TEE.md)
 
 - With a CABG, you will have some ‘down time’ between sternotomy and going on pump as they harvest. When taking down the LIMA/RIMA watch your tidal volumes and peep and they’ll typically ask or make you keep bring the lungs down.
 
