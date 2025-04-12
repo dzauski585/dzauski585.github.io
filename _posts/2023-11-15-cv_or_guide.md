@@ -5,6 +5,7 @@ date: 2024-10-20
 categories: [Anesthesia, Cardiac]
 tags: [anesthesia, cardiac anesthesia, cardiac surgery ]     # TAG names should always be lowercase
 pdf_file: "/assets/pdf/cardiac_surgery_blocks.pdf"
+pin: true
 ---
 
 ## Resources
@@ -72,6 +73,7 @@ One last key to success is to save the charting for when you are on pump. Pay at
   - You will take the swan from your anesthesia tech still sterile, and place the swan cover ~80cm and lock the distal end in place. (Little hole to the little swan) When inserting the swan, there is no reason to look down at the swan after you hit 20cm (and say ‘balloon up’), this is the time where you look at the monitor and watch the waveform change.
   - Remember when putting on your swan cover proximal to the patient there are two locks, one to lock the cover to the introducer and one lock to lock the swan in place so it doesn’t move inside the cover.
   - [Review of CVP and Swan catheters](https://dzauski585.github.io/posts/cardiac_physiology/)
+    - Just scroll down
 - Next will be TEE insertion.
 - And finally a bronchial blocker if needed.
 - [EZ Blocker insertion](https://www.youtube.com/watch?v=HM12Zcu-DQ8)
