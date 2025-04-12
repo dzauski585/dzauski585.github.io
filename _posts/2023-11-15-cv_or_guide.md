@@ -179,6 +179,13 @@ One last key to success is to save the charting for when you are on pump. Pay at
 
 ![pacer](/assets/img/pace.jpg)
 
+#### Defib Settings
+
+- 20j for internal paddles
+- 200-360j for external pads
+- Synchronize for cardioversion
+  - Hold the shock button so the shock will be delivered correctly
+
 ## Post Bypass
 
 - Once separated, switch the monitor back to cardiac mode, and turn on CO monitoring.
