@@ -8,69 +8,6 @@ mermaid: true
 math: true
 ---
 
-## Cardiac and Respiratory
-
-### Ficks Law of Diffusion
-
-Blood to organ can be calculated using a marker substance if the amount of marker uptake per time, concentration venous and arterial of marker are known.
-
-$$
-CO = {\dot VO_2 \over Ca - Cv} = {(125ml/min) * (BSA) \over CaO_2 - CvO_2}
-$$
-
-$$
-Oxygen Carrying Capacity = CaO_2 = {(Hgb * SaO_2 * 1.34) + (PaO_2 * 0.003)}
-$$
-
-### Law of Laplace
-
-#### Arteries and AAA
-
-The assumption is that the structure described is cylindrical. 
-
-$$
-Wall Tension (Cylinder) = {Pressure * Radius \over Wall Thickness}
-$$
-
-
-#### Left Ventricle and Alveoli
-
-The assumption is that the structure described is spherical. Surfactant does help to lower the surface tension in the alveoli. 
-
-$$
-Wall Tension (Sphere) = {Pressure * Radius \over 2 *  Wall Thickness}
-$$
-
-### Poiseuille's Law for Flow or Resistance
-
-The original law was presented for flow through a cylinder. If the equation is rearranged it represents resistance through that cylinder. Both are described below. 
-
-#### Flow
-
-$$
-Q = {\pi r^4 \over 8L\eta }{(\Delta P)}
-$$
-
-#### Resistance
-
-$$
-R = {8L\eta \over \pi r^4 }{(\Delta P)}
-$$
-
-### Systemic Vascular Resistance SVR
-
-$$
-SVR = {MAP- CVP \over CO }{(80)}
-$$
-
-## Starling Curve!
-
-![starling](/assets/img/starling.png)
-
-## Subclavian Steal
-
-![sc steal](/assets/img/scsteal.png)
-
 ## CVSpecificMonitors{CV}
 
 ### CVP
@@ -84,12 +21,14 @@ $$
   - Tricuspid stenosis, diastolic dysfx, ischemic heart, RVH, AV dissociation, junctional, V paced, PVC
 - Large v Wave:
   - Tricuspid regurg
-
+  
 ### PA Catheter
 
 ![alt text](../assets/img/pa.png)
 
 ![PA](/assets/img/pap1.png)
+
+![pacath](</assets/img/pa pressures.png>)
 
 #### When PAOP Does NOT Predict LVEDV
 
@@ -138,6 +77,69 @@ flowchart
     P --> S[Normal > 8]
     S --> T[Analgesia vs Sedation]
 ```
+
+### Systemic Vascular Resistance SVR
+
+$$
+SVR = {MAP- CVP \over CO }{(80)}
+$$
+
+## Cardiac and Respiratory
+
+## Starling Curve!
+
+![starling](/assets/img/starling.png)
+
+### Ficks Law of Diffusion
+
+Blood to organ can be calculated using a marker substance if the amount of marker uptake per time, concentration venous and arterial of marker are known.
+
+$$
+CO = {\dot VO_2 \over Ca - Cv} = {(125ml/min) * (BSA) \over CaO_2 - CvO_2}
+$$
+
+$$
+Oxygen Carrying Capacity = CaO_2 = {(Hgb * SaO_2 * 1.34) + (PaO_2 * 0.003)}
+$$
+
+### Law of Laplace
+
+#### Arteries and AAA
+
+The assumption is that the structure described is cylindrical. 
+
+$$
+Wall Tension (Cylinder) = {Pressure * Radius \over Wall Thickness}
+$$
+
+
+#### Left Ventricle and Alveoli
+
+The assumption is that the structure described is spherical. Surfactant does help to lower the surface tension in the alveoli. 
+
+$$
+Wall Tension (Sphere) = {Pressure * Radius \over 2 *  Wall Thickness}
+$$
+
+### Poiseuille's Law for Flow or Resistance
+
+The original law was presented for flow through a cylinder. If the equation is rearranged it represents resistance through that cylinder. Both are described below. 
+
+#### Flow
+
+$$
+Q = {\pi r^4 \over 8L\eta }{(\Delta P)}
+$$
+
+#### Resistance
+
+$$
+R = {8L\eta \over \pi r^4 }{(\Delta P)}
+$$
+
+## Subclavian Steal
+
+![sc steal](/assets/img/scsteal.png)
 
 ### EKG
 
