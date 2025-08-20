@@ -122,7 +122,9 @@ One last key to success is to save the charting for when you are on pump. Pay at
 
 - In order of cannulation: they will first cannulate the aorta, then insert their venous cannula(s), next is the antegrade cardioplegia cannula, retrograde cardioplegia cannula if they are using it, and then finally the LV vent.
 
-- During aortic cannulation the pressure needs to be less than 100 systolic.
+- During aortic cannulation the pressure needs to be less than 100 systolic. 
+
+- After this cannula is tied down it is good practice to raise the blood pressure back to 120 systolic to prepare for the RAP. RAP is retrograde autologous prime or backward flow out of the arterial cannula into the CPB machine with the patients own blood for repriming. This gets rid of most of the CPB machine saline prime to avoid dropping the hct when initiating bypass. This equates to a volume loss of a 300-500cc. There is a small venous cannula RAP as well. 
 
 - If they are cannulating the groin the blood pressures do not matter as much but they should still be in the target range to avoid any arterial injuries. With groin cannulation we are responsible for guiding their wires across the IVC/SVC and descending aorta with the TEE.
 
@@ -245,7 +247,9 @@ T4 is approximately the ridge of the scupla and T6 is the tip of the scapula. Ai
 
 ### Serratus Anterior BL
 
-For thoracotomy if pt cannot sit
+For thoracotomy if pt cannot sit or in addition to ESP if you dose correctly
+Good landmarks are midaxillary line at the level of the 4th or 5th rib or the nipple, and slightly tilt the probe toward the head. If you cannot see the latissimus dorsi then you are too anterior.
+
 See the PDF regarding the blocks as it covers all of the blocks that we do!
 
 {% pdf {{ page.pdf_file }} %}
