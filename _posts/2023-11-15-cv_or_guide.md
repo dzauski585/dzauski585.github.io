@@ -155,6 +155,11 @@ One last key to success is to save the charting for when you are on pump. Pay at
 - 20C for temp then slowly rewarm
 - Get products in the room
 
+### Explanation of Posterior Pericardiectomy/otomy
+
+- See this website for a great write up on why our surgeons commonly perform this procedure.
+- https://www.acc.org/Latest-in-Cardiology/Articles/2022/04/11/15/08/The-Role-of-the-Posterior-Left-Pericardiotomy-in-Reducing-Pericardial-Effusion
+
 ## Discontinue Cardiac Bypass
 
 ### WARM acronym
