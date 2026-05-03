@@ -95,6 +95,7 @@ nav:
     - Physiology: cvor/cardiac_physiology.md
     - Pharmacology: cvor/CVPharm.md
     - Mechanical Support: cvor/Mechanical_Support.md
+    - Assessment: assessment.html
   - Case-Specific Notes:
     - cases/index.md
     - Thoracic Anesthesia: cases/thoracic_review.md

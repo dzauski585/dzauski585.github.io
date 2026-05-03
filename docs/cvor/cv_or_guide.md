@@ -10,6 +10,7 @@ tags: [anesthesia, cardiac anesthesia, cardiac surgery ]     # TAG names should 
 - [CV Pharmacology](CVPharm.md)
 - [TEE Basics and Advanced](TEE.md#exam-overview)
 - [Heart Valve Physiology and Anesthesia](cardiac_physiology.md#valve-pathophysiology)
+- [Test your knowledge](../assessment.html) on some of the basics and some of the advanced aspects of CV anesthesia. Not a requirement at all for SRNA students.
 
 ## Morning Setup
 
