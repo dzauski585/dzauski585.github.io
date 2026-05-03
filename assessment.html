@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardiac Anesthesia Knowledge Assessment</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f4ef;
+    --surface: #ffffff;
+    --border: #ddd8cf;
+    --text: #1a1714;
+    --muted: #6b6460;
+    --accent: #1a3a5c;
+    --accent-light: #e8eef5;
+    --correct: #1a6b3c;
+    --correct-bg: #e8f5ee;
+    --wrong: #8b1a1a;
+    --wrong-bg: #f5e8e8;
+    --pending: #5c4a1a;
+    --pending-bg: #f5f0e8;
+    --radius: 6px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  header {
+    background: var(--accent); color: white; padding: 2.5rem 2rem 2rem;
+    position: relative; overflow: hidden;
+  }
+  header::after {
+    content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
+    height: 4px; background: linear-gradient(90deg, #4a9fd4, #1a3a5c, #4a9fd4);
+  }
+  header h1 { font-family: 'Source Serif 4', serif; font-size: 1.9rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.3rem; }
+  header p { opacity: 0.75; font-size: 0.9rem; letter-spacing: 0.03em; }
+
+  .score-bar {
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 0.75rem 2rem; display: flex; align-items: center; gap: 1.5rem;
+    position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow);
+  }
+  .score-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .score-val { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 500; color: var(--accent); }
+  .score-progress { flex: 1; height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; }
+  .score-progress-fill { height: 100%; background: linear-gradient(90deg, #2a7d5c, #4a9fd4); border-radius: 99px; transition: width 0.4s ease; width: 0%; }
+
+  main { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+  .section-header { display: flex; align-items: center; gap: 1rem; margin: 2.5rem 0 1rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--accent); }
+  .section-num { background: var(--accent); color: white; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 3px; letter-spacing: 0.05em; }
+  .section-title { font-family: 'Source Serif 4', serif; font-size: 1.05rem; font-weight: 600; color: var(--accent); letter-spacing: -0.01em; }
+
+  .q-block { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin-bottom: 0.75rem; transition: border-color 0.2s; }
+  .q-block:focus-within { border-color: var(--accent); }
+  .q-label { font-size: 0.7rem; font-family: 'JetBrains Mono', monospace; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+  .q-text { font-size: 0.95rem; line-height: 1.55; margin-bottom: 0.85rem; color: var(--text); }
+  .q-text strong { color: var(--accent); }
+
+  .answer-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; }
+  .answer-row .prefix { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--muted); min-width: 1.6rem; }
+
+  input[type="text"] {
+    flex: 1; border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 0.45rem 0.75rem; font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+    background: var(--bg); color: var(--text); transition: border-color 0.2s, background 0.2s; outline: none;
+  }
+  input[type="text"]:focus { border-color: var(--accent); background: white; }
+  input[type="text"].correct { border-color: var(--correct); background: var(--correct-bg); color: var(--correct); }
+  input[type="text"].wrong { border-color: var(--wrong); background: var(--wrong-bg); color: var(--wrong); }
+
+  .feedback-icon { font-size: 1rem; min-width: 1.2rem; text-align: center; }
+
+  .tf-row { display: flex; gap: 0.6rem; margin-top: 0.25rem; }
+  .tf-btn {
+    padding: 0.4rem 1.4rem; border: 1.5px solid var(--border); border-radius: var(--radius);
+    background: var(--bg); font-family: 'DM Sans', sans-serif; font-size: 0.85rem;
+    font-weight: 500; cursor: pointer; transition: all 0.15s; letter-spacing: 0.03em;
+  }
+  .tf-btn:hover { border-color: var(--accent); background: var(--accent-light); }
+  .tf-btn.selected-correct { background: var(--correct-bg); border-color: var(--correct); color: var(--correct); }
+  .tf-btn.selected-wrong { background: var(--wrong-bg); border-color: var(--wrong); color: var(--wrong); }
+  .tf-btn.disabled { pointer-events: none; opacity: 0.5; }
+  .tf-btn.selected-correct.disabled, .tf-btn.selected-wrong.disabled { opacity: 1; }
+
+  .sub-q { margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); }
+  .sub-q-label { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.4rem; font-style: italic; }
+
+  .inline-feedback { font-size: 0.78rem; margin-top: 0.3rem; padding: 0.3rem 0.6rem; border-radius: 4px; display: none; }
+  .inline-feedback.show { display: block; }
+  .inline-feedback.correct { background: var(--correct-bg); color: var(--correct); }
+  .inline-feedback.wrong { background: var(--wrong-bg); color: var(--wrong); }
+
+  .data-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 0.5rem; }
+  .data-table th { background: var(--accent); color: white; padding: 0.5rem 0.75rem; text-align: left; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
+  .data-table td { padding: 0.45rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  .data-table tr:nth-child(even) td { background: var(--bg); }
+  .data-table input[type="text"] { width: 100%; min-width: 140px; }
+
+  .image-section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin-bottom: 0.75rem; }
+  .image-placeholder { background: var(--bg); border: 2px dashed var(--border); border-radius: var(--radius); padding: 2rem; text-align: center; color: var(--muted); font-size: 0.85rem; margin: 0.75rem 0; }
+  .image-placeholder .img-name { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; margin-top: 0.3rem; color: var(--accent); }
+
+  .hint { font-size: 0.78rem; color: var(--muted); font-style: italic; margin-top: 0.25rem; }
+
+  .action-bar { display: flex; gap: 1rem; justify-content: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+  .btn-reset { padding: 0.65rem 2rem; border: 1.5px solid var(--accent); border-radius: var(--radius); background: transparent; color: var(--accent); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: all 0.15s; }
+  .btn-reset:hover { background: var(--accent-light); }
+
+  .given-tag { display: inline-block; font-size: 0.68rem; background: var(--pending-bg); color: var(--pending); border: 1px solid #d4b87a; border-radius: 3px; padding: 0.1rem 0.4rem; margin-left: 0.4rem; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.03em; vertical-align: middle; }
+
+  .note-box { background: var(--accent-light); border: 1px solid #b8cfe8; border-radius: 4px; padding: 0.75rem 1rem; font-size: 0.82rem; color: var(--accent); margin-top: 0.75rem; }
+
+  @media (max-width: 600px) {
+    header { padding: 1.5rem 1rem; }
+    main { padding: 1rem 0.75rem 3rem; }
+    .score-bar { padding: 0.6rem 1rem; flex-wrap: wrap; }
+    .data-table { font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cardiac Anesthesia Knowledge Assessment</h1>
+  <p>Type your answers and receive instant feedback &nbsp;·&nbsp; All fields are graded</p>
+</header>
+
+<div class="score-bar">
+  <span class="score-label">Score</span>
+  <span class="score-val" id="scoreDisplay">0 / 0</span>
+  <div class="score-progress"><div class="score-progress-fill" id="scoreBar"></div></div>
+  <span class="score-label" id="pctDisplay">—</span>
+</div>
+
+<main>
+
+<!-- ═══ SECTION 1 ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="section-num">01</span>
+  <span class="section-title">Cardiopulmonary Bypass &amp; Cardioprotection</span>
+</div>
+
+<!-- Q1 — any order accepted across all 4 lines -->
+<div class="q-block">
+  <div class="q-label">Question 1</div>
+  <div class="q-text">List 4 ways to provide cardio-protection during CPB.</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded multi-q1"
+      data-pool="antegrade|retrograde|hand held|vf coronary"
+      placeholder="Method i…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q1"
+      data-pool="antegrade|retrograde|hand held|vf coronary"
+      placeholder="Method ii…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">iii.</span>
+    <input type="text" class="graded multi-q1"
+      data-pool="antegrade|retrograde|hand held|vf coronary"
+      placeholder="Method iii…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">iv.</span>
+    <input type="text" class="graded multi-q1"
+      data-pool="antegrade|retrograde|hand held|vf coronary"
+      placeholder="Method iv…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 2</div>
+  <div class="q-text">After going on pump you notice the patient's <strong>right side of face is stark white</strong>. What is the cause?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="inadequate perfusion of the aortic arch,aortic arch malperfusion,inadequate arch perfusion,malperfusion,aortic malperfusion,arch malperfusion,inadequate perfusion arch, aortic cannula too deep"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 3</div>
+  <div class="q-text">After going on CPB you notice the head is <strong>bluish-purple</strong>. What should you do?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="tell surgeon,notify surgeon,inform surgeon,inadequate svc drainage,svc drainage,svc obstruction,superior vena cava,venous drainage,poor svc drainage,tell the surgeon,notify the surgeon and perfusionist"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 4</div>
+  <div class="q-text">During CPB utilizing <strong>femoral arterial cannulation</strong>, which arterial line placement ensures the entire aortic arch is perfused?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="right radial,right radial artery,right radial arterial line,right radial line"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- Q5 — any order: distention ischemia OR air removal -->
+<div class="q-block">
+  <div class="q-label">Question 5</div>
+  <div class="q-text">Why is <strong>LV venting</strong> important? (2 reasons)</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded multi-q5"
+      data-pool="distention ischemia|air removal"
+      placeholder="Reason i…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q5"
+      data-pool="distention ischemia|air removal"
+      placeholder="Reason ii…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- Q6 — any order: root vent OR pulmonary vein -->
+<div class="q-block">
+  <div class="q-label">Question 6</div>
+  <div class="q-text">Name 2 common ways to vent the LV.</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded multi-q6"
+      data-pool="root vent|pulmonary vein"
+      placeholder="Method i…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q6"
+      data-pool="root vent|pulmonary vein"
+      placeholder="Method ii…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- ═══ SECTION 2 ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="section-num">02</span>
+  <span class="section-title">Oxygen Delivery &amp; Utilization</span>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 7</div>
+  <div class="q-text">Write out the <strong>Delivery of Oxygen (DO₂)</strong> equation.</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="do2 = 1.39 x hb x sao2 + 0.003 x pao2 x co,1.39 x hb x sao2,1.39 hb sao2 0.003 pao2 co,do2 1.39 hb sao2 pao2 co,hb sao2 pao2 co 1.39,1.39,do2 = cco x cao2"
+      placeholder="DO₂ = …"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 8</div>
+  <div class="q-text">Write out the <strong>Oxygen Utilization (VO₂)</strong> equation.</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="vo2 = co x ca - co x cv,vo2 = co x cao2 - cvo2,fick,co x ca-cv,vo2 co ca cv,co = vo2/ca-cv,fick equation,co cao2 cvo2,vo2 co arterial venous"
+      placeholder="VO₂ = …"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 9</div>
+  <div class="q-text">Why does <strong>SvO₂ decline</strong> between the OR and ICU? Describe factors influencing oxygen utilization.</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="oxygen consumption increases,decreased anesthesia depth,loss of paralysis,less anesthesia,waking up,increased consumption,decreased depth of anesthesia,anesthesia wears off,metabolic demand increases,depth of anesthesia decreases"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 10</div>
+  <div class="q-text"><strong>Nitrous Oxide improves cardiac output.</strong></div>
+  <div class="tf-row">
+    <button class="tf-btn" data-correct="false" onclick="handleTF(this)">TRUE</button>
+    <button class="tf-btn" data-correct="true" onclick="handleTF(this)">FALSE</button>
+  </div>
+  <div class="inline-feedback">Nitrous oxide <em>depresses</em> myocardial function and does not improve cardiac output.</div>
+</div>
+
+<!-- ═══ SECTION 3 ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="section-num">03</span>
+  <span class="section-title">CPB Troubleshooting</span>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 11</div>
+  <div class="q-text">Patient is on full CPB flow, cross-clamp NOT applied, CVP and PA pressure are zero, yet the patient has a <strong>pulsatile arterial line</strong>. What is the diagnosis?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="aortic insufficiency,ai,aortic regurgitation,ar"
+      placeholder="Diagnosis…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 12</div>
+  <div class="q-text">During <strong>antegrade cardioplegia</strong> you notice a rise in PA pressure. What is the diagnosis?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="aortic insufficiency,ai,aortic regurgitation,ar"
+      placeholder="Diagnosis…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 13</div>
+  <div class="q-text">The most common reason for <strong>ST segment elevation post-CABG</strong> is:</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="air,air embolism,coronary air embolism,coronary air"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 14</div>
+  <div class="q-text">A common reason for <strong>sudden VFib while coming off pump</strong> is:</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="air,air embolism,coronary air,air in coronary"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 15</div>
+  <div class="q-text">Prior to removing the TEE probe, the <strong>___________</strong> should be assessed to help prevent sudden arrest on transport.</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="left atrial appendage,laa,left atrial appendage for thrombus,left atrial appendage clot,left atrial appendage thrombus"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- ═══ SECTION 4 ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="section-num">04</span>
+  <span class="section-title">Hemodynamics &amp; Equations</span>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 16</div>
+  <div class="q-text">What are the <strong>units for SVR</strong>?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="dynes sec cm-5,dynes sec cm5,dyne sec cm-5,dynes per sec per cm5,dynes"
+      placeholder="Units…"><span class="feedback-icon"></span></div>
+  <div class="sub-q">
+    <div class="sub-q-label">b. Derive SVR (Hint: V = IR, Ohm's Law analogy)</div>
+    <div class="answer-row">
+      <input type="text" class="graded"
+        data-answers="svr = map - cvp / co x 80,map-cvp/co x 80,map minus cvp divided by co,pressure over flow,delta p over q,map-cvp/co,map cvp co,p over q"
+        placeholder="SVR derivation…"><span class="feedback-icon"></span></div>
+  </div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 17</div>
+  <div class="q-text">Write the complete <strong>SVR formula</strong>:</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="svr = map - cvp / co x 80,map-cvp/co x 80,map-cvp over co times 80,map cvp co 80,map - cvp / co * 80"
+      placeholder="SVR = …"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- Q18 — any order across 3 lines -->
+<div class="q-block">
+  <div class="q-label">Question 18</div>
+  <div class="q-text"><strong>Stroke Volume</strong> is dependent on: (3 factors)</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded multi-q18"
+      data-pool="preload|afterload|contractility"
+      placeholder="Factor i…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q18"
+      data-pool="preload|afterload|contractility"
+      placeholder="Factor ii…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">iii.</span>
+    <input type="text" class="graded multi-q18"
+      data-pool="preload|afterload|contractility"
+      placeholder="Factor iii…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 19</div>
+  <div class="q-text">Define <strong>Cardiac Output</strong>:</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="sv x hr,stroke volume x heart rate,heart rate x stroke volume,hr x sv,sv hr,hr sv"
+      placeholder="CO = …"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 20</div>
+  <div class="q-text">A <strong>Low CI</strong> automatically equates to low myocardial function (Low EF).</div>
+  <div class="tf-row">
+    <button class="tf-btn" data-correct="false" onclick="handleTF(this)">TRUE</button>
+    <button class="tf-btn" data-correct="true" onclick="handleTF(this)">FALSE</button>
+  </div>
+  <div class="inline-feedback">A low CI does <em>not</em> automatically mean low myocardial function — and a normal CI does not automatically mean normal function.</div>
+</div>
+
+<!-- ═══ SECTION 5 ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="section-num">05</span>
+  <span class="section-title">PA Catheter Interpretation</span>
+</div>
+
+<!-- Q21 — any order -->
+<div class="q-block">
+  <div class="q-label">Question 21</div>
+  <div class="q-text">What are the major <strong>assumptions</strong> when interpreting numbers on a PA Catheter?</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded multi-q21"
+      data-pool="pressure reflects volume|closed system"
+      placeholder="Assumption i…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q21"
+      data-pool="pressure reflects volume|closed system"
+      placeholder="Assumption ii…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- Q22 — any order -->
+<div class="q-block">
+  <div class="q-label">Question 22</div>
+  <div class="q-text">Reasons for <strong>PCWP being greater than PAD</strong>:</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded multi-q22"
+      data-pool="overinflated balloon|peep"
+      placeholder="Reason i…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q22"
+      data-pool="overinflated balloon|peep"
+      placeholder="Reason ii…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 23</div>
+  <div class="q-text">A PAD greater than <strong>_____</strong> mmHg from the PCWP implies intrinsic pulmonary artery pressure rather than LV volume.</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="5,5-10,5 to 10,5-10 mmhg,5 mmhg,10"
+      placeholder="Number (mmHg)…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- Q24 — any order across 3 lines -->
+<div class="q-block">
+  <div class="q-label">Question 24</div>
+  <div class="q-text">List 3 situations where PCWP is <strong>greater than</strong> LVEDP (overestimates filling):</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded multi-q24"
+      data-pool="mitral stenosis|atrial masses|peep"
+      placeholder="Situation i…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q24"
+      data-pool="mitral stenosis|atrial masses|peep"
+      placeholder="Situation ii…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">iii.</span>
+    <input type="text" class="graded multi-q24"
+      data-pool="mitral stenosis|atrial masses|peep"
+      placeholder="Situation iii…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- Q25 — any order across 3 lines -->
+<div class="q-block">
+  <div class="q-label">Question 25</div>
+  <div class="q-text">List 3 situations where PCWP is <strong>less than</strong> LVEDP (underestimates filling):</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded multi-q25"
+      data-pool="lvh|aortic insufficiency premature mv closure|extremely high lvedp"
+      placeholder="Situation i…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q25"
+      data-pool="lvh|aortic insufficiency premature mv closure|extremely high lvedp"
+      placeholder="Situation ii…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">iii.</span>
+    <input type="text" class="graded multi-q25"
+      data-pool="lvh|aortic insufficiency premature mv closure|extremely high lvedp"
+      placeholder="Situation iii…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 26</div>
+  <div class="q-text">In which <strong>West Lung Zone</strong> is PCWP NOT a reliable indicator of LVEDV?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="zone 1,zone i,west zone 1,zone one,1"
+      placeholder="Zone…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 27</div>
+  <div class="q-text"><strong>Cannon V waves</strong> correlate with:</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="valve pathology,tr,tricuspid regurgitation,mitral regurgitation,mr,valve regurgitation,valvular pathology,regurgitation"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 28</div>
+  <div class="q-text"><strong>Cannon A waves</strong> correlate with:</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="heart block,junctional rhythm,av block,complete heart block,junctional,av dissociation"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- Q29 — any order across 3 lines -->
+<div class="q-block">
+  <div class="q-label">Question 29</div>
+  <div class="q-text"><strong>Thermodilution</strong> (non-oximetric) cardiac output is inaccurate in the following situations: (3)</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded multi-q29"
+      data-pool="afib|tricuspid regurgitation|intracardiac shunt"
+      placeholder="Situation i…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q29"
+      data-pool="afib|tricuspid regurgitation|intracardiac shunt"
+      placeholder="Situation ii…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">iii.</span>
+    <input type="text" class="graded multi-q29"
+      data-pool="afib|tricuspid regurgitation|intracardiac shunt"
+      placeholder="Situation iii…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 30</div>
+  <div class="q-text">The focus of treatment for <strong>Right Heart Failure and Left Heart Failure are similar</strong>.</div>
+  <div class="tf-row">
+    <button class="tf-btn" data-correct="false" onclick="handleTF(this)">TRUE</button>
+    <button class="tf-btn" data-correct="true" onclick="handleTF(this)">FALSE</button>
+  </div>
+  <div class="inline-feedback">Right and left heart failure have fundamentally <em>different</em> treatment strategies.</div>
+</div>
+
+<!-- ═══ SECTION 6 ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="section-num">06</span>
+  <span class="section-title">Post-Bypass Management</span>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 31</div>
+  <div class="q-text">Which <strong>valve repair</strong> carries the highest level of concern for post-bypass troubles?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="tricuspid,tricuspid valve,tv,tricuspid valve repair"
+      placeholder="Valve…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 32</div>
+  <div class="q-text">Above what <strong>CVP</strong> does continued volume resuscitation become worrisome?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="15,15 mmhg,cvp of 15"
+      placeholder="CVP value…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- ═══ SECTION 7 ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="section-num">07</span>
+  <span class="section-title">Heparin &amp; Protamine</span>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 33</div>
+  <div class="q-text">How is <strong>heparin metabolized</strong>?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="liver and kidney,kidney and liver,hepatic and renal,liver,kidney,renal and hepatic,hepatic renal"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 34</div>
+  <div class="q-text"><strong>Type 2 HIT</strong> occurs rapidly in onset and is associated with high mortality.</div>
+  <div class="tf-row">
+    <button class="tf-btn" data-correct="false" onclick="handleTF(this)">TRUE</button>
+    <button class="tf-btn" data-correct="true" onclick="handleTF(this)">FALSE</button>
+  </div>
+  <div class="inline-feedback">FALSE — Type 1 HIT occurs 2–5 days post-exposure and resolves without treatment. Type 2 HIT occurs days 5–9, carries 20% risk of thrombosis and 40% mortality.</div>
+</div>
+
+<!-- Q35 — fixed order (first = more heparin, second = FFP/AT3, sub = population) -->
+<div class="q-block">
+  <div class="q-label">Question 35</div>
+  <div class="q-text">After giving 400 units/kg of heparin, the patient's ACT remains 300. Name the first and second treatments.</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded"
+      data-answers="more heparin,additional heparin,heparin bolus,give more heparin,repeat heparin,heparin"
+      placeholder="First treatment…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded"
+      data-answers="ffp,fresh frozen plasma,antithrombin iii,at3,at-iii,antithrombin 3,ffp for at3,fresh frozen plasma antithrombin"
+      placeholder="Second treatment…"><span class="feedback-icon"></span></div>
+  <div class="sub-q">
+    <div class="sub-q-label">b. What patient population is at highest risk for being non-responsive?</div>
+    <div class="answer-row">
+      <input type="text" class="graded"
+        data-answers="those on heparin,patients on heparin,hospitalized on heparin,heparin drip,pre-op heparin,chronic heparin,heparin infusion,on heparin"
+        placeholder="Patient population…"><span class="feedback-icon"></span></div>
+  </div>
+</div>
+
+<!-- Q36 — sub-parts in fixed order but major reactions any order -->
+<div class="q-block">
+  <div class="q-label">Question 36</div>
+  <div class="q-text"><strong>Protamine</strong> — answer the following:</div>
+  <div class="sub-q">
+    <div class="sub-q-label">a. How does protamine work?</div>
+    <div class="answer-row">
+      <input type="text" class="graded"
+        data-answers="positive charge binds negative heparin,binds heparin,positively charged binds negatively charged heparin,ionic binding,charge based binding,binds negatively charged heparin,electrostatic,positive binds negative"
+        placeholder="Mechanism…"><span class="feedback-icon"></span></div>
+  </div>
+  <div class="sub-q">
+    <div class="sub-q-label">b. Where else in medicine is protamine used?</div>
+    <div class="answer-row">
+      <input type="text" class="graded"
+        data-answers="nph,nph insulin,insulin,nph insulin formulation"
+        placeholder="Other use…"><span class="feedback-icon"></span></div>
+  </div>
+  <div class="sub-q">
+    <div class="sub-q-label">c. Where does protamine come from?</div>
+    <div class="answer-row">
+      <input type="text" class="graded"
+        data-answers="salmon,salmon sperm,fish,salmon testes"
+        placeholder="Source…"><span class="feedback-icon"></span></div>
+  </div>
+  <div class="sub-q">
+    <div class="sub-q-label">d. Name 3 major reactions (i–iii) and 1 minor reaction (iv) to protamine:</div>
+    <div class="answer-row"><span class="prefix">i.</span>
+      <input type="text" class="graded multi-q36d-major"
+        data-pool="hypotension|anaphylactoid|pulmonary hypertension"
+        placeholder="Major reaction i…"><span class="feedback-icon"></span></div>
+    <div class="answer-row"><span class="prefix">ii.</span>
+      <input type="text" class="graded multi-q36d-major"
+        data-pool="hypotension|anaphylactoid|pulmonary hypertension"
+        placeholder="Major reaction ii…"><span class="feedback-icon"></span></div>
+    <div class="answer-row"><span class="prefix">iii.</span>
+      <input type="text" class="graded multi-q36d-major"
+        data-pool="hypotension|anaphylactoid|pulmonary hypertension"
+        placeholder="Major reaction iii…"><span class="feedback-icon"></span></div>
+    <div class="answer-row"><span class="prefix">iv.</span>
+      <input type="text" class="graded"
+        data-answers="anticoagulation,anticoagulant effect,bleeding,coagulopathy,heparin rebound,anticoag"
+        placeholder="Minor reaction…"><span class="feedback-icon"></span></div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 8 ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="section-num">08</span>
+  <span class="section-title">Respiratory &amp; Valvular Pathology</span>
+</div>
+
+<!-- Q37 — positions ii, iv, v, vi any order among the 4 blanks -->
+<div class="q-block">
+  <div class="q-label">Question 37</div>
+  <div class="q-text">List the 6 categorical reasons for <strong>Hypoxemia</strong>: <span class="given-tag">1 &amp; 3 given</span></div>
+  <div class="answer-row"><span class="prefix">i.</span><input type="text" value="Low FiO₂" disabled style="opacity:0.6;"><span class="feedback-icon">—</span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q37"
+      data-pool="dead space|diffusion impairment|hypoventilation|low mvo2"
+      placeholder="Category ii…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">iii.</span><input type="text" value="Shunt" disabled style="opacity:0.6;"><span class="feedback-icon">—</span></div>
+  <div class="answer-row"><span class="prefix">iv.</span>
+    <input type="text" class="graded multi-q37"
+      data-pool="dead space|diffusion impairment|hypoventilation|low mvo2"
+      placeholder="Category iv…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">v.</span>
+    <input type="text" class="graded multi-q37"
+      data-pool="dead space|diffusion impairment|hypoventilation|low mvo2"
+      placeholder="Category v…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">vi.</span>
+    <input type="text" class="graded multi-q37"
+      data-pool="dead space|diffusion impairment|hypoventilation|low mvo2"
+      placeholder="Category vi…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 38</div>
+  <div class="q-text">Mitral Valve Prolapse–related MR improves with <strong>full ventricular volumes, slow heart rates</strong>.</div>
+  <div class="tf-row">
+    <button class="tf-btn" data-correct="false" onclick="handleTF(this)">TRUE</button>
+    <button class="tf-btn" data-correct="true" onclick="handleTF(this)">FALSE</button>
+  </div>
+  <div class="inline-feedback">FALSE — MVP-related MR improves with full ventricular volumes and <em>normal</em> heart rates, not slow.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 39</div>
+  <div class="q-text"><strong>AFib is well tolerated</strong> in patients with Mitral Stenosis.</div>
+  <div class="tf-row">
+    <button class="tf-btn" data-correct="false" onclick="handleTF(this)">TRUE</button>
+    <button class="tf-btn" data-correct="true" onclick="handleTF(this)">FALSE</button>
+  </div>
+  <div class="inline-feedback">FALSE — AFib is poorly tolerated in mitral stenosis; the atrial kick is critical and rate control is essential.</div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 40</div>
+  <div class="q-text">In patients with Mitral Stenosis the atrial kick accounts for <strong>35%</strong> of cardiac output.</div>
+  <div class="tf-row">
+    <button class="tf-btn" data-correct="true" onclick="handleTF(this)">TRUE</button>
+    <button class="tf-btn" data-correct="false" onclick="handleTF(this)">FALSE</button>
+  </div>
+  <div class="inline-feedback">TRUE — In mitral stenosis the atrial kick accounts for ~35% of cardiac output (vs ~20% in normal physiology).</div>
+</div>
+
+<!-- Q41 — Dx fixed (methemoglobinemia), Tx fixed (methylene blue), side effects any order, rest fixed -->
+<div class="q-block">
+  <div class="q-label">Question 41</div>
+  <div class="q-text">A patient receives a TEE under sedation and arrives in the OR appearing <strong>blue</strong>. Diagnosis and treatment?</div>
+  <div class="answer-row"><span class="prefix">Dx:</span>
+    <input type="text" class="graded"
+      data-answers="methemoglobinemia,met hgb,methemoglobin,methb,meth hgb,methemoglobinemia met hgb"
+      placeholder="Diagnosis…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">Tx:</span>
+    <input type="text" class="graded"
+      data-answers="methylene blue,methylenblue,methylene blue iv"
+      placeholder="Treatment…"><span class="feedback-icon"></span></div>
+  <div class="sub-q">
+    <div class="sub-q-label">b. Side effects of this medication: (any order)</div>
+    <div class="answer-row"><span class="prefix">i.</span>
+      <input type="text" class="graded multi-q41b"
+        data-pool="hypertension|pulse oximetry inaccurate"
+        placeholder="Side effect i…"><span class="feedback-icon"></span></div>
+    <div class="answer-row"><span class="prefix">ii.</span>
+      <input type="text" class="graded multi-q41b"
+        data-pool="hypertension|pulse oximetry inaccurate"
+        placeholder="Side effect ii…"><span class="feedback-icon"></span></div>
+  </div>
+  <div class="sub-q">
+    <div class="sub-q-label">c. Other time you'd use this in cardiac surgery?</div>
+    <div class="answer-row">
+      <input type="text" class="graded"
+        data-answers="vasoplegia,vasoplegic syndrome,refractory vasoplegia,vasoplegia refractory to other medications"
+        placeholder="Other indication…"><span class="feedback-icon"></span></div>
+  </div>
+  <div class="sub-q">
+    <div class="sub-q-label">d. Contraindicated in which patient population?</div>
+    <div class="answer-row">
+      <input type="text" class="graded"
+        data-answers="g6pd,glucose 6 phosphate dehydrogenase deficiency,g6pd deficiency,g-6-pd"
+        placeholder="Contraindication…"><span class="feedback-icon"></span></div>
+  </div>
+</div>
+
+<!-- Q42 — any order across 3 lines -->
+<div class="q-block">
+  <div class="q-label">Question 42</div>
+  <div class="q-text"><strong>Type A dissections</strong> need emergent cardiac intervention for 3 main reasons:</div>
+  <div class="answer-row"><span class="prefix">i.</span>
+    <input type="text" class="graded multi-q42"
+      data-pool="tamponade|coronary dissection|severe aortic insufficiency"
+      placeholder="Reason i…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">ii.</span>
+    <input type="text" class="graded multi-q42"
+      data-pool="tamponade|coronary dissection|severe aortic insufficiency"
+      placeholder="Reason ii…"><span class="feedback-icon"></span></div>
+  <div class="answer-row"><span class="prefix">iii.</span>
+    <input type="text" class="graded multi-q42"
+      data-pool="tamponade|coronary dissection|severe aortic insufficiency"
+      placeholder="Reason iii…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 43</div>
+  <div class="q-text">Sickle Cell SS patient for emergent Type A dissection repair under <strong>deep hypothermic circulatory arrest</strong>. Anesthetic concerns?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="sickling,hgb sickling,sickle cell crisis,exchange transfusion,hypothermia causes sickling,sickling from cooling,complete exchange transfusion,hca causes sickling,cooling causes sickling"
+      placeholder="Your answer…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- ═══ SECTION 9 ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="section-num">09</span>
+  <span class="section-title">Calculations</span>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 44</div>
+  <div class="q-text">Calculate the <strong>Aortic Valve Area</strong> — round to the nearest tenth:</div>
+  <table class="data-table" style="margin-bottom:1rem; width:auto;">
+    <tr><th>Parameter</th><th>Value</th></tr>
+    <tr><td>VTI AV</td><td>20 cm</td></tr>
+    <tr><td>VTI LVOT</td><td>12 cm</td></tr>
+    <tr><td>Diameter LVOT</td><td>20 mm</td></tr>
+  </table>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="1.9,1.9 cm2"
+      placeholder="AVA = … cm²  (round to nearest tenth)"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 45</div>
+  <div class="q-text"><strong>Aortic Valve Area Classification</strong> — fill in area and mean gradient thresholds:</div>
+  <div class="answer-row">
+    <span class="prefix" style="min-width:4rem;">Mild:</span>
+    <input type="text" class="graded" data-answers=">1.5,greater than 1.5,>1.5 cm2,more than 1.5,>1.5cm2" placeholder="Area (cm²)…" style="max-width:160px;">
+    <input type="text" class="graded" data-answers="<20,less than 20,<20 mmhg,under 20,below 20" placeholder="Gradient (mmHg)…" style="max-width:160px;">
+    <span class="feedback-icon"></span>
+  </div>
+  <div class="answer-row">
+    <span class="prefix" style="min-width:4rem;">Moderate:</span>
+    <input type="text" class="graded" data-answers="0.8-1.2,0.8 to 1.2,0.8-1.5,1.0-1.5,moderate,0.8 1.2" placeholder="Area (cm²)…" style="max-width:160px;">
+    <input type="text" class="graded" data-answers="20-40,20 to 40,20-40 mmhg,between 20 and 40" placeholder="Gradient (mmHg)…" style="max-width:160px;">
+    <span class="feedback-icon"></span>
+  </div>
+  <div class="answer-row">
+    <span class="prefix" style="min-width:4rem;">Severe:</span>
+    <input type="text" class="graded" data-answers="<1.0,<0.8,less than 1,less than 0.8,<1,0.8,under 1,under 0.8" placeholder="Area (cm²)…" style="max-width:160px;">
+    <input type="text" class="graded" data-answers=">40,greater than 40,>40 mmhg,over 40,above 40" placeholder="Gradient (mmHg)…" style="max-width:160px;">
+    <span class="feedback-icon"></span>
+  </div>
+</div>
+
+<!-- ═══ SECTION 10 ═══════════════════════════════════════════════ -->
+<div class="section-header">
+  <span class="section-num">10</span>
+  <span class="section-title">TEE Safety</span>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 46</div>
+  <div class="q-text">What is the incidence of <strong>orogastric trauma</strong> from TEE probe?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="0.2%,0.2,0.2 percent,point two percent"
+      placeholder="Incidence…"><span class="feedback-icon"></span></div>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 47</div>
+  <div class="q-text">What is the incidence of <strong>perforation</strong> from TEE probe?</div>
+  <div class="answer-row">
+    <input type="text" class="graded"
+      data-answers="0.01%,0.01,0.01 percent,point zero one percent"
+      placeholder="Incidence…"><span class="feedback-icon"></span></div>
+</div>
+
+<!-- ═══ SECTION 11 — TEE IMAGES (not interactive) ═══════════════ -->
+<div class="section-header">
+  <span class="section-num">11</span>
+  <span class="section-title">TEE Image Identification <span style="font-size:0.75rem; font-weight:400; color:var(--muted);">(complete by hand)</span></span>
+</div>
+
+<div class="image-section">
+  <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Label all structures indicated by arrows and name each view. Complete this section on a printed copy.</p>
+
+  <p style="font-size:0.9rem; font-weight:600; margin-bottom:0.5rem;">Page 1 — Views 1–6</p>
+  <img src="page1.png" alt="TEE Views 1-6" style="width:100%; border-radius:4px; border:1px solid var(--border); margin-bottom:1.5rem;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+  <div class="image-placeholder" style="display:none;">📄 Place <strong>page1.png</strong> in your docs folder<div class="img-name">page1.png</div></div>
+
+  <p style="font-size:0.9rem; font-weight:600; margin-bottom:0.5rem;">Page 2 — Views 7–12</p>
+  <img src="page2.png" alt="TEE Views 7-12" style="width:100%; border-radius:4px; border:1px solid var(--border); margin-bottom:1rem;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+  <div class="image-placeholder" style="display:none;">📄 Place <strong>page2.png</strong> in your docs folder<div class="img-name">page2.png</div></div>
+
+  <div class="note-box">
+    <strong>Reference views include:</strong> ME four chamber, ME two chamber, ME LAX, TG mid SAX, TG two chamber, TG basal SAX, ME mitral commissural, ME AV SAX, ME AV LAX, TG LAX, deep TG LAX, ME bicaval, ME RV inflow-outflow, TG RV inflow, ME asc aortic SAX/LAX, desc aortic SAX/LAX, UE aortic arch LAX/SAX
+  </div>
+</div>
+
+<!-- ═══ SECTION 12 — CORONARY TERRITORY (interactive) ════════════ -->
+<div class="section-header">
+  <span class="section-num">12</span>
+  <span class="section-title">Coronary Artery Territory</span>
+</div>
+
+<div class="q-block">
+  <p style="font-size:0.85rem; color:var(--muted); margin-bottom:1rem;">Using the numbered myocardial segment diagrams, list the segment numbers each artery supplies. Any order is accepted.</p>
+  <img src="page3.png" alt="Coronary territory diagrams" style="width:100%; border-radius:4px; border:1px solid var(--border); margin-bottom:1rem;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+  <div class="image-placeholder" style="display:none;">📄 Place <strong>page3.png</strong> in your docs folder<div class="img-name">page3.png</div></div>
+
+  <!-- RCA: 5, 11, 15 — any order, any separator -->
+  <div class="answer-row">
+    <span class="prefix" style="min-width:3rem;"><strong>RCA</strong></span>
+    <input type="text" class="graded" id="rca-input" placeholder="Segment numbers (e.g. 1, 2, 3)">
+    <span class="feedback-icon" id="rca-icon"></span>
+  </div>
+  <!-- CX: 3, 4, 9, 10 -->
+  <div class="answer-row">
+    <span class="prefix" style="min-width:3rem;"><strong>CX</strong></span>
+    <input type="text" class="graded" id="cx-input" placeholder="Segment numbers (e.g. 1, 2, 3)">
+    <span class="feedback-icon" id="cx-icon"></span>
+  </div>
+  <!-- LAD: 1, 2, 6, 7, 8, 12, 13, 14, 16 -->
+  <div class="answer-row">
+    <span class="prefix" style="min-width:3rem;"><strong>LAD</strong></span>
+    <input type="text" class="graded" id="lad-input" placeholder="Segment numbers (e.g. 1, 2, 3)">
+    <span class="feedback-icon" id="lad-icon"></span>
+  </div>
+</div>
+
+<!-- ═══ SECTION 13 — HEMODYNAMIC SCENARIOS ══════════════════════ -->
+<div class="section-header">
+  <span class="section-num">13</span>
+  <span class="section-title">Hemodynamic Scenarios</span>
+</div>
+
+<div class="q-block">
+  <div class="q-label">Question 48</div>
+  <div class="q-text">For each hemodynamic scenario, identify the appropriate treatment.</div>
+  <div style="overflow-x:auto; margin-top:0.75rem;">
+  <table class="data-table">
+    <thead>
+      <tr><th>CVP</th><th>BP</th><th>CI</th><th>Treatment</th><th></th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>5</td><td>80/45</td><td>1.8</td>
+        <td><input type="text" class="graded"
+          data-answers="volume,volume loading,fluid,give volume,fluid resuscitation,try volume,volume load"
+          placeholder="Treatment…"></td>
+        <td><span class="feedback-icon"></span></td>
+      </tr>
+      <tr>
+        <td>15</td><td>90/60</td><td>1.8</td>
+        <td><input type="text" class="graded"
+          data-answers="inotropic support,inotrope,inotropes,dobutamine,milrinone,inotropic,may not treat if normal svo2,observe if svo2 normal,inotropic support if poor ef"
+          placeholder="Treatment…"></td>
+        <td><span class="feedback-icon"></span></td>
+      </tr>
+      <tr>
+        <td>15</td><td>140/85</td><td>1.8</td>
+        <td><input type="text" class="graded"
+          data-answers="afterload reduction,vasodilator,reduce afterload,nitroprusside,nitro,nitroglycerin,afterload"
+          placeholder="Treatment…"></td>
+        <td><span class="feedback-icon"></span></td>
+      </tr>
+      <tr>
+        <td>18</td><td>80/50</td><td>1.4</td>
+        <td><input type="text" class="graded"
+          data-answers="rhf,right heart failure,milrinone,epi,epinephrine,milrinone epi,concern for rhf,danger rhf,right ventricular failure,rvf,right heart failure milrinone"
+          placeholder="Treatment…"></td>
+        <td><span class="feedback-icon"></span></td>
+      </tr>
+      <tr>
+        <td>10</td><td>120/80</td><td>2.0</td>
+        <td><input type="text" class="graded"
+          data-answers="afterload reduction and volume,afterload reduction,volume and afterload,vasodilator and volume,volume afterload,afterload reduction volume"
+          placeholder="Treatment…"></td>
+        <td><span class="feedback-icon"></span></td>
+      </tr>
+      <tr>
+        <td>12</td><td>85/50</td><td>3.2</td>
+        <td><input type="text" class="graded"
+          data-answers="pressor,vasopressor,norepinephrine,norepi,phenylephrine,vasopressors,vasoconstrictor,pressors"
+          placeholder="Treatment…"></td>
+        <td><span class="feedback-icon"></span></td>
+      </tr>
+      <tr>
+        <td>12</td><td>85/50</td><td>1.5</td>
+        <td><input type="text" class="graded"
+          data-answers="volume then inotrope,more volume then inotrope,volume and inotrope,volume inotrope,fluid then inotrope based on ef,volume inotrope based on ef,volume then inotrope based on ef"
+          placeholder="Treatment…"></td>
+        <td><span class="feedback-icon"></span></td>
+      </tr>
+      <tr>
+        <td>6</td><td>100/65</td><td>2.2</td>
+        <td><input type="text" class="graded"
+          data-answers="volume as needed,volume prn,volume,may give volume,fluid as needed,observe,prn volume,volume if needed"
+          placeholder="Treatment…"></td>
+        <td><span class="feedback-icon"></span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-reset" onclick="resetAll()">↺ Reset &amp; Retake</button>
+</div>
+
+</main>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+// MULTI-GROUP POOL MATCHING ENGINE
+// Each input in a group has data-pool="optionA|optionB|optionC"
+// The grader checks: does user input match any pool option? AND
+// is that option not already claimed by another input in the group?
+// ═══════════════════════════════════════════════════════════════
+
+// Maps of keyword aliases for pool tokens
+const POOL_ALIASES = {
+  // Q1
+  "antegrade":           ["antegrade","antegrade cardioplegia"],
+  "retrograde":          ["retrograde","retrograde cardioplegia"],
+  "hand held":           ["hand held","handheld","hand-held","hand held cardioplegia","direct coronary","ostial","handheld cardioplegia"],
+  "vf coronary":         ["vf","vfib","ventricular fibrillation","vf with coronary perfusion","vf coronary perfusion","beating heart","coronary perfusion","vf with coronary"],
+  // Q5
+  "distention ischemia": ["lv distention causes ischemia","distention ischemia","ventricular distension","distention","ischemia","lv distention","ventricular distention","lv ischemia"],
+  "air removal":         ["removal of air","air removal","remove air","air bubbles","air embolism","deairing","de-airing","remove air bubbles"],
+  // Q6
+  "root vent":           ["root vent","aortic root vent","antegrade perfusion cannula to root vent","change antegrade to root vent","aortic vent","root","aortic root"],
+  "pulmonary vein":      ["pulmonary vein","cannula in pulm vein","pulm vein through la","through la and mv","pulmonary vein cannula","left atrium","via pulmonary vein","pulm vein"],
+  // Q18
+  "preload":             ["preload","volume","filling","end diastolic volume","edv"],
+  "afterload":           ["afterload","resistance","svr","systemic vascular resistance","vascular resistance"],
+  "contractility":       ["contractility","inotropy","contractile function","myocardial contractility","inotropic state"],
+  // Q21
+  "pressure reflects volume": ["pressure reflects volume","pressure reflects volume loading","pressure volume","pressure reflects filling","pressure equals volume"],
+  "closed system":       ["closed system","heart is a closed system","continuous flow","one direction","no pathology","no shunts","volume flows in one direction","no valve pathology"],
+  // Q22
+  "overinflated balloon":["overinflated balloon","balloon overinflated","balloon too inflated","over wedged","overwedged","balloon overinflation"],
+  "peep":                ["peep","positive end expiratory pressure","high peep","positive pressure","positive end-expiratory pressure"],
+  // Q24
+  "mitral stenosis":     ["mitral stenosis","ms","mitral valve stenosis","mv stenosis"],
+  "atrial masses":       ["atrial masses","atrial mass","atrial myxoma","atrial obstruction","masses causing obstruction","atrial tumor"],
+  // Q25
+  "lvh":                 ["lvh","left ventricular hypertrophy","lv hypertrophy","hypertrophy","concentric hypertrophy"],
+  "aortic insufficiency premature mv closure": ["ai with premature closure","aortic insufficiency premature mv closure","premature mv closure","premature mitral valve closure","ai premature","ar premature closure","aortic regurgitation premature closure","ai"],
+  "extremely high lvedp":["extremely high lvedp","very high lvedp","lvedp is extremely high","high lvedp","non-compliant lv","extremely elevated lvedp"],
+  // Q29
+  "afib":                ["afib","atrial fibrillation","af","irregular rhythm","a fib","atrial fib"],
+  "tricuspid regurgitation":["tr","tricuspid regurgitation","tricuspid valve regurgitation","tricuspid insufficiency"],
+  "intracardiac shunt":  ["intracardiac shunt","shunt","cardiac shunt","vsd","asd","intra-cardiac shunt","intracardiac shunts"],
+  // Q36d major
+  "hypotension":         ["hypotension","systemic hypotension","low blood pressure","bp drop","low bp","hypotensive"],
+  "anaphylactoid":       ["anaphylactoid","anaphylaxis","anaphylactic","allergic reaction","anaphylactoid reaction","anaphylactic reaction"],
+  "pulmonary hypertension":["pulmonary hypertension","pulmonary htn","pah","pulm htn","elevated pa pressure","pulmonary vasoconstriction","increased pa pressure"],
+  // Q37
+  "dead space":          ["dead space","dead space ventilation","increased dead space","vd/vt","vd vt","anatomical dead space"],
+  "diffusion impairment":["diffusion impairment","diffusion defect","diffusion limitation","diffusion abnormality","impaired diffusion"],
+  "hypoventilation":     ["hypoventilation","decreased ventilation","low minute ventilation","respiratory depression","alveolar hypoventilation"],
+  "low mvo2":            ["low mvo2","low mixed venous oxygen","low svo2","decreased mvo2","mvo2","low mixed venous","decreased mixed venous"],
+  // Q41b
+  "hypertension":        ["hypertension","htn","elevated bp","high blood pressure","increased bp","systemic hypertension"],
+  "pulse oximetry inaccurate":["cant read pulse ox","pulse ox inaccurate","interferes with pulse oximetry","pulse oximetry","spo2 inaccurate","pulse oximetry interference","cannot read pulse ox","pulse ox"],
+  // Q42
+  "tamponade":           ["tamponade","cardiac tamponade","pericardial tamponade","pericardial effusion tamponade"],
+  "coronary dissection": ["coronary dissection","coronary artery dissection","coronary involvement","coronary ischemia","coronary artery involvement"],
+  "severe aortic insufficiency":["severe ai","severe aortic insufficiency","severe aortic regurgitation","ar","ai","severe ar","aortic insufficiency","aortic regurgitation"],
+};
+
+function normalize(str) {
+  return str.toLowerCase()
+    .replace(/[^a-z0-9\s\.\-\/]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function matchesAlias(userNorm, token) {
+  const aliases = POOL_ALIASES[token] || [token];
+  return aliases.some(a => {
+    const an = normalize(a);
+    if (userNorm === an) return true;
+    if (an.length > 3 && userNorm.includes(an)) return true;
+    if (an.length > 3 && an.includes(userNorm)) return true;
+    return false;
+  });
+}
+
+function getPoolTokens(input) {
+  return input.dataset.pool ? input.dataset.pool.split('|').map(t => t.trim()) : [];
+}
+
+function getGroupInputs(input) {
+  // find all inputs in the same multi-group by class
+  const classes = Array.from(input.classList).filter(c => c.startsWith('multi-'));
+  if (classes.length === 0) return null;
+  return Array.from(document.querySelectorAll('.' + classes[0]));
+}
+
+function checkMultiGroup(changedInput) {
+  const groupInputs = getGroupInputs(changedInput);
+  if (!groupInputs) return checkSingle(changedInput);
+
+  const poolTokens = getPoolTokens(changedInput);
+
+  // Use Map so DOM elements work correctly as keys
+  const assignments = new Map(); // inp -> matched token | false | null
+
+  groupInputs.forEach(inp => {
+    const val = normalize(inp.value.trim());
+    if (!val) { assignments.set(inp, null); return; }
+    const matched = poolTokens.find(t => matchesAlias(val, t));
+    assignments.set(inp, matched || false);
+  });
+
+  // Detect conflicts: same token claimed by multiple inputs
+  const tokenClaims = {};
+  groupInputs.forEach(inp => {
+    const tok = assignments.get(inp);
+    if (tok) {
+      if (!tokenClaims[tok]) tokenClaims[tok] = [];
+      tokenClaims[tok].push(inp);
+    }
+  });
+
+  // Now mark each input
+  groupInputs.forEach(inp => {
+    const val = inp.value.trim();
+    if (!val) {
+      if (answered.has(inp)) answered.delete(inp);
+      inp.classList.remove('correct','wrong');
+      inp.dataset.wasCorrect = '';
+      const icon = inp.nextElementSibling;
+      if (icon && icon.classList.contains('feedback-icon')) icon.textContent = '';
+      return;
+    }
+
+    const tok = assignments.get(inp);
+    let isCorrect = false;
+    if (tok) {
+      // correct only if this input is the sole claimant of this token
+      isCorrect = tokenClaims[tok].length === 1;
+    }
+
+    const wasCorrect = inp.dataset.wasCorrect === 'true';
+    answered.add(inp);
+    inp.dataset.wasCorrect = isCorrect ? 'true' : 'false';
+    inp.classList.toggle('correct', isCorrect);
+    inp.classList.toggle('wrong', !isCorrect);
+    const icon = inp.nextElementSibling;
+    if (icon && icon.classList.contains('feedback-icon')) {
+      icon.textContent = isCorrect ? '✓' : '✗';
+      icon.style.color = isCorrect ? 'var(--correct)' : 'var(--wrong)';
+    }
+  });
+
+  updateScore();
+}
+
+function checkSingle(input) {
+  const raw = input.value.trim();
+  if (!raw) {
+    if (answered.has(input)) answered.delete(input);
+    input.classList.remove('correct','wrong');
+    input.dataset.wasCorrect = '';
+    const icon = input.nextElementSibling;
+    if (icon && icon.classList.contains('feedback-icon')) icon.textContent = '';
+    updateScore();
+    return;
+  }
+
+  const userNorm = normalize(raw);
+  const answers = input.dataset.answers.split(',').map(a => normalize(a.trim()));
+  const isCorrect = answers.some(a => {
+    if (userNorm === a) return true;
+    if (a.length > 3 && userNorm.includes(a)) return true;
+    if (a.length > 3 && a.includes(userNorm)) return true;
+    return false;
+  });
+
+  answered.add(input);
+  input.dataset.wasCorrect = isCorrect ? 'true' : 'false';
+  input.classList.toggle('correct', isCorrect);
+  input.classList.toggle('wrong', !isCorrect);
+  const icon = input.nextElementSibling;
+  if (icon && icon.classList.contains('feedback-icon')) {
+    icon.textContent = isCorrect ? '✓' : '✗';
+    icon.style.color = isCorrect ? 'var(--correct)' : 'var(--wrong)';
+  }
+  updateScore();
+}
+
+// ─── CORONARY TERRITORY GRADER ───────────────────────────────────
+function parseNumbers(str) {
+  return str.match(/\d+/g)?.map(Number).sort((a,b)=>a-b) || [];
+}
+function arraysEqual(a, b) {
+  return a.length === b.length && a.every((v,i) => v === b[i]);
+}
+
+function checkCoronary(inputId, iconId, correct) {
+  const input = document.getElementById(inputId);
+  const icon = document.getElementById(iconId);
+  const val = input.value.trim();
+
+  if (!val) {
+    if (answered.has(input)) answered.delete(input);
+    input.classList.remove('correct','wrong');
+    input.dataset.wasCorrect = '';
+    icon.textContent = '';
+    updateScore();
+    return;
+  }
+
+  const userNums = parseNumbers(val);
+  const isCorrect = arraysEqual(userNums, correct.slice().sort((a,b)=>a-b));
+
+  answered.add(input);
+  input.dataset.wasCorrect = isCorrect ? 'true' : 'false';
+  input.classList.toggle('correct', isCorrect);
+  input.classList.toggle('wrong', !isCorrect);
+  icon.textContent = isCorrect ? '✓' : '✗';
+  icon.style.color = isCorrect ? 'var(--correct)' : 'var(--wrong)';
+  updateScore();
+}
+
+// ─── SCORING ─────────────────────────────────────────────────────
+let totalGraded = 0;
+let totalCorrect = 0;
+let answered = new Set();
+let tfScore = 0;
+let tfTotal = 0;
+
+function recount() {
+  totalCorrect = 0;
+  answered.forEach(inp => { if (inp.dataset.wasCorrect === 'true') totalCorrect++; });
+  totalGraded = answered.size;
+}
+
+function updateScore() {
+  recount();
+  const combined = totalGraded + tfTotal;
+  const combinedCorrect = totalCorrect + tfScore;
+  const pct = combined > 0 ? Math.round((combinedCorrect / combined) * 100) : 0;
+  document.getElementById('scoreDisplay').textContent = `${combinedCorrect} / ${combined}`;
+  document.getElementById('pctDisplay').textContent = combined > 0 ? `${pct}%` : '—';
+  document.getElementById('scoreBar').style.width = `${pct}%`;
+}
+
+// ─── EVENT LISTENERS ─────────────────────────────────────────────
+document.querySelectorAll('input.graded').forEach(input => {
+  // skip coronary inputs — handled separately below
+  if (['rca-input','cx-input','lad-input'].includes(input.id)) return;
+
+  const isMulti = Array.from(input.classList).some(c => c.startsWith('multi-'));
+  const handler = () => isMulti ? checkMultiGroup(input) : checkSingle(input);
+  input.addEventListener('blur', handler);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') input.blur(); });
+});
+
+// Coronary territory
+document.getElementById('rca-input').addEventListener('blur', () => checkCoronary('rca-input','rca-icon',[5,11,15]));
+document.getElementById('cx-input').addEventListener('blur', () => checkCoronary('cx-input','cx-icon',[3,4,9,10]));
+document.getElementById('lad-input').addEventListener('blur', () => checkCoronary('lad-input','lad-icon',[1,2,6,7,8,12,13,14,16]));
+['rca-input','cx-input','lad-input'].forEach(id => {
+  document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById(id).blur(); });
+});
+
+// ─── TRUE / FALSE ─────────────────────────────────────────────────
+function handleTF(btn) {
+  const row = btn.closest('.tf-row');
+  if (row.dataset.answered === 'true') return;
+  row.dataset.answered = 'true';
+
+  const isCorrect = btn.dataset.correct === 'true';
+  row.querySelectorAll('.tf-btn').forEach(b => {
+    b.classList.add('disabled');
+    if (b === btn) b.classList.add(isCorrect ? 'selected-correct' : 'selected-wrong');
+  });
+
+  const fb = row.nextElementSibling;
+  if (fb && fb.classList.contains('inline-feedback')) {
+    fb.classList.add('show', isCorrect ? 'correct' : 'wrong');
+  }
+
+  tfTotal++;
+  if (isCorrect) tfScore++;
+  updateScore();
+}
+
+// ─── RESET ───────────────────────────────────────────────────────
+function resetAll() {
+  if (!confirm('Reset all answers and start over?')) return;
+
+  document.querySelectorAll('input.graded').forEach(input => {
+    input.value = '';
+    input.classList.remove('correct','wrong');
+    input.dataset.wasCorrect = '';
+    const icon = input.nextElementSibling;
+    if (icon && icon.classList.contains('feedback-icon')) icon.textContent = '';
+  });
+
+  // coronary icons
+  ['rca-icon','cx-icon','lad-icon'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = '';
+  });
+
+  document.querySelectorAll('.tf-row').forEach(row => {
+    row.dataset.answered = '';
+    row.querySelectorAll('.tf-btn').forEach(btn => {
+      btn.classList.remove('selected-correct','selected-wrong','disabled');
+    });
+  });
+
+  document.querySelectorAll('.inline-feedback').forEach(fb => {
+    fb.classList.remove('show','correct','wrong');
+  });
+
+  answered.clear();
+  tfScore = 0;
+  tfTotal = 0;
+  totalGraded = 0;
+  totalCorrect = 0;
+  updateScore();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
