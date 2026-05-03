@@ -28,7 +28,7 @@ Used in amniotic fluid embolism
     - Must redose every 30min 5cc
   
 !!! info  
-> If epidural bolus fails then take out and place spinal 1.6-1.8
+    If epidural bolus fails then take out and place spinal 1.6-1.8
 
 - GETA
   - 0.5MAC Des with 50% nitrous
@@ -51,7 +51,7 @@ Used in amniotic fluid embolism
 ## Labor Epidural Plan
 
 !!! danger
-> Do not do if platelets are less than 100k
+    Do not do if platelets are less than 100k
 
 - 0.2% Ropi plain
   - 5-10cc bolus with 50-100mcg fentanyl

@@ -1,31 +1,46 @@
 ﻿---
 title: Cardiac Physiology Review
-tags: [vision loss, bone cement, ]   
+tags: [cardiac anesthesia, monitors, cvp, swan, svo2]   
 ---
 
-## CVSpecificMonitors{CV}
+## Valve Pathophysiology
 
-### CVP
+| Lesion | HR | Rhythm | Preload | Afterload | Contractility | Avoid |
+|--------|----|--------|---------|-----------|---------------|-------|
+| **AS** | 60-80 | NSR essential | Maintain | Maintain | Support | Tachycardia, hypotension, vasodilators |
+| **AR** | 80-100 | NSR preferred | Maintain | Reduce | Support | Bradycardia, high SVR |
+| **MS** | 60-80 | NSR essential | Maintain | Maintain | Preserve | Tachycardia, AF with fast rate |
+| **MR** | 80-100 | NSR preferred | Maintain | Reduce | Support | Bradycardia, high SVR |
+| **TR** | 80-100 | NSR preferred | RV preload | Reduce PVR | Support RV | Hypoxia, hypercarbia, N2O |
 
-![cvp](../assets/img/cvp.png)
+**Stenosis = Slow and Full** — fixed orifice needs time and pressure
 
-- Loss of a Wave: 
-  - A fib or V pacing without atrial contraction
-- Large a Wave: 
-  - Atria emptying against high resistance
-  - Tricuspid stenosis, diastolic dysfx, ischemic heart, RVH, AV dissociation, junctional, V paced, PVC
-- Large v Wave:
-  - Tricuspid regurg
+**Regurgitation = Faster and Forward** — faster HR reduces regurgitant fraction,
+lower afterload promotes forward flow
+
+## CVSpecificMonitors
   
 ### PA Catheter
 
 ![alt text](../assets/img/pa.png)
 
-![PA](../assets/img/pap1.png)
+![pacath](<../assets/img/pa pressures.png>)
 
-![pacath](</assets/img/pa pressures.png>)
+### CVP
+
+![cvp](../assets/img/cvp.png)
+
+- Loss of a Wave:
+  - A fib or V pacing without atrial contraction
+- Large a Wave:
+  - Atria emptying against high resistance
+  - Tricuspid stenosis, diastolic dysfx, ischemic heart, RVH, AV dissociation, junctional, V paced, PVC
+- Large v Wave:
+  - Tricuspid regurg
 
 #### When PAOP Does NOT Predict LVEDV
+
+![PA](../assets/img/pap1.png)
 
 - Overestimates
   - Impaired LV compliance ie. ischemia

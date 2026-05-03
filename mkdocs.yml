@@ -81,17 +81,14 @@ copyright: >
 
 nav:
   - Home: index.md
-  - CVOR Guide:
+  - CVOR Overview:
     - cvor/index.md
     - CVOR Case Guide: cvor/cv_or_guide.md
     - Structural Heart & EP: cvor/structural_heart.md
     - Intraoperative TEE: cvor/TEE.md
     - Physiology: cvor/cardiac_physiology.md
     - Pharmacology: cvor/CVPharm.md
-    - Mechanical Support: cvor/ECMO.md
-    - Coagulation: cvor/TEG.md
-    - Pericardial Baffle: cvor/pericardial_baffle.md
-    - Ultrasound Basics: cvor/ultrasound.md
+    - Mechanical Support: cvor/Mechanical_Support.md
   - Case-Specific Notes:
     - cases/index.md
     - Thoracic Anesthesia: cases/thoracic_review.md

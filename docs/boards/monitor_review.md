@@ -10,10 +10,10 @@ tags: [Monitors, bp, ekg, physics, cvp, pa, pulse ox]
 ![bp](../assets/img/bp.png)
 
 !!! info
-> General guideline is no more than 20-30% drop in MAP from baseline
+    General guideline is no more than 20-30% drop in MAP from baseline
 
 !!! danger
-> Sitting Position: BP decreases by 0.74mmHg per cm
+    Sitting Position: BP decreases by 0.74mmHg per cm
 
 ## EKG
 

@@ -8,6 +8,6 @@ TEG6 algorithm proposed by Syracuse anesthesiologist Dr. Courtney Maxey-Jones. S
 
 ![alt text](../assets/img/IMG_9937.PNG)
 
-Courtesy of [ICU One Pager!](https://onepagericu.com/)
+Courtesy of [ICU One Pager!](https://onepagericu.com/) Another TEG algorithm.
 
-[View PDF](../assets/pdf/REPLACE-WITH-FILENAME.pdf){ .md-button }
+[View PDF](../assets/pdf/ICU_one_pager+-+TEG+v12.pdf){ .md-button }

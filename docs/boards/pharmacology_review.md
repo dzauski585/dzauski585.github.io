@@ -60,14 +60,14 @@ If these medications are prescribed for drug eluding stents DES, review ACC guid
   - 1.25mg or 0.5ml will normally yield good images with patients wieghing less than 90kg.
 
 !!! danger
-> Total ICG dosages shoudl not exceed 2mg/kg per patient
+    Total ICG dosages shoudl not exceed 2mg/kg per patient
 
 ## Local Anesthetics
 
 ### Max Dose
 
 !!! info
-> Use Safe Local App
+    Use Safe Local App
 
 - Chloroprocaine 12mg/kg
 - Bupivacaine 3mg/kg
@@ -82,32 +82,32 @@ If these medications are prescribed for drug eluding stents DES, review ACC guid
 ## Sugammadex Safety
 
 !!! info
->Ok in dialysis patients but need special filter
+    Ok in dialysis patients but need special filter
 
 !!! danger
->3.57mg of sugammadex binds to 1mg of Rocuronium
+    3.57mg of sugammadex binds to 1mg of Rocuronium
 
 !!! danger
->Crystallized with zofran
+    Crystallized with zofran
 
 !!! danger
->Binds to hormonal birth control
+    Binds to hormonal birth control
 
 !!! danger
->Use atropine and neostigmine with pregnant patients due to possibility of sugammadex binding to progesterone. 0.1mg atropine per 1mg neostigmine.
+    Use atropine and neostigmine with pregnant patients due to possibility of sugammadex binding to progesterone. 0.1mg atropine per 1mg neostigmine.
 
 ## Preoperative Cessation of SGLT2i
 
 From [American College of Cardiology](https://www.acc.org/Latest-in-Cardiology/Articles/2022/10/07/17/21/Preoperative-Cessation-of-SGLT2i#:~:text=When%20caring%20for%20patients%20being,ketoacidosis%20and%20urinary%20tract%20infections.)
 
 !!! info
-> When caring for patients being referred for surgery it is important to advise patients to stop their SGLT2-inhibitors 3-4 days prior to surgery to minimize the risk of postoperative ketoacidosis and urinary tract infections.
+    When caring for patients being referred for surgery it is important to advise patients to stop their SGLT2-inhibitors 3-4 days prior to surgery to minimize the risk of postoperative ketoacidosis and urinary tract infections.
 
 !!! info
-> The cardiovascular teams should be aware of recent Food and Drug Administration (FDA) advisory warnings for increased incidence of euglycemic diabetic ketoacidosis when SGLT2-inhibitors medications are continued prior to non-cardiac surgeries.
+    The cardiovascular teams should be aware of recent Food and Drug Administration (FDA) advisory warnings for increased incidence of euglycemic diabetic ketoacidosis when SGLT2-inhibitors medications are continued prior to non-cardiac surgeries.
 
 !!! danger
-> The FDA released multiple warnings related to the elevated risk of DKA. The recommendation is for canagliflozin, dapagliflozin, and empagliflozin to be discontinued 3 days before scheduled surgery and ertugliflozin should be stopped at least 4 days prior to surgery. This differs from other diabetic medications which are typically held the day of surgery. With the increase in SLGT2-inhibitors being prescribed for both diabetes and heart failure, it is crucial that providers are aware of this preoperative hold parameter and recognize patients at risk for EDKA.
+    The FDA released multiple warnings related to the elevated risk of DKA. The recommendation is for canagliflozin, dapagliflozin, and empagliflozin to be discontinued 3 days before scheduled surgery and ertugliflozin should be stopped at least 4 days prior to surgery. This differs from other diabetic medications which are typically held the day of surgery. With the increase in SLGT2-inhibitors being prescribed for both diabetes and heart failure, it is crucial that providers are aware of this preoperative hold parameter and recognize patients at risk for EDKA.
 
 Euglycemic diabetic ketoacidosis (EDKA) is an uncommon but life-threatening diagnosis and must be considered in postoperative patients who have been on SGLT2-inhibitors. EDKA in this setting has been reported to occur any time during the course of medication use.
 

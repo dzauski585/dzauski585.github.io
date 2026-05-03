@@ -8,7 +8,11 @@ Practical Approach to Transesophageal Echocardiography 4th edition by Scott Reev
 
 [TTE Guide PDF](https://www.asecho.org/guideline/guidelines-for-performing-a-comprehensive-transthoracic-echocardiographic-examination-in-adults/)
 
-[TEE Practice](https://pie.med.utoronto.ca/TEE/TEE_content/TEE_standardViews_intro.html)
+[TEE Practice with University of Toronto TEE Simulator](https://pie.med.utoronto.ca/TEE/TEE_content/TEE_standardViews_intro.html)
+
+[TEE Practice University of Utah](https://echo.anesthesia.med.utah.edu/)
+
+[CRNA TEE Encyclopedia](https://crna-tee.org/)
 
 ## Ultrasound Physics
 

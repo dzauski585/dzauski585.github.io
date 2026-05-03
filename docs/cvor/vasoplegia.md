@@ -5,7 +5,7 @@ tags: [pharm, cardiac]
 
 # Vasoplegia
 
-Vasoplegia is a type fo distributive shock that follows cardiac surgery in up to 25% of cases. This leads to prolonged ICU stays, renal fialure, and increased mortality. Catecholamine resistant vasoplegia can be lethal with mortality rates approaching 25%. Vasoplegia can also exist in septic shock, end stage liver disease, and glucocorticoid deficiency.
+Vasoplegia is a type of distributive shock that follows cardiac surgery in up to 25% of cases. This leads to prolonged ICU stays, renal fialure, and increased mortality. Catecholamine resistant vasoplegia can be lethal with mortality rates approaching 25%. Vasoplegia can also exist in septic shock, end stage liver disease, and glucocorticoid deficiency.
 
 ## Risk Factors
 

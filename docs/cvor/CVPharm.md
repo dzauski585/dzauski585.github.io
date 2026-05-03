@@ -29,7 +29,7 @@ These anticoagulant effects are mitigated by administering the correct dose of p
 
 See this pdf for some interesting persecptives on protamine administration such as the rate of reactions if the patient takes aspirin or does it make sense to give it through a PIV...
 
-[View PDF](../assets/pdf/REPLACE-WITH-FILENAME.pdf){ .md-button }
+[View PDF](../assets/pdf/Protamine_Administration.pdf){ .md-button }
 
 ## Cyanokit (Hydroxocobalamin)
 
@@ -51,7 +51,7 @@ See this pdf for some interesting persecptives on protamine administration such 
 ### Side Effects
 
 !!! info
-> Increased Blood Pressure
+    Increased Blood Pressure
 
 - Allergic Reaction
 - Acute renal failure with ATN
@@ -64,7 +64,7 @@ See this pdf for some interesting persecptives on protamine administration such 
 ## Methylene Blue
 
 - Along with being quite helpful in hypotension methylene blue is also used to treat methemoglobinemia. This condition is the result of Fe2+ of hemoglobin getting oxidized to Fe3+. This significantly reduces the oxygen carrying capacity of hemoglobin. 
-- Finally it also has been shown to help in malaria treatment by stopping the immunologically active byproduct production from the Plasmodium species. 
+- Finally it also has been shown to help in malaria treatment by stopping the immunologically active byproduct production from the Plasmodium species.
 
 ### Dose
 
@@ -83,10 +83,10 @@ See this pdf for some interesting persecptives on protamine administration such 
 ### Side Effects
 
 !!! danger
-> Serotonin Syndrome
+    Serotonin Syndrome
 
 !!! info
-> Increased Blood Pressure
+    Increased Blood Pressure
 
 - Decreased pulse ox to approx 85%
 - Dark blue/green urine
@@ -97,6 +97,8 @@ See this pdf for some interesting persecptives on protamine administration such 
 Link to a great paper: [Vasoplegia after CPB](https://pmc.ncbi.nlm.nih.gov/articles/PMC7328055/)
 
 ## Comparison Between Methylene Blue and Hydroxocobalamin
+
+[Mechanism Review](../assets/pdf/barnes-et-al-2020-vasoplegia-after-cardiopulmonary-bypass-a-narrative-review-of-pathophysiology-and-emerging-targeted.pdf){ .md-button }
 
 A small sample size study showed no difference between the two treatment options when faced with vasoplegia status post cardiac bypass.  
 

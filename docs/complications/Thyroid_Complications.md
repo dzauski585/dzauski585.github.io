@@ -10,7 +10,7 @@ Thyroidectomy is a surgery that involves the removal of the entire thyroid gland
    - This is the most common cause of stridor within the first 24 hours after thyroidectomy. It is usually associated with difficulty breathing. It is differentiated from hematoma or recurrent laryngeal nerve (RLN) injury because of no visible signs of neck discoloration or vocal disturbances, respectively. Preoperatively, for select patients, corticosteroids may help minimize the occurrence.
 
 !!! danger
-> Acute management involves the use of racemic epinephrine.
+    Acute management involves the use of racemic epinephrine.
 
 1. Hematoma
    - This will often present with neck swelling, discoloration, pain and pressure. Like laryngeal edema, this will likely occur within the first 24 hours postop. Depending on the size, emergent surgical evacuation may be necessary. For large hematoma, it may be prudent to keep the patient spontaneously breathing while the surgical team makes a small incision and evacuation in order to relieve potential tracheal compression prior to securing the airway with endotracheal tube.
