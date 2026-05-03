@@ -67,13 +67,20 @@ tags: [anesthesia, cardiac anesthesia, cardiac surgery ]     # TAG names should 
 
 ??? info "Click for Induction Tips"
     - It is very rare to give the high dose opioids and versed for induction. Most will induce the patient like it’s a sick hip fracture; A little versed (2-5mg), a little fentanyl (50-100mcg), touch of propofol and topped off with some zemuron. Ketamine is also frequently part of the induction 25-50mg.
-    - The use of high versed and opioids harkens to a time when anesthetic agents were not available on the bypass machines. High opioids were thought to provide the most stable of anesthetics, with blood pressure swings being minimal, the “stress” response minimized. The use of high dose benzo’s were for amnesia. Present day every patient coming for surgery are on beta-blockers; the stress response to induction is minimized. In addition, lets be practical in our thought process, most patients who come for elective coronary surgery had a stress test at some point and did not die during that process. In addition our goal in anesthesia is maintain normal hemodynamics. When you induce the sick old hip fracture patient or do a BiV pacer/AICD, would ever consider giving 20 ml of Fentanyl and 10mg of versed for a “stable” induction? Not in a million years. So why do that for cardiac patient? If they have a normal blood pressure of 120-140 , maintaining that during our induction should be fine. 
+    - The use of high versed and opioids harkens to a time when anesthetic agents were not available on the bypass machines. High opioids were thought to provide the most stable of anesthetics, with blood pressure swings being minimal, the “stress” response minimized. The use of high dose benzo’s were for amnesia. Present day every patient coming for surgery are on beta-blockers; the stress response to induction is minimized. In addition, lets be practical in our thought process, most patients who come for elective coronary surgery had a stress test at some point and did not die during that process. In addition our goal in anesthesia is maintain normal hemodynamics. When you induce the sick old hip fracture patient or do a BiV pacer/AICD, would ever consider giving 20 ml of Fentanyl and 10mg of versed for a “stable” induction? Not in a million years. So why do that for cardiac patient? If they have a normal blood pressure of 120-140 , maintaining that during our induction should be fine.
     - In the setting of a high opioid induction when there is no surgical stimulation for about an hour after induction, you will find yourself having to support low blood pressure while trying to focus on placing lines and obtaining TEE images.  High normal BP is better than low BP for coronary, cerebral and renal perfusion, especially in the setting of Aortic Stenosis, mitral Stenosis and tight Left Main coronary disease. As a clinician new to cardiac anesthesia it might not seem bad when you have an attending able to push your phenylephrine when you are scrubbed doing lines, but when you are all alone, it can a daunting task. You may notice I am more concerned about the dose of opioid than versed for induction. It tends to be the opioids that cause the greatest drop in BP especially when given with propofol. However, it should be noted that the versed dose, especially in the elderly, can have the biggest impact in post-op extubation times
     - Sternotomy = Single lumen tube 7.5 or 8.0. Some like the 8.5 ETT when using a Blocker, however this is not required for placement. The ICU team greatly appreciates at least a 7.5 ETT , please do not force a large ETT in a tiny old lady and leave the ICU with no cuff leak. TEE in of themselves can increase dysphagia by up to 4%, adding a large ETT actually promotes swallowing difficulty postop as well.
 
-- Then the neck will be prepped usually on the right side (both sides prepped just in case) and the patient will be placed in a slight T-berg. 
+- Then the neck will be prepped usually on the right side (both sides prepped just in case) and the patient will be placed in a slight T-berg.
 - You will use the avoguard hand wash in the room to “scrub”.
 - Then you will get your gown and gloves on for the central line.
+  - This will be double lumen cordis
+
+!!! info
+    When placing the IJ line the best way to avoid a pneumothorax is a perpendicular approach to vein cannulation. I see many trying to enter the vein at a 30-45 degree angle. You can’t see the end of your needle in this approach. Especially with 2D ultrasound you have a high likelihood of PTX using such a low angle of approach. Try using an 80 degree approach with the needle entry point touching the US probe. In this manner when you enter the vein the tip of your needle will be visible on your US screen.
+
+- A single lumen CVC is also used occasionaly:
+  - Zho Line for bicaval cannulation in mini thoracotomy Triscuspid/repair/replace, ASD closure and as requested based on patient size.
 
 ??? info "Click if new to Central Line Placement"
     - Talk through what you are doing and this will instill confidence in others you do know what you are doing. ‘I see IJ lateral to the carotid, the IJ is collapsible when I press down with the probe, I am going down with my needle at a steep angle towards the ipsilateral nipple as I aspirate’ etc etc. Once the attendings get to know you, they won’t hover as much, they just want to be confident you know what you are doing… and you do! At the beginning, silence and performing incorrect actions is more scary than narrating exactly what you are doing. Make sure you can see your needle tip as you are entering the IJ.
@@ -134,6 +141,9 @@ Good landmarks are midaxillary line at the level of the 4th or 5th rib or the ni
   - Ancef is primary
   - Vanco additional if MRSA positive
 - Ensure the patient has had a beta blocker in the last 24 hours. If not give some esmolol or metoprolol depending on hemodynamics.
+
+!!! info
+    You should be done around 0810 at the latest!
 
 ## Off Pump CABG
 
