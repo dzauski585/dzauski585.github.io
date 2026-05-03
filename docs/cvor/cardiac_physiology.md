@@ -1,6 +1,6 @@
 ﻿---
 title: Cardiac Physiology Review
-tags: [cardiac anesthesia, monitors, cvp, swan, svo2]   
+tags: [cardiac anesthesia, monitors, cvp, swan, svo2, valves]   
 ---
 
 ## Valve Pathophysiology
