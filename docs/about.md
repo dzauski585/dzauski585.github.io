@@ -1,4 +1,4 @@
----
+﻿---
 title: About & Attribution
 ---
 
@@ -6,7 +6,7 @@ title: About & Attribution
 
 Built for CRNA students rotating through cardiac anesthesia.
 Content reflects local practice at a single hospital and should not
-replace institutional protocols or clinical judgment.
+replace institutional protocols or clinical judgment. If you are a reference creator and do not see you work cited please reach out to rectify that situation. 
 
 ## References & Attribution
 
@@ -19,6 +19,7 @@ replace institutional protocols or clinical judgment.
 | [American Society of Anesthesiologists](https://www.asahq.org) | GLP1 guidelines |
 | [American College of Cardiology](https://www.acc.org) | SGLT2 perioperative guidance |
 | [Wallace Cardiac Anesthesia Guide](https://www.cardiacengineering.com/cardiaca.htm) | Background reference |
+| [Favicons](https://www.flaticon.com/free-icons/anesthesia) |
 
 ## Disclaimer
 

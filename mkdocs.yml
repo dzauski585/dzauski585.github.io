@@ -90,26 +90,22 @@ nav:
     - Pharmacology: cvor/CVPharm.md
     - Mechanical Support: cvor/ECMO.md
     - Coagulation: cvor/TEG.md
-    - Pericardial Baffle: complications/pericardial_baffle.md
+    - Pericardial Baffle: cvor/pericardial_baffle.md
+    - Ultrasound Basics: cvor/ultrasound.md
   - Case-Specific Notes:
     - cases/index.md
     - Thoracic Anesthesia: cases/thoracic_review.md
     - OB Anesthesia: cases/ob_review.md
+    - TIVA & TCI: cases/TIVA.md
   - Complications:
     - complications/index.md
     - Case Complications: complications/complications.md
     - Thyroid Surgery: complications/Thyroid_Complications.md
     - Cardiac Arrest in OR: complications/cardiac_arrest_OR.md
     - Hyperperfusion Syndrome: complications/hyperperfusion.md
-    - Corneal Abrasion: periop/corneal_abrasion.md
-  - Periop Reference:
-    - Goal Directed Fluids: periop/goal_directed_fluid_therapy.md
-    - Perioperative Insulin: periop/Insulin_Periop.md
-    - GLP1 / SGLT2: periop/GLP1_SGLT2.md
-    - Ultrasound Basics: periop/ultrasound.md
-    - TIVA & TCI: cases/TIVA.md
-    - Gastric Ultrasound: cases/gastric_US.md
+    - Corneal Abrasion: complications/corneal_abrasion.md
   - Boards Review:
+    - boards/index.md
     - Anatomy & Physiology: boards/Anatomy_physiology.md
     - Pharmacology Review: boards/pharmacology_review.md
     - Monitors Review: boards/monitor_review.md
@@ -118,4 +114,6 @@ nav:
     - Cephalosporin Cross-Reactivity: boards/Cephalosporin_Cross.md
     - Stanford Periop Abx: boards/stanford_perioperative_abx_guide.md
     - Stanford Emergency Manual: boards/Stanford_Emergency_Manual.md
+    - Goal Directed Fluids: boards/goal_directed_fluid_therapy.md
+    - Gastric Ultrasound: boards/gastric_US.md
   - About: about.md

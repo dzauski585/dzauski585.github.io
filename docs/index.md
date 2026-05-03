@@ -1,10 +1,10 @@
----
+﻿---
 title: CVOR Anesthesia Reference
 ---
 
 # CVOR Anesthesia Reference
 
-A clinical reference for CRNA students rotating through cardiac anesthesia.
+A clinical reference for CRNA students rotating through cardiac anesthesia. You will also find lots of other reference material relating to board review, specific general case pearls of wisdom, general case complications to be aware of, and lots of great supporting references throughout. 
 
 ---
 

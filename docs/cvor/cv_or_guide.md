@@ -1,11 +1,6 @@
----
+﻿---
 title: Cardiac Anesthesia CVOR Guide
-author: dz  
-date: 2024-10-20
-categories: [Anesthesia, Cardiac]
 tags: [anesthesia, cardiac anesthesia, cardiac surgery ]     # TAG names should always be lowercase
-pdf_file: "/assets/pdf/cardiac_surgery_blocks.pdf"
-pin: true
 ---
 
 ## Resources
@@ -184,7 +179,7 @@ One last key to success is to save the charting for when you are on pump. Pay at
 
 #### Pacemaker Settings Review
 
-![pacer](/assets/img/pace.jpg)
+![pacer](../assets/img/pace.jpg)
 
 #### Defib Settings
 
@@ -257,7 +252,7 @@ Good landmarks are midaxillary line at the level of the 4th or 5th rib or the ni
 
 See the PDF regarding the blocks as it covers all of the blocks that we do!
 
-{% pdf {{ page.pdf_file }} %}
+[View PDF](../assets/pdf/REPLACE-WITH-FILENAME.pdf){ .md-button }
 
 ## Important Links
 
