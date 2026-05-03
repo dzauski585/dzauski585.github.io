@@ -3,10 +3,12 @@ site_url: https://dzauski585.github.io
 site_author: dz
 site_description: Cardiac anesthesia reference for CRNA students
 
+docs_dir: docs
 theme:
   name: material
   logo: assets/logo.png
   favicon: assets/favicon.png
+  custom_dir: overrides
 
   palette:
     # Light mode
@@ -70,6 +72,10 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+
+extra:
+  analytics:
+    provider: custom
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6

@@ -141,12 +141,18 @@ Good landmarks are midaxillary line at the level of the 4th or 5th rib or the ni
 - Do not give albumin until the IMA are done being taken down...otherwise you have expensive urine and no real help to your preload/CO
 - May need higher doses of pressers  and pushes during the times when the heart is being manipulated or held in an abnormal position. Look in the chest!
 - Usually do not need amicar. Ok to ask the surgeon.
+- [Video from UPENN CV Surgeons Demonstrating entire off pump CABG procedure with coronary shunt](https://mmcts.org/tutorial/2040)
+  - This is a deep dive and not required material to watch prior to CVOR day.
+- Before protamine admin at end of case graft will be flow probed
+  - Pulsatility Index (PI) should be <3 to indicate a good graft
 
 ## Minimally Invasive Surgery
 
 ### Robotic CABG
 
 - On vs off pump or pump assist
+  - Pump assisted cabg without aortic cross clamp/arresting heart has been shownt to be equal if not superior to standard on pump CABG
+  - Off pump CABG has been shown to have equal outcomes to on pump CABG.
 - Bronchial blocker after central line
 - Amicar not  needed if not going on bypass
 - Groin cannulation if on pump
@@ -200,7 +206,20 @@ Good landmarks are midaxillary line at the level of the 4th or 5th rib or the ni
 
 - With a CABG, you will have some ‘down time’ between sternotomy and going on pump as they harvest the saphenous vein and/or IMA. When taking down the LIMA/RIMA watch your tidal volumes and peep and the surgeon will typically ask or make you keep bringing the lungs down.
 
-- Prior to cannulation the surgeon will ask for Heparin, which comes from perfusion, and you’ll draw an ACT 3 minutes after. Goal ACT 400. Watch your pressure after heparin due to its histamine release.
+- Prior to cannulation the surgeon will ask for Heparin: Dose: 400-450un/kg
+
+- Draw an ACT 3 minutes after administration
+
+- Goal ACT 400. Watch your pressure after heparin due to its histamine release.
+  - Other mechanisms of hypotension following large dose heparin admin have been theorized such as decreased blood viscosity
+
+??? "Click for Heparin Resistance"
+    - If first dose of heparin does not yield act of 400-450:
+    - If act is close (300s) ok to give additional heparin 10,000ish
+    - If act is near baseline: redose heparin
+    - If act continues to be near baseline give antithrombin 3 (AT3) concentrate
+      - dose from pharmacy
+    - Can also give 2 units FFP for enough AT3
 
 - In order of cannulation: they will first cannulate the aorta, then insert their venous cannula(s), next is the antegrade cardioplegia cannula, retrograde cardioplegia cannula if they are using it, and then finally the LV vent.
 
@@ -220,6 +239,9 @@ Good landmarks are midaxillary line at the level of the 4th or 5th rib or the ni
   
 - Turn the ventilator off/standby, turn off vaporizer, turn FGF down to 0.1LPM
 - Ensure perfusion has turned on their isoflurane vaporizer. Communicate with the patient's anesthetic requirements.
+- The surgical team will now place additional cannulas and clamp the aorta, arrest the heart
+  - Retrograde cardioplegia line will be connected to pa cath transducer stopcock and flushed. Turn the stopcock so that the yellow line monitors coronary sinus pressure. 
+- [Deep Dive on Cardioprotection](https://www.ncbi.nlm.nih.gov/books/NBK567795/)
 - Paralytics: Redosing is preference but it is accepted practice to redose at the beginning of bypass and/or upon rewarming/or when the aortic clamp comes off. DON’T give prior to transport or at the end of the case, will only serve to prolong the extubations.
 - Electrolytes/Labs: Keep the glucose under 180. Insulin drips and boluses are your friend. Keep an eye on acid base status and potassium/calcium. Perfusion will be adjusting their setup for titration but we can offer assistance as needed.
 - Monitor urine output. It is good practice to know the prebypass, bypass, and post bypass urine amounts. If output is low while on bypass, let perfusion know (goal ~1mL/kg/hr on pump).
@@ -353,11 +375,19 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 ## Chest Closure and Transport
 
 - After the chest closes CVP should rise so be mindful of additional volume if CVP is already 15.
+- BUT ensure you have given enough volume consider cell saver, albumin, crystalloid
+  - CHECK the TEE
+  - CHECK your hemodynamic values
 - Lungs down so the sternum does not trap the lungs between it. Usually no PEEP during chest closure.
 - Once the sternum is closed the level of stimulation drops off and so does the blood pressure.
 - If the patient is stable, begin preparing for transport. Cleaning up your lines, disconnecting cables etc. Wait for vital signs cables until the final second before moving over. TEE probe can come out and an OGT can go in. When moving to the bed the patient can become unstable due to hemodynamic shifts and air bubble movement. Watch the monitor and know where your push line is. Have pressers ready.
 - Make sure you have enough oxygen to get the unit. Be judicious in ventilation. Be mindful of all wires and cables. This will be the time the pacer wires are pulled out or you lose an arterial line. Get to the ICU safely and assist with hook up as needed. - Have a sign out report ready for the team.
+- Remove TEE
+- Place OGT
 - PLUG IN THE BED ONCE IN ICU
+
+!!! warning
+    If you have to uptitrate drips and things are not looking stable do not remove TEE probe!
 
 ## Before Leaving the Room
 

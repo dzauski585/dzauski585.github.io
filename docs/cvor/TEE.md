@@ -14,6 +14,8 @@ Practical Approach to Transesophageal Echocardiography 4th edition by Scott Reev
 
 [CRNA TEE Encyclopedia](https://crna-tee.org/)
 
+[TEE Calculator Made Easy](https://www.e-echocardiography.com/calculators)
+
 ## Ultrasound Physics
 
 The basics of ultrasound:
