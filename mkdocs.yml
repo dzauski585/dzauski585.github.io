@@ -74,6 +74,7 @@ markdown_extensions:
       permalink: true
 
 extra:
+  comments: true
   analytics:
     provider: custom
 
