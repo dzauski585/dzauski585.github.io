@@ -2342,6 +2342,54 @@
 
 
 
+<div class="md-source-feedback" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--md-default-fg-color--lightest)">
+  <h3 style="margin-bottom: 0.5rem">💬 Suggest new content or an edit</h3>
+
+  <form id="feedback-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="720d3e94-f55a-4152-b7c0-add1125ca428">
+    <input type="hidden" name="subject" value="MkDocs Feedback">
+    <input type="hidden" name="page" value="Anatomy &amp; Physiology — https://dzauski585.github.io/boards/Anatomy_physiology/">
+    <input type="hidden" name="redirect" value="false">
+
+    <select name="type" style="width:100%; padding:0.5rem; margin-bottom:0.5rem;
+      background:var(--md-default-bg-color); color:var(--md-default-fg-color);
+      border:1px solid var(--md-default-fg-color--light); border-radius:4px">
+      <option value="new content">💡 Suggest new content</option>
+      <option value="edit">✏️ Suggest an edit to this page</option>
+      <option value="other">💬 Other feedback</option>
+    </select>
+
+    <textarea name="message" rows="4" required="" placeholder="Describe your suggestion..." style="width:100%; padding:0.5rem; margin-bottom:0.5rem;
+        background:var(--md-default-bg-color); color:var(--md-default-fg-color);
+        border:1px solid var(--md-default-fg-color--light); border-radius:4px; 
+        font-family:inherit; font-size:0.85rem">    </textarea>
+
+    <button type="submit" style="padding:0.4rem 1.2rem; background:var(--md-primary-fg-color);
+        color:var(--md-primary-bg-color); border:none; border-radius:4px; cursor:pointer">
+      Send anonymously →
+    </button>
+  </form>
+
+  <p id="feedback-success" style="display:none; color: green; margin-top:0.5rem">
+    ✅ Thanks! Your suggestion has been sent.
+  </p>
+</div>
+
+<script>
+  document.getElementById("feedback-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: new FormData(this)
+    }).then(r => r.json()).then(data => {
+      if (data.success) {
+        this.style.display = "none";
+        document.getElementById("feedback-success").style.display = "block";
+      }
+    });
+  });
+</script>
+
                 
               </article>
             </div>
