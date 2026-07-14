@@ -118,6 +118,62 @@
     .score-bar { padding: 0.6rem 1rem; flex-wrap: wrap; }
     .data-table { font-size: 0.78rem; }
   }
+
+  /* ─── Credit / instructions blurb under the score ─── */
+  .credit-note {
+    background: var(--accent-light); border: 1px solid #b8cfe8;
+    border-left: 3px solid var(--accent); border-radius: var(--radius);
+    padding: 0.85rem 1.15rem; margin-bottom: 1.75rem;
+  }
+  .credit-note p { font-size: 0.86rem; line-height: 1.5; color: var(--accent); }
+  .credit-note p + p { margin-top: 0.4rem; }
+  .credit-note .credit-hint { color: var(--muted); font-size: 0.8rem; }
+  .credit-note .credit-key { margin-right: 0.15rem; }
+
+  /* ─── Answer reveal (collapsible, appears after a few wrong tries) ─── */
+  .answer-reveal { margin-top: 0.9rem; }
+  .answer-reveal[hidden] { display: none; }
+  .answer-reveal > summary {
+    display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer;
+    list-style: none; user-select: none;
+    font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--pending); background: var(--pending-bg);
+    border: 1px solid #d4b87a; border-radius: 99px;
+    padding: 0.32rem 0.8rem; transition: background 0.15s, box-shadow 0.15s;
+  }
+  .answer-reveal > summary::-webkit-details-marker { display: none; }
+  .answer-reveal > summary::before { content: '🔑'; font-size: 0.78rem; }
+  .answer-reveal > summary:hover { background: #efe4c8; }
+  .answer-reveal > summary:focus-visible { outline: none; box-shadow: 0 0 0 2px #d4b87a; }
+  .answer-reveal[open] > summary { background: #efe4c8; }
+  .answer-reveal[open] > summary .lbl-show { display: none; }
+  .answer-reveal:not([open]) > summary .lbl-hide { display: none; }
+  .answer-reveal-body {
+    margin-top: 0.6rem; padding: 0.7rem 1rem;
+    background: var(--correct-bg); border: 1px solid #b9dcc6;
+    border-left: 3px solid var(--correct); border-radius: 4px;
+    font-size: 0.86rem; color: var(--text); line-height: 1.55;
+  }
+  .answer-reveal-body .ans-line { margin: 0.18rem 0; }
+  .answer-reveal-body .ans-sub {
+    font-style: italic; color: var(--muted); font-size: 0.78rem;
+    margin: 0.55rem 0 0.1rem;
+  }
+  .answer-reveal-body .ans-label {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+    color: var(--muted); margin-right: 0.3rem;
+  }
+  .answer-reveal-body .ans-any {
+    display: inline-block; font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--pending); background: var(--pending-bg);
+    border: 1px solid #e0cfa0; border-radius: 3px;
+    padding: 0.04rem 0.35rem; margin-right: 0.45rem; vertical-align: 0.05em;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .answer-reveal > summary { transition: none; }
+  }
 </style>
 </head>
 <body>
@@ -135,6 +191,11 @@
 </div>
 
 <main>
+
+<div class="credit-note">
+  <p>This assessment was created by <strong>Dr.&nbsp;Fetterman</strong>. The content is meant to support your learning in cardiac anesthesia.</p>
+  <p class="credit-hint"><span class="credit-key">🔑</span> Attempting a question twice will make a <em>Show answer</em> button appear.</p>
+</div>
 
 <!-- ═══ SECTION 1 ═══════════════════════════════════════════════ -->
 <div class="section-header">
@@ -795,7 +856,7 @@
   </div>
   <div class="answer-row">
     <span class="prefix" style="min-width:4rem;">Severe:</span>
-    <input type="text" class="graded" data-answers="<1.0,<0.8,less than 1,less than 0.8,<1,0.8,under 1,under 0.8" placeholder="Area (cm²)…" style="max-width:160px;">
+    <input type="text" class="graded" data-range="lt:1" data-reveal="&lt; 1.0 cm²" placeholder="Area (cm²)…" style="max-width:160px;">
     <input type="text" class="graded" data-answers=">40,greater than 40,>40 mmhg,over 40,above 40" placeholder="Gradient (mmHg)…" style="max-width:160px;">
     <span class="feedback-icon"></span>
   </div>
@@ -1027,15 +1088,54 @@ function normalize(str) {
     .trim();
 }
 
+// Shared answer matcher. Accepts an exact match, or a fuzzy match ONLY when the
+// user typed at least 4 characters AND it lines up with whole words — so stray
+// single letters (e.g. "t" sitting inside "valve pathology") no longer pass.
+function looseMatch(userNorm, candidate) {
+  const a = normalize(candidate);
+  if (!userNorm || !a) return false;
+  if (userNorm === a) return true;                        // exact (covers short aliases: ai, tr, 5…)
+  if (userNorm.length < 4 || a.length < 4) return false;  // block sub-4-char fuzzy matches
+  if (userNorm.includes(a)) return true;                  // user wrote a superset of a full answer
+  const esc = userNorm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp('(^|\\s)' + esc + '(\\s|$)').test(a); // answer contains the input as whole word(s)
+}
+
+// Numeric range grader for threshold questions (e.g. AVA classification).
+// spec is "lt:X" (any value < X), "gt:X" (any value > X), or "range:A-B" (A..B inclusive).
+// Reads operators from the RAW text so "<1", "less than 1", "under 0.8" all work,
+// while a bare number is judged on its value ("0.99" and "0.8" pass lt:1; "1" does not).
+function matchesRange(raw, spec) {
+  const m = (spec || '').match(/^(gt|lt|range):(.+)$/);
+  if (!m) return false;
+  const kind = m[1];
+  let s = (raw || '').toLowerCase();
+  const hasLess = /<|≤|less than|under|below|lower than|up to|at most|no more than/.test(s);
+  const hasMore = />|≥|greater than|over|above|more than|at least|higher than|exceed/.test(s);
+  s = s.replace(/cm²|cm2|cm\^2|mmhg|mm hg|cm|mm|hg/g, ' '); // drop units so "cm2" isn't read as a 2
+  const nums = (s.match(/\d+(?:\.\d+)?/g) || []).map(Number);
+  if (!nums.length) return false;
+  if (kind === 'lt') {
+    const X = Number(m[2]);
+    if (hasMore) return false;
+    return hasLess ? nums[0] <= X : nums[0] < X;
+  }
+  if (kind === 'gt') {
+    const X = Number(m[2]);
+    if (hasLess) return false;
+    return hasMore ? nums[0] >= X : nums[0] > X;
+  }
+  const [A, B] = m[2].split('-').map(Number);
+  if (nums.length >= 2) {
+    const lo = Math.min(nums[0], nums[1]), hi = Math.max(nums[0], nums[1]);
+    return lo >= A - 1e-9 && hi <= B + 1e-9;
+  }
+  return nums[0] >= A - 1e-9 && nums[0] <= B + 1e-9;
+}
+
 function matchesAlias(userNorm, token) {
   const aliases = POOL_ALIASES[token] || [token];
-  return aliases.some(a => {
-    const an = normalize(a);
-    if (userNorm === an) return true;
-    if (an.length > 3 && userNorm.includes(an)) return true;
-    if (an.length > 3 && an.includes(userNorm)) return true;
-    return false;
-  });
+  return aliases.some(a => looseMatch(userNorm, a));
 }
 
 function getPoolTokens(input) {
@@ -1122,13 +1222,13 @@ function checkSingle(input) {
   }
 
   const userNorm = normalize(raw);
-  const answers = input.dataset.answers.split(',').map(a => normalize(a.trim()));
-  const isCorrect = answers.some(a => {
-    if (userNorm === a) return true;
-    if (a.length > 3 && userNorm.includes(a)) return true;
-    if (a.length > 3 && a.includes(userNorm)) return true;
-    return false;
-  });
+  let isCorrect = false;
+  if (input.dataset.answers) {
+    isCorrect = input.dataset.answers.split(',').some(a => looseMatch(userNorm, a));
+  }
+  if (!isCorrect && input.dataset.range) {
+    isCorrect = matchesRange(raw, input.dataset.range);
+  }
 
   answered.add(input);
   input.dataset.wasCorrect = isCorrect ? 'true' : 'false';
@@ -1277,6 +1377,184 @@ function resetAll() {
   updateScore();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     ANSWER REVEAL — adds a collapsible "Show answer" to each question.
+     Answers are read from the grading data already in the page, so
+     there is nothing extra to maintain: edit a data-answers / data-pool
+     and its reveal updates automatically.
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  // How many wrong tries on a question before its reveal link appears.
+  // Set to 0 to show every reveal from the start.
+  const REVEAL_AFTER = 2;
+
+  const capitalize = s => { s = (s || '').trim(); return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; };
+
+  // Display polish ONLY. The grader still uses data-answers / data-pool as-is;
+  // this map just decides how the *first* (canonical) answer is shown so that
+  // formulas and acronyms read cleanly instead of "Do2 = ..." or "Ffp".
+  // Keyed on the lowercased answer/pool token. Anything not listed just gets
+  // its first letter capitalized. To override one question directly, add a
+  // data-reveal="..." attribute to its input — that always wins.
+  const PRETTY = {
+    // ── equations & units ──
+    'do2 = 1.39 x hb x sao2 + 0.003 x pao2 x co': 'DO₂ = (1.39 × Hb × SaO₂ + 0.003 × PaO₂) × CO',
+    'vo2 = co x ca - co x cv': 'VO₂ = CO × (CaO₂ − CvO₂)\u2003(Fick)',
+    'svr = map - cvp / co x 80': 'SVR = (MAP − CVP) / CO × 80',
+    'dynes sec cm-5': 'dynes · sec · cm⁻⁵',
+    'sv x hr': 'CO = SV × HR',
+    '1.9': '1.9 cm²',
+    '5': '5–10 mmHg',
+    // ── acronyms / short answers ──
+    'ffp': 'FFP (for antithrombin III deficiency)',
+    'nph': 'NPH insulin',
+    'g6pd': 'G6PD deficiency',
+    'liver and kidney': 'Liver & kidney',
+    'tell surgeon': 'Notify surgeon & perfusionist (inadequate SVC drainage)',
+    'valve pathology': 'Valve pathology (e.g. TR)',
+    'heart block': 'Heart block / junctional rhythm',
+    'oxygen consumption increases': '↑ O₂ consumption (lighter anesthesia, loss of paralysis)',
+    'sickling': 'Cooling → HgB sickling; needs exchange transfusion before HCA',
+    // ── pool tokens ──
+    'vf coronary': 'VF with coronary perfusion',
+    'distention ischemia': 'LV distention → ischemia',
+    'air removal': 'Removal of air',
+    'root vent': 'Aortic root vent (push → pull)',
+    'pulmonary vein': 'Pulmonary vein (via LA & MV)',
+    'peep': 'PEEP',
+    'lvh': 'LVH',
+    'afib': 'AFib',
+    'low mvo2': 'Low MvO₂',
+    'aortic insufficiency premature mv closure': 'AI with premature MV closure',
+    'extremely high lvedp': 'Extremely high LVEDP',
+    'atrial masses': 'Atrial masses (obstruction)',
+    'closed system': 'Closed system (one-way flow, no pathology)',
+    'severe aortic insufficiency': 'Severe AI',
+    'pulse oximetry inaccurate': 'Pulse oximetry inaccurate'
+  };
+  const pretty = raw => PRETTY[(raw || '').trim().toLowerCase()] || capitalize(raw);
+
+  // Human-readable form of a data-range spec, used when no data-reveal is given.
+  function rangeToText(spec) {
+    const m = (spec || '').match(/^(gt|lt|range):(.+)$/);
+    if (!m) return '';
+    if (m[1] === 'gt') return '> ' + m[2];
+    if (m[1] === 'lt') return '< ' + m[2];
+    return m[2].split('-').join('–');
+  }
+
+  // Hard-coded coronary answers (these live in JS, not in data-* attributes)
+  function coronaryBody() {
+    const rows = [['RCA', '5, 11, 15'], ['CX', '3, 4, 9, 10'], ['LAD', '1, 2, 6, 7, 8, 12, 13, 14, 16']];
+    return rows.map(([a, n]) =>
+      `<div class="ans-line"><span class="ans-label">${a}</span>${n}</div>`).join('');
+  }
+
+  // Build the answer HTML for a question block by reading its own data.
+  function buildBody(block) {
+    if (block.querySelector('#rca-input')) return coronaryBody();
+
+    const parts = [];
+    const seenPools = new Set();
+
+    block.querySelectorAll('.sub-q-label, .answer-row').forEach(el => {
+      if (el.classList.contains('sub-q-label')) {
+        parts.push(`<div class="ans-sub">${el.textContent.trim()}</div>`);
+        return;
+      }
+      // .answer-row
+      const inputs = el.querySelectorAll('input.graded');
+      if (!inputs.length) return;
+      const prefixEl = el.querySelector('.prefix');
+      const label = prefixEl ? prefixEl.textContent.trim() : '';
+      const singles = [];
+
+      inputs.forEach(inp => {
+        const multi = Array.from(inp.classList).find(c => c.startsWith('multi-'));
+        if (multi) {
+          if (seenPools.has(multi)) return;
+          seenPools.add(multi);
+          const opts = (inp.dataset.pool || '').split('|').map(pretty).filter(Boolean);
+          parts.push(`<div class="ans-line"><span class="ans-any">any order</span>${opts.join(' &nbsp;·&nbsp; ')}</div>`);
+        } else if (inp.dataset.answers || inp.dataset.reveal || inp.dataset.range) {
+          const shown = inp.dataset.reveal
+            || (inp.dataset.answers ? pretty(inp.dataset.answers.split(',')[0]) : rangeToText(inp.dataset.range));
+          if (shown) singles.push(shown);
+        }
+      });
+
+      if (singles.length) {
+        const lbl = label ? `<span class="ans-label">${label}</span>` : '';
+        parts.push(`<div class="ans-line">${lbl}${singles.join(' &nbsp;·&nbsp; ')}</div>`);
+      }
+    });
+
+    return parts.join('');
+  }
+
+  // Attach a reveal to every question block that has gradable text answers.
+  const reveals = [];
+  document.querySelectorAll('.q-block').forEach(block => {
+    const body = buildBody(block);
+    if (!body) return; // pure True/False or hand-graded blocks — skip
+
+    const details = document.createElement('details');
+    details.className = 'answer-reveal';
+    if (REVEAL_AFTER > 0) details.hidden = true;
+    details.innerHTML =
+      '<summary><span class="lbl-show">Show answer</span>' +
+      '<span class="lbl-hide">Hide answer</span></summary>' +
+      '<div class="answer-reveal-body">' + body + '</div>';
+    block.appendChild(details);
+
+    block._wrong = 0;
+    block._reveal = details;
+    reveals.push(details);
+
+    block.querySelectorAll('input.graded').forEach(inp => {
+      inp.addEventListener('blur', () => {
+        // Runs after the page's own grader has set data-was-correct.
+        if (inp.dataset.wasCorrect === 'false') {
+          block._wrong++;
+          if (block._wrong >= REVEAL_AFTER) details.hidden = false;
+        }
+      });
+    });
+  });
+
+  // When a True/False is answered wrong, also highlight the correct button
+  // so the student can see the right choice (explanation already shows).
+  if (typeof window.handleTF === 'function') {
+    const origTF = window.handleTF;
+    window.handleTF = function (btn) {
+      origTF(btn);
+      const row = btn.closest('.tf-row');
+      const correctBtn = row && row.querySelector('.tf-btn[data-correct="true"]');
+      if (correctBtn && !correctBtn.classList.contains('selected-correct')) {
+        correctBtn.classList.add('selected-correct');
+      }
+    };
+  }
+
+  // Fold reveals back up on reset.
+  if (typeof window.resetAll === 'function') {
+    const origReset = window.resetAll;
+    window.resetAll = function () {
+      const before = document.querySelectorAll('.tf-row[data-answered="true"]').length;
+      origReset();
+      // origReset returns early (no change) if the user cancels the confirm dialog.
+      const after = document.querySelectorAll('.tf-row[data-answered="true"]').length;
+      const graded = document.querySelectorAll('input.graded.correct, input.graded.wrong').length;
+      if (before > 0 && after === 0 || graded === 0) {
+        document.querySelectorAll('.q-block').forEach(b => { if (b._wrong !== undefined) b._wrong = 0; });
+        reveals.forEach(d => { d.open = false; if (REVEAL_AFTER > 0) d.hidden = true; });
+      }
+    };
+  }
+})();
 </script>
 </body>
 </html>
