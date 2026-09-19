@@ -29,14 +29,15 @@ tags: [anesthesia, cardiac anesthesia, cardiac surgery ]     # TAG names should 
 - Propofol 100mg vial, dosing is age and situation dependent around 30mcg/kg/min
 - Precdex dosing is age and situation dependent around 0.3 mcg/kg/min
 - Insulin 2-4un/hr ONLY IF blood sugar is greater than 150 preop
-- Nicardipine Have in ther room not spiked for isolated CABG, AVR, and patients less than 70. Dosing 5mg/hr then titrate.
+- Nicardipine Consider having in the room not spiked for isolated CABG, AVR, and patients less than 70. Dosing 5mg/hr then titrate.
 - Milrinone for mitral, tricuspid, and multiple combination surgery 0.25mcg/kg/hr
 - Epi in the room for low ef, sick, multiple combination surgery (check with preceptor before preparing) 0.02mcg/kg/min
 
 ### Syringes
 
 - Midazolam, 5-10mg
-- Fentanyl, 250-500mcg
+- Methadone, 0.2mg/kg max dose of 30mg
+- Fentanyl, 100-250mcg (if using  methadone) 250-500mcg (if not using methadone)
 - Propofol, 200mg
 - Rocuronium 100mg
 - Cefazolin 2-3g
