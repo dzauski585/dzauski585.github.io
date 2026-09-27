@@ -16,6 +16,9 @@ A clinical reference for CRNA students rotating through cardiac anesthesia. You 
 | [Cardiac Pharmacology](cvor/CVPharm.md) | Protamine, milrinone, vasoplegia drugs |
 | [Mechanical Support](cvor/Mechanical_Support.md) | ECMO, Impella, IABP |
 | [Structural Heart & EP](cvor/structural_heart.md) | TAVR, clips, lead extractions |
+| [CV Test](../assessment.html) | Test of key conepts related to the CVOR not required for SRNAs |
+| [Methadone Tips](cvor/methadone.md) | Evolving use of IV methadone for  cardiac surgery |
+| [Papers Published by our Docs](cvor/papers.md) | Publications by our team |
 
 ---
 
