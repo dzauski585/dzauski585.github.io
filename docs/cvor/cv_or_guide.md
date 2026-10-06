@@ -372,7 +372,7 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 - Factor 7
 - Surgical Bleeding
 - [Pericardial Baffle for aortotomy incision lines](../assets/pdf/use-of-pericardial-baffle-in-the-management-of-intractable-bleeding-in-patients-undergoing-aortic-surgery.pdf)
-- [TEG if you have it](TEG.md)
+- [TEG if you have it...we do not](TEG.md)
 
 ## Returning to Bypass
 
@@ -383,6 +383,30 @@ Large dose in a relatively short time frame. Consider using calcium and/or vaso 
 
 !!! Danger
     Do not let the surgeon remove the aortic cannula if the patient is unstable Communicate before they pull it.
+
+## Arterial Line Dampening
+
+### Synmptoms
+
+- 10-60min of low BP
+- 10-40 points difference
+
+### Mechanism
+
+- Post bypass vasospasm due to hypothermia/pressors
+- Altered arterial elasticity due to non pulsatile flow
+
+### Treatment
+
+- Wait
+- Cannulate femorally
+- NIBP
+
+### Prevetion
+
+- Rewarm
+- Brachial over radial
+- Patience
 
 ## Chest Closure and Transport
 
