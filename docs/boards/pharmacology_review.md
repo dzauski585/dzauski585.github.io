@@ -1,4 +1,4 @@
-﻿---
+---
 title: Pharmacology Review
 tags: [pharm, cardiac, locals, anticoagulants]   
 ---
@@ -21,9 +21,9 @@ See the [coagulation cascade](../boards/Anatomy_physiology.md#coagulation-cascad
 ![dual](../assets/img/dualantiplt.png)
 
 - 3-5-7 days
-  - Brillinta (Ticagrelor) - Plavix (clopidogrel)-Effient (Prasugrel)
+  - Brilinta (Ticagrelor) - Plavix (clopidogrel)-Effient (Prasugrel)
 
-If these medications are prescribed for drug eluding stents DES, review ACC guidelines on discontinuing or postpone the case as needed. See the graphics from the 2023 ECC
+If these medications are prescribed for drug eluting stents DES, review ACC guidelines on discontinuing or postpone the case as needed. See the graphics from the 2023 ECC
 
 ### NOACS and DOACS and What to do!
 
@@ -57,10 +57,10 @@ If these medications are prescribed for drug eluding stents DES, review ACC guid
 - Preparation
   - Mix ICG with 10ml sterile water to obtain 2.5mg/ml
 - Administration
-  - 1.25mg or 0.5ml will normally yield good images with patients wieghing less than 90kg.
+  - 1.25mg or 0.5ml will normally yield good images with patients weighing less than 90kg.
 
 !!! danger
-    Total ICG dosages shoudl not exceed 2mg/kg per patient
+    Total ICG dosages should not exceed 2mg/kg per patient
 
 ## Local Anesthetics
 
@@ -72,8 +72,8 @@ If these medications are prescribed for drug eluding stents DES, review ACC guid
 - Chloroprocaine 12mg/kg
 - Bupivacaine 3mg/kg
 - Lidocaine 4.5 or 7mg/kg
-- Ropiviciane 3mg/kg
-- Fun math trick: 1mg lidocaine = 3.6mg ropivicaine
+- Ropivacaine 3mg/kg
+- Fun math trick: 1mg lidocaine = 3.6mg ropivacaine
 
 ### Do you need to Dilute Locals?
 
@@ -107,7 +107,7 @@ From [American College of Cardiology](https://www.acc.org/Latest-in-Cardiology/A
     The cardiovascular teams should be aware of recent Food and Drug Administration (FDA) advisory warnings for increased incidence of euglycemic diabetic ketoacidosis when SGLT2-inhibitors medications are continued prior to non-cardiac surgeries.
 
 !!! danger
-    The FDA released multiple warnings related to the elevated risk of DKA. The recommendation is for canagliflozin, dapagliflozin, and empagliflozin to be discontinued 3 days before scheduled surgery and ertugliflozin should be stopped at least 4 days prior to surgery. This differs from other diabetic medications which are typically held the day of surgery. With the increase in SLGT2-inhibitors being prescribed for both diabetes and heart failure, it is crucial that providers are aware of this preoperative hold parameter and recognize patients at risk for EDKA.
+    The FDA released multiple warnings related to the elevated risk of DKA. The recommendation is for canagliflozin, dapagliflozin, and empagliflozin to be discontinued 3 days before scheduled surgery and ertugliflozin should be stopped at least 4 days prior to surgery. This differs from other diabetic medications which are typically held the day of surgery. With the increase in SGLT2-inhibitors being prescribed for both diabetes and heart failure, it is crucial that providers are aware of this preoperative hold parameter and recognize patients at risk for EDKA.
 
 Euglycemic diabetic ketoacidosis (EDKA) is an uncommon but life-threatening diagnosis and must be considered in postoperative patients who have been on SGLT2-inhibitors. EDKA in this setting has been reported to occur any time during the course of medication use.
 
@@ -117,7 +117,7 @@ It should be considered when a patient has:
 - Elevated ketones in the blood or urine
 - A blood glucose <200
 
-Given the clinical overlap with starvation ketoacidosis, it is a difficult diagnosis to make. The mechanism of both is similar, except that in EDKA, the patient has diabetes mellitus and has been taking a SLGT2-inhibitor.
+Given the clinical overlap with starvation ketoacidosis, it is a difficult diagnosis to make. The mechanism of both is similar, except that in EDKA, the patient has diabetes mellitus and has been taking a SGLT2-inhibitor.
 
 ### Proposed Mechanism of EDKA
 
@@ -125,7 +125,7 @@ Given the clinical overlap with starvation ketoacidosis, it is a difficult diagn
 
 ### Lab Testing
 
-- Betahydroxybuterate -- for euglycemic DKA dx in patients taking SGLT2 Inhibitors.
+- Beta-hydroxybutyrate -- for euglycemic DKA dx in patients taking SGLT2 Inhibitors.
 
 ## Preop Cessation of GLP1s
 
@@ -158,7 +158,9 @@ The American Society of Anesthesiologists (ASA) Task Force on Preoperative Fasti
 
 Refer to the [Gastric Ultrasound Page](../boards/gastric_US.md)
 
-## Subcutaneous vs IV
+## Perioperative Insulin
+
+### Subcutaneous vs IV
 
 - If emergency surgery use IV insulin drip
 - If elective surgery AND:
@@ -169,13 +171,13 @@ Refer to the [Gastric Ultrasound Page](../boards/gastric_US.md)
   
   Use subcutaneous insulin
 
-## Dosing: Refer to current practice facility
+### Dosing: Refer to current practice facility
 
 Here is a sample dosing chart
 ![IV Dosing](../assets/img/insulin.png)
 ![Sub Q Dosing](../assets/img/subq.png)
 
-## Hypoglycemia Treatment
+### Hypoglycemia Treatment
 
 1. If BG < 70 stop insulin treatment
 2. Administer 25cc of D50 or start D10 infusion

@@ -1,11 +1,11 @@
-﻿---
+---
 title: Case-Specific Notes
 ---
 
 # Case-Specific Notes
 
 These pages cover case types with specific anesthetic considerations that differ
-from standard general anesthesia. Thoracic, OB, and thyroid each have airway,
+from standard general anesthesia. Thoracic, OB, and TIVA each have airway,
 hemodynamic, and pharmacologic nuances. 
 
 | Page | When You Need It |

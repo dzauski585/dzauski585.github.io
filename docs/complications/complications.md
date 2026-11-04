@@ -1,4 +1,4 @@
-﻿---
+---
 title: Specific Case Complication Review
 tags: [vision loss, bone cement, positioning]     # TAG names should always be lowercase
 ---
@@ -10,14 +10,14 @@ tags: [vision loss, bone cement, positioning]     # TAG names should always be l
 
 - Methyl methacrylate cement: increases intramedullary pressure in bones causing micro emboli to be released. They lodge in  lungs causing V/Q mismatch and can cause right heart failure 
 
-- Residual methyl methacrylate in the systemic circulation cases bradycardia, hypotension, and pulmonary HTN, hypoxia, cardiac arrest.
+- Residual methyl methacrylate in the systemic circulation causes bradycardia, hypotension, and pulmonary HTN, hypoxia, cardiac arrest.
 
 ## Post Op Vision Loss
 
 - Central Retinal Artery Occlusion
 	- Cardiac bypass
 		- Showers of emboli
-	- Moss common cause of retinal vision loss after nonocular sx
+	- Most common cause of retinal vision loss after nonocular sx
 - Anterior Ischemic Optic Neuropathy
 	- Globe pressure on optic disc
 - Posterior Ischemic Optic Neuropathy
@@ -40,7 +40,7 @@ tags: [vision loss, bone cement, positioning]     # TAG names should always be l
 
 ### Physiology
 
-- Priming even such as infection, cytokine administration, surgery, burns that activates pulmonary endothelium
+- Priming event such as infection, cytokine administration, surgery, burns that activates pulmonary endothelium
 - Infusion of donor derived anti HLA (part of MHC class) or anti HNA antibodies directed against antigens on the neutrophil surface
 
 ## Positioning of Hands/Arms

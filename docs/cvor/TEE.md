@@ -1,4 +1,4 @@
-﻿---
+---
 title: Intraoperative TEE Basics
 tags: [anesthesia, cardiac surgery, cardiac anesthesia, echo]     # TAG names should always be lowercase
 ---
@@ -20,9 +20,9 @@ Practical Approach to Transesophageal Echocardiography 4th edition by Scott Reev
 
 The basics of ultrasound:
 
-- Sound waves vibrating off of structures travelling through a media
-- 2-10Mhz (Human hearing < 20,000hz)
-- Electrodes stimulate ceramic pizoelectric crystals which both vibrate and receive incoming vibrations.
+- Sound waves vibrating off of structures travelling through a medium
+- 2-10MHz (Human hearing < 20,000Hz)
+- Electrodes stimulate ceramic piezoelectric crystals which both vibrate and receive incoming vibrations.
   - Electricity causes trapped polarized molecules to vibrate
 - Better resolution with increased frequency
 - Ultrasound produces reflection, scatter, and refraction which can alter your image or fool you into thinking something is present when it actually is not.
@@ -32,21 +32,21 @@ The basics of ultrasound:
 ## Complications of TEE
 
 1. Oropharyngeal: lips, teeth, gum damage, laceration, perforation, tracheal intubation
-2. Esophageal: Odynophagia, dysphagia laceration, perforation
+2. Esophageal: Odynophagia, dysphagia, laceration, perforation
 3. Gastric: Laceration, perforation
 4. Misc: Airway compromise, thermal injury, tongue necrosis
 
 ![malp](../assets/img/malp.png)
 
-## Absolute Contradindications of TEE
+## Absolute Contraindications of TEE
 
-1. Perforated viscous
+1. Perforated viscus
 2. Esophageal pathology
 3. Active GI bleed
 4. Recent upper GI surgery
 5. Esophagectomy or gastric bypass surgery
 
-## Relative Contradindications of TEE
+## Relative Contraindications of TEE
 
 1. Atlantoaxial joint disease
 2. Severe cervical arthritis
@@ -75,7 +75,7 @@ This is a great summary of angles if you have trouble visualizing them.
 
 ### Rate and Rhythm
 
-Dysrhythmias can make LV function analysis both in systole and diastole anomalus. This can also happen with simple brady or tachycardias.
+Dysrhythmias can make LV function analysis both in systole and diastole anomalous. This can also happen with simple brady or tachycardias.
 
 ### Mid Esophageal Views
 
@@ -84,7 +84,7 @@ Dysrhythmias can make LV function analysis both in systole and diastole anomalus
 #### ME Four-Chamber View
 
 - The ME four-chamber view is obtained by advancing the probe to a depth of approximately 35 cm. You may need to advance slightly to bring the true apex into view. A slight retroflexion may be required to align the MV and LV apex. 
-- This view is used to assess global function of the LV and RV, MV and TV function, and shunt flow if present. To assess valve function and shunt flow use color doppler with a Nyquist limit of 50-60cm/sec.
+- This view is used to assess global function of the LV and RV, MV and TV function, and shunt flow if present. To assess valve function and shunt flow use color Doppler with a Nyquist limit of 50-60cm/sec.
 - Sometimes image optimization is difficult due to patient anatomy and it is easier to split this into an "LV-focused" view and an "RV-focused" view by simply rotating to the left and right.
 - Often at 0 degrees of omniplane, a 5 chamber view will be obtained with the LVOT and part of the aortic valve imaged. In this scenario the omniplane can be increased slightly (usually no more than 20-30 degrees) to obtain a more true 4 chamber view.
 
@@ -106,7 +106,7 @@ From the four chamber view rotate your angle to approx. 60 degrees to where you 
 #### ME Two-Chamber 90 View
 
 - From the four chamber view rotate your angle to approx. 90 degrees to where you no longer see any right sided structures. This view gives a different perspective on LV and MV function.
-- The left atrial appendage is often viewed best from this view (though sometimes with slightly less omniplane and can be interrogated for clot presence.
+- The left atrial appendage is often viewed best from this view (though sometimes with slightly less omniplane) and can be interrogated for clot presence.
 - At 90 degrees of omniplane, the anterior wall of the LV will be displayed on screen right and the inferior wall on screen left.
 
 ![views](../assets/img/90.png)
@@ -128,7 +128,7 @@ From the four chamber view rotate your angle to approx. 60 degrees to where you 
 
 ![meue](../assets/img/meue.png)
 
-- From any ME view, change your angle to 45 degrees and slowly advance or pullback until the AV comes into view. You may need to rotate clockwise. It should look similar to a Mercedes logo. To find the RV inflow outflow views adjust your angle to 60-90 and move the probe to keep the AV in view. Change the probe depth or rotation to focus on the TV or PV. Utilize color doppler for valve analysis.
+- From any ME view, change your angle to 45 degrees and slowly advance or pullback until the AV comes into view. You may need to rotate clockwise. It should look similar to a Mercedes logo. To find the RV inflow outflow views adjust your angle to 60-90 and move the probe to keep the AV in view. Change the probe depth or rotation to focus on the TV or PV. Utilize color Doppler for valve analysis.
 - The three cusps are labeled to the left. The non-coronary cusp is always adjacent to the interatrial septum and the right-coronary cusp is at the bottom of the screen adjacent to the RVOT as imaged. The left-cusp is usually identified as "last-but-not-least".
 
 ![40](../assets/img/40-60.png)
@@ -143,16 +143,16 @@ From the four chamber view rotate your angle to approx. 60 degrees to where you 
 
 #### ME Ascending Aortic LAX View
 
-- From the ME Aortic SAX change the angle to 90. You can also withdraw the probe from the ME LAX viewto see the LAX of the ascending aorta. This can count as an UE view due to withdrawing the probe.
+- From the ME Aortic SAX change the angle to 90. You can also withdraw the probe from the ME LAX view to see the LAX of the ascending aorta. This can count as an UE view due to withdrawing the probe.
 - From the ME Long Axis view ~120, focus on the aortic root and begin slowly withdrawing the probe to image the more superior ascending aorta. The right pulmonary artery will be seen in cross section between the ultrasound transducer and the aorta.
-- Careful counter-clockwise rotation from this view will allow imaging of the main pulmonary artery and pulmonic valve, often with good alignment for doppler interrogation
+- Careful counter-clockwise rotation from this view will allow imaging of the main pulmonary artery and pulmonic valve, often with good alignment for Doppler interrogation
 
 ![melax](../assets/img/melax.png)
 
 #### ME Bicaval View
 
 - From the ME RV inflow-outflow view rotate 90-110 and slightly clockwise. The RA and vena cavas should be in view. 
-- This is particularly helpful when placing venous access wires or ECMO/CBP cannulas.
+- This is particularly helpful when placing venous access wires or ECMO/CPB cannulas.
 
 ![bicaval](../assets/img/bicav1.png)
 
@@ -166,14 +166,14 @@ The first image orients you with body while the following image is more detailed
 
 #### TG Midpapillary SAX View
 
-From the ME four-chamber view advance into the stomach and anteflexed to come in contact with the gastric wall. Slowly advance until you can see both papillary muscles. Visualization of the MV leaflet chords indicates that the probe should be advanced, whereas not visualizing any papillary muscles indicates that the probe is too deep.
+From the ME four-chamber view advance into the stomach and anteflex to come in contact with the gastric wall. Slowly advance until you can see both papillary muscles. Visualization of the MV leaflet chords indicates that the probe should be advanced, whereas not visualizing any papillary muscles indicates that the probe is too deep.
 Once the posteromedial papillary muscle is in view, visualization of the anterolateral papillary muscle is optimized by varying the degree of anteflexion. If MV leaflet chords are seen, anteflexion should be decreased, whereas not visualizing any papillary muscles indicates that anteflexion should be increased. This view is very popular for intraoperative monitoring.
 
 ![midpap](../assets/img/midpap.png)
 
 #### TG Deep LAX View
 
-This view is used for aortic valve measurments due to the LVOT and AV being lined up with probe. The cosine of the doppler angle is still a factor but significantly diminished as oppposed to the ME 120 degree view.
+This view is used for aortic valve measurements due to the LVOT and AV being lined up with probe. The cosine of the Doppler angle is still a factor but significantly diminished as opposed to the ME 120 degree view.
 
 ![deep](../assets/img/deeplax.png)
 
@@ -186,7 +186,7 @@ This view is used in MV analysis specifically planimetry for the area of the MV 
 
 ### Descending Aortic SAX and LAX Views
 
-This selection of views is helpful in aneurysms and dissections. It is also quite useful when placing intra-aortic balloon pumps and arterial cannulas for ECMO or CPB. Rotate teh probe couterclockwise from the ME Four Chamber view to locate the aorta and then advance for more descending or withdrawn for arch and ascending views. Use the X-Plane mode for 90 degree view or just move your angle to 90 as needed.
+This selection of views is helpful in aneurysms and dissections. It is also quite useful when placing intra-aortic balloon pumps and arterial cannulas for ECMO or CPB. Rotate the probe counterclockwise from the ME Four Chamber view to locate the aorta and then advance for more descending or withdraw for arch and ascending views. Use the X-Plane mode for 90 degree view or just move your angle to 90 as needed.
 
 ![descend](../assets/img/descendingaorta.png)
 
@@ -198,7 +198,7 @@ Make sure to unlock the probe and withdraw it slowly. Check the probe for signs 
 
 ### LV Systolic Function
 
-In normal hearts the Teicholz equation is accurate, but for hearts suffering from infaractions past or present the disc method using Simpson's Rule is preferred.
+In normal hearts the Teicholz equation is accurate, but for hearts suffering from infarctions past or present the disc method using Simpson's Rule is preferred.
 
 V = LV Volume
 D = LV diameter
@@ -228,12 +228,12 @@ The software will calculate the area change and ejection fraction.
 
 ### LV Diastolic Function
 
-Using Doppler to diagnosis heart failure with preserved ejection fraction requires PW Doppler at the mitral annulus and/or tissue Doppler at the medial/lateral mitral annulus. The ratios and velocities are then used to extrapolate diastolic dysfunction.
+Using Doppler to diagnose heart failure with preserved ejection fraction requires PW Doppler at the mitral annulus and/or tissue Doppler at the medial/lateral mitral annulus. The ratios and velocities are then used to extrapolate diastolic dysfunction.
 
 Grade 1 through 4. Grade 1 is associated with 8x increase in all cause mortality within 5 years!
 
 !!! info
-> If e' is < 7 (MV tissue doppler), or the E/e' is more than 8, or if the E:A ratio is more than 2:1 there is diastolic dysfunction
+    If e' is < 7 (MV tissue Doppler), or the E/e' is more than 8, or if the E:A ratio is more than 2:1 there is diastolic dysfunction
 
 Examples of diastology with traditional methods:
 
@@ -249,7 +249,7 @@ Examples of speckle tracking:
 
 ### RV
 
-Functional status usually read as normal, moderatley decreased, or poor
+Functional status usually read as normal, moderately decreased, or poor
 
 TAPSE or (Tricuspid annular plane systolic excursion) is the most common method
 
@@ -268,7 +268,7 @@ Measurements and grading will be present. Remember a small yet high velocity jet
 | Vena Contracta (mm)        | < 3       | 3-6.9    | > 7    |
 | Jet area / LA area         | < 20      | 20-40    | > 40   |
 | PISA radius (mm)           | < 4       | 4-10     | > 10   |
-| Regugitant volume (ml)     | < 30      | 30-59    | > 60   |
+| Regurgitant volume (ml)     | < 30      | 30-59    | > 60   |
 | Regurgitant fraction %     | < 30      | 30-49    | > 50   |
 | EROA (cm^2)                | < 0.2     | 0.2-0.4  | > 0.4  |
 
@@ -276,7 +276,7 @@ Measurements and grading will be present. Remember a small yet high velocity jet
 
 | Measurement                     | Normal           | Mild      | Moderate | Severe |
 | -----------                     | :---------:      | :-------: | :------: | :----: |
-| Valve Area ($cm^2$)             |  > 2             | 1.5-2     | 1-135    | < 1    |
+| Valve Area ($cm^2$)             |  > 2             | 1.5-2     | 1-1.5    | < 1    |
 | Pressure Half Time (ms)         |                  | < 90      | 90-150   | > 150  |
 | Indexed Valve Area $cm^2 / m^2$ | 2                | > 0.85    | 0.6-0.85 | < 0.6  |
 
@@ -294,9 +294,9 @@ Measurements and grading will be present. Remember a small yet high velocity jet
 | Measurement                | Mild      | Moderate | Severe |
 | -----------                | :-------: | :------: | :----: |
 | Vena Contracta (cm)        | < 0.3     | 0.3-0.6  | > 0.6  |
-| Jet area / LVOT area       | < 4       | 4-6      | > 60   |
+| Jet area / LVOT area       | < 4       | 4-6      | > 6   |
 | PHT (ms)                   | > 500     | 500-200  | <200   |
-| Regugitant volume (ml)     | < 30      | 30-59    | > 60   |
+| Regurgitant volume (ml)     | < 30      | 30-59    | > 60   |
 | Regurgitant fraction %     | < 30      | 30-49    | > 50   |
 | EROA (cm^2)                | < 0.1     | 0.1-0.29 | > 0.3  |
 
@@ -334,7 +334,7 @@ Any abnormalities including structural defects, pleural effusions etc.
 
 ### Color Doppler
 
-Crystals both recieve and transmit signals but rather than focusing on a single point, multiple sample volumes are evaluated along each individual sampling line. Velocities are detected and depicted with blue signals moving away from the probe and red moving toward.
+Crystals both receive and transmit signals but rather than focusing on a single point, multiple sample volumes are evaluated along each individual sampling line. Velocities are detected and depicted with blue signals moving away from the probe and red moving toward.
 
 ### Continuous Wave (CW) Doppler
 
@@ -365,11 +365,11 @@ t = time
 AV = aortic valve
 CSA = cross sectional area
 r = radius
-VTI = volume time integral
+VTI = velocity time integral
 
 In order to find the area of the LVOT the diameter must be measured.
 
-To find the VTI of the aortic valve you need to use CW doppler in the TG LAX view. To find the LVOT VTI you need to use PW Doppler in the TG LAX view. It is possible to find both of the velocities using CW Doppler if the LVOT and AV are lined up. This is called the double envelope technique. The drawback of this technique is that it may overestimate the AV area.
+To find the VTI of the aortic valve you need to use CW Doppler in the TG LAX view. To find the LVOT VTI you need to use PW Doppler in the TG LAX view. It is possible to find both of the velocities using CW Doppler if the LVOT and AV are lined up. This is called the double envelope technique. The drawback of this technique is that it may overestimate the AV area.
 
 $$
 SD = v*t = \int_{AV open}^{AV close}vdt
@@ -408,7 +408,7 @@ _Double envelope technique_
 ![bernouli](../assets/img/bernouli.png)
 
 
-##### Planimetery
+##### Planimetry
 
 With a good enough view the valve opening can be traced and calculated using the echo software. This is frequently done for the mitral valve using the TG view.
 
@@ -430,7 +430,7 @@ $$
 
 Modified equation:
 
-In many cases the volume through the $V_1$ structure is negligable so the simplified version is used. If $V_1$ is > 1.4m/s the modified euqation should be used.
+In many cases the volume through the $V_1$ structure is negligible so the simplified version is used. If $V_1$ is > 1.4m/s the modified equation should be used.
 
 $$
 \Delta P = 4 (v_2^2 - v_1^2)
@@ -454,7 +454,7 @@ This is a measurement of the narrowest portion of a regurgitant jet or where the
 
 #### Pressure Half Time
 
-Pressure half time or PHT is the measurement used for mitral valve area or aortic regurgitation. The concept is based on pressure deceleration. PHT is independent of both CO and MR. However it can be underestimated in low flow states. To get a measurement use CW doppler at the mitral opening in early diastole. This will give a velocity tracing. PHT is the measure of the rate of decrease in pressure and the time to decrease to 50% of the peak velocity. As stenosis worsens the PHT increases. Experimental models show a PHT of 220ms eqates to a MVA of 1cm.
+Pressure half time or PHT is the measurement used for mitral valve area or aortic regurgitation. The concept is based on pressure deceleration. PHT is independent of both CO and MR. However it can be underestimated in low flow states. To get a measurement use CW Doppler at the mitral opening in early diastole. This will give a velocity tracing. PHT is the measure of the rate of decrease in pressure and the time to decrease to 50% of the peak velocity. As stenosis worsens the PHT increases. Experimental models show a PHT of 220ms equates to a MVA of 1cm.
 
 Equation to link area and PHT:
 
@@ -468,11 +468,11 @@ $$
 
 #### Proximal isovelocity surface area (PISA)
 
-This term describes an idea in physics where, when fluid flows through an orifice all equidistant points towards the orifice exhibit the smae velocities.The velocity increases near the orifice giving the appearance of multiple concentric hemispheres of flow convergence with equal velocity. PISA is commonly used in MV analysis.
+This term describes an idea in physics where, when fluid flows through an orifice all equidistant points towards the orifice exhibit the same velocities. The velocity increases near the orifice giving the appearance of multiple concentric hemispheres of flow convergence with equal velocity. PISA is commonly used in MV analysis.
 
 PISA flow rate = Regurgitant flow rate
 
-Where $velocity_{PISA}$ is the Nyquist limit, EROA is the effectvie regurgitant orifice area and the MR is mitral regurgitant VTI.
+Where $velocity_{PISA}$ is the Nyquist limit, EROA is the effective regurgitant orifice area and the MR is mitral regurgitant VTI.
 
 $$
 CSA_{PISA} * velocity_{PISA} = EROA_{MV} * VTI_{MR}

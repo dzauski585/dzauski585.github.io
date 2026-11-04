@@ -1,4 +1,4 @@
-﻿---
+---
 title: Goal Directed Fluid Therapy
 tags: [fluids, resuscitation]     # TAG names should always be lowercase
 ---
@@ -41,7 +41,7 @@ tags: [fluids, resuscitation]     # TAG names should always be lowercase
 2. 8-10cc/kg tidal volume in assist control not AF or PC or PS
 3. No spontaneous breaths
 4. No RV failure
-5. Low intraabdominal pressures in laproscopic surgery
+5. Low intraabdominal pressures in laparoscopic surgery
 6. No prone spine case
 7. No thoracic or one lung/open chest case
 8. EF > 45%

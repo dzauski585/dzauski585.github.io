@@ -1,4 +1,4 @@
-﻿---
+---
 title: Anesthesia Monitors Review
 tags: [Monitors, bp, ekg, physics, cvp, pa, pulse ox]   
 ---
@@ -21,7 +21,7 @@ tags: [Monitors, bp, ekg, physics, cvp, pa, pulse ox]
 
 ## Pulse Oximetry and the Beer Lambert Law
 
-Important to note that red wavelength is 600 and infra red is 900. The Beer Lambert law discusses absorption of light and then a converstion into a saturation percentage.
+Important to note that red wavelength is 600 and infra red is 900. The Beer Lambert law discusses absorption of light and then a conversion into a saturation percentage.
 
 - Variables:
   - A = absorbance

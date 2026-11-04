@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mechanical Support
 tags: [anesthesia, cardiac surgery, cardiac anesthesia, ECMO]     # TAG names should always be lowercase
 ---
@@ -12,25 +12,25 @@ Most common for lung issues such as ARDS
 
 #### Protec Duo Cannula
 
-This special VV ecmo is used when a patient is in isolated RV failure with oxygenation needs.
+This special VV ECMO is used when a patient is in isolated RV failure with oxygenation needs.
 
 ![protec](../assets/img/protec.png)
 
 ### VA ECMO
 
-Heart failure, cardiogenic shock, PE. Need to worry about North South syndrome. North being deoxygenated, and South being oxygenated. Also may lead to LV distension in poor outflow states consider VAV or impella or both.
+Heart failure, cardiogenic shock, PE. Need to worry about North South syndrome. North being deoxygenated, and South being oxygenated. Also may lead to LV distension in poor outflow states consider VAV or Impella or both.
 
 ![va](../assets/img/va.png)
 
 ### VVA ECMO
 
-VA ecmo with increased drainage may help offload LV distension
+VA ECMO with increased drainage may help offload LV distension
 
 ![vva](../assets/img/vva.png)
 
 ### VAV ECMO
 
-Combined VV and VA support. May need impella for LV distension
+Combined VV and VA support. May need Impella for LV distension
 
 ![vav](../assets/img/vav.png)
 
@@ -51,7 +51,7 @@ Combined VV and VA support. May need impella for LV distension
 - Inlet (pigtail) in LV pointing toward apex
 - Outlet in ascending aorta above aortic valve
 - Straddling the aortic valve = malposition — reposition
-- RP FLex should be beyond pulmonic valve with PA tracing
+- RP Flex should be beyond pulmonic valve with PA tracing
 
 ### Aortic Insufficiency Complication
 
@@ -104,6 +104,7 @@ coronary perfusion), systolic unloading (deflates before systole to
 reduce afterload).
 
 **Timing modes:**
+
 - ECG trigger — standard, uses R wave to time inflation
 - Pressure trigger — backup when ECG signal is poor
 

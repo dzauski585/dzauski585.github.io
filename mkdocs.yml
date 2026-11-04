@@ -34,15 +34,15 @@ theme:
     - navigation.tabs             # top-level section tabs in header
     - navigation.tabs.sticky      # tabs stay visible on scroll
     - navigation.sections         # section headers rendered in sidebar
-    - navigation.expand           # expand sidebar sections by default
     - navigation.top              # back-to-top button
     - navigation.indexes          # section folders can have index pages
-    - toc.integrate               # TOC in left sidebar alongside nav
+    - navigation.path             # breadcrumbs above the page title
+    - navigation.footer           # previous/next links at the bottom of each page
+    - toc.follow                  # on-page contents scrolls with the reader
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.copy
-    - content.admonitions
 
   icon:
     repo: fontawesome/brands/github
@@ -72,6 +72,7 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+      toc_depth: 3      # hides H4s from the on-page contents
 
 extra:
   comments: true
@@ -85,39 +86,53 @@ copyright: >
   Built by dz
   Content for educational use only. Not a substitute for clinical judgment.
 
+# Files stay in their current folders, so existing URLs keep working.
 nav:
   - Home: index.md
-  - CVOR Overview:
+  - CVOR:
     - cvor/index.md
-    - CVOR Case Guide: cvor/cv_or_guide.md
-    - Structural Heart & EP: cvor/structural_heart.md
-    - Intraoperative TEE: cvor/TEE.md
-    - Physiology: cvor/cardiac_physiology.md
-    - Pharmacology: cvor/CVPharm.md
-    - Mechanical Support: cvor/Mechanical_Support.md
-    - Assessment: assessment.html
-  - Case-Specific Notes:
-    - cases/index.md
-    - Thoracic Anesthesia: cases/thoracic_review.md
-    - OB Anesthesia: cases/ob_review.md
-    - TIVA & TCI: cases/TIVA.md
-  - Complications:
-    - complications/index.md
-    - Case Complications: complications/complications.md
-    - Thyroid Surgery: complications/Thyroid_Complications.md
-    - Cardiac Arrest in OR: complications/cardiac_arrest_OR.md
-    - Hyperperfusion Syndrome: complications/hyperperfusion.md
-    - Corneal Abrasion: complications/corneal_abrasion.md
-  - Boards Review:
-    - boards/index.md
-    - Anatomy & Physiology: boards/Anatomy_physiology.md
-    - Pharmacology Review: boards/pharmacology_review.md
-    - Monitors Review: boards/monitor_review.md
-    - Math & Physics: boards/math_physics_review.md
-    - Antibiotic Guide: boards/antibiotic_guide.md
-    - Cephalosporin Cross-Reactivity: boards/Cephalosporin_Cross.md
-    - Stanford Periop Abx: boards/stanford_perioperative_abx_guide.md
-    - Stanford Emergency Manual: boards/Stanford_Emergency_Manual.md
-    - Goal Directed Fluids: boards/goal_directed_fluid_therapy.md
-    - Gastric Ultrasound: boards/gastric_US.md
+    - The Case:
+      - Case Guide: cvor/cv_or_guide.md
+      - Structural Heart & EP: cvor/structural_heart.md
+    - Skills:
+      - Intraoperative TEE: cvor/TEE.md
+      - Using an Ultrasound: cvor/ultrasound.md
+    - Physiology & Pharmacology:
+      - Cardiac Physiology: cvor/cardiac_physiology.md
+      - CV Pharmacology: cvor/CVPharm.md
+      - Vasoplegia: cvor/vasoplegia.md
+      - IV Methadone: cvor/methadone.md
+    - Go Further:
+      - CV Test: assessment.html
+      - Mechanical Support: cvor/Mechanical_Support.md
+      - TEG: cvor/TEG.md
+      - Papers by Our Team: cvor/papers.md
+  - Reference:
+    - reference/index.md
+    - Case Notes:
+      - cases/index.md
+      - Thoracic Anesthesia: cases/thoracic_review.md
+      - OB Anesthesia: cases/ob_review.md
+      - TIVA & TCI: cases/TIVA.md
+    - Complications:
+      - complications/index.md
+      - Cardiac Arrest in OR: complications/cardiac_arrest_OR.md
+      - Stanford Emergency Manual: boards/Stanford_Emergency_Manual.md
+      - Case Complications: complications/complications.md
+      - Thyroid Surgery: complications/Thyroid_Complications.md
+      - Hyperperfusion Syndrome: complications/hyperperfusion.md
+      - Corneal Abrasion: complications/corneal_abrasion.md
+    - Antibiotics:
+      - Antibiotic Guide: boards/antibiotic_guide.md
+      - Stanford Periop Antibiotics: boards/stanford_perioperative_abx_guide.md
+      - Cephalosporin Cross-Reactivity: boards/Cephalosporin_Cross.md
+    - Perioperative Tools:
+      - Goal-Directed Fluids: boards/goal_directed_fluid_therapy.md
+      - Gastric Ultrasound: boards/gastric_US.md
+    - Boards Review:
+      - boards/index.md
+      - Anatomy & Physiology: boards/Anatomy_physiology.md
+      - Pharmacology Review: boards/pharmacology_review.md
+      - Monitors Review: boards/monitor_review.md
+      - Math & Physics: boards/math_physics_review.md
   - About: about.md

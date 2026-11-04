@@ -1,4 +1,4 @@
-﻿---
+---
 title: Antibiotic Review
 tags: [review, antibiotics]     # TAG names should always be lowercase3
 ---
@@ -10,7 +10,7 @@ tags: [review, antibiotics]     # TAG names should always be lowercase3
 ## BETA-LACTAMS = PCNs, Cephalosporins, Carbapenems, Monobactam(Aztreonam)
 
 - Cell wall inhibitors: bind PBPs (Penicillin-binding proteins) in cell membrane and inhibit cell wall crosslinking  --> bactericidal.
-- Main side effects: Hypersensitivity reactions including anaphylaxis, Rashes, Bone marrow suppression, Interstitial Nephritis,  GI (nausea, diarrhea, and C.diff) interstitial nephritis, GI (nausea, diarrhea, and C.diff), seizures (mainly with high doses in renal failure)
+- Main side effects: Hypersensitivity reactions including anaphylaxis, Rashes, Bone marrow suppression, Interstitial Nephritis, GI (nausea, diarrhea, and C.diff), seizures (mainly with high doses in renal failure)
 - As a general rule, if pathogen is susceptible and patient non-allergic, beta-lactams are the preferred drug for most situations due to high efficacy and cidal nature.
 Most oral beta-lactams have poor bioavailability and achieve low serum concentrations, making them poor choices for serious or deep seated infections (Amoxicillin has the best bioavailability).
 - No beta-lactam has activity vs MRSA (except Ceftaroline), and none have activity vs atypical intracellular organisms (i.e. Legionella, Mycoplasma, Chlamydia).
@@ -20,10 +20,10 @@ Most oral beta-lactams have poor bioavailability and achieve low serum concentra
 ### Overview of Beta-Lactam Allergies
 
 - Rash occurs in up to 5% of patients receiving PCN, but the overall rate of anaphylaxis to PCN is <1/10,000.
-- A mong all patients with reported PCN allergy, ~85-90% will tolerate PCN (either never truly allergic, or resolution of remote prior allergy).
+- Among all patients with reported PCN allergy, ~85-90% will tolerate PCN (either never truly allergic, or resolution of remote prior allergy).
 - Clinical cross-reactivity with cephalosporins and carbapenems is very low: of those with a positive PCN skin test, ~ 2% will have a cephalosporin reaction, and <1% will have a carbapenem reaction.
 - There is no cross-reactivity between PCN and Aztreonam; however, cross-reactivity between Aztreonam and Ceftazidime has been reported (due to an identical side chain).
-- Skin testing is useful to evaluate for potential Type I (IgE-mediated) allergic reaction (only 10-15% of those with reported allergy will have positive skin test).  Skin test has ~50% positive predictive value à give alternate drug, do graded challenge, or desensitize.   Skin test has very a high negative predictive value:  >98% will tolerate PCN, but not 100% à give 10% “test” dose and observe for 1 hour prior to full dose.
+- Skin testing is useful to evaluate for potential Type I (IgE-mediated) allergic reaction (only 10-15% of those with reported allergy will have positive skin test).  Skin test has ~50% positive predictive value → give alternate drug, do graded challenge, or desensitize.   Skin test has very a high negative predictive value:  >98% will tolerate PCN, but not 100% → give 10% “test” dose and observe for 1 hour prior to full dose.
 - If skin testing unavailable and beta-lactam is preferred, decision depends on prior type of reaction and how recently it occurred. If >10 years ago, and/or not characteristic of IgE, give cephalosporin or carbapenem (<1% of anaphylaxis).  If recent and/or features of IgE reaction, can give cephalosporin or carbapenem by graded challenge.  If probable history of anaphylaxis, desensitize.
 
 ### PENICILLINS
@@ -71,7 +71,7 @@ Similar to Zosyn, but Timentin has activity vs Stenotrophomonas, and is less eff
 
 1. 1st Generation - Cefazolin (Ancef, Kefzol) - IV, Cephalexin (Keflex) - PO
 Spectrum:  Excellent Gram positive (MSSA and strep), minor Gram negative = Proteus, E.coli, Klebsiella.
-Used for: Mild-moderate nonpurulent cellulitis (if do not suspect MRSA).  Cefazolin ofted used for prophlaxis during surgery.  Sometimes used for UTIs as well (especially during pregnancy).
+Used for: Mild-moderate nonpurulent cellulitis (if do not suspect MRSA).  Cefazolin often used for prophylaxis during surgery.  Sometimes used for UTIs as well (especially during pregnancy).
 In PCN-allergic patients, Cefazolin is drug of choice for severe MSSA infections (bacteremia, endocarditis, etc).  Some use it preferentially in prolonged treatment courses over Nafcillin/Oxacillin due to overall better tolerance (less rash, diarrhea, interstitial nephritis, hepatitis)
 2. 2nd Generation - Cefuroxime (PO and IV)
 Spectrum: Gram positive and more gram negative’s  than 1st generation - gains activity vs H.influenza, Enterobacter, Neisseria.
@@ -79,7 +79,7 @@ Used for: respiratory infections (upper and lower tract), gonorrhea, UTIs, Lyme 
 3. ”Cephamycins” -  Cefoxitin, Cefotetan (IV)
 Spectrum: get anaerobes and gram negatives, but no Pseudomonas and weak/unreliable  gram positive coverage.
 Used for: UTI’s, non-severe intraabdominal infections, pelvic/GYN infections.
-Bacteroides fragilis has high rates of resistance to Cefotetan (Cefoxitin is a bit better) – for serious intrabdominal infections, should use other agents.
+Bacteroides fragilis has high rates of resistance to Cefotetan (Cefoxitin is a bit better) – for serious intraabdominal infections, should use other agents.
 Cefotetan can cause elevated INR.
 4. 3rd Generation - Ceftriaxone (Rocephin) – IV, Cefotaxime - IV, Cefpodoxime - PO
 Spectrum: Good gram positive (although possibly worse than 1st generation) and excellent gram negative coverage (E.coli, Proteus, Klebsiella, Neisseria, H.influenza, and most SPACE organisms, but not Pseudomonas), no anaerobes .
@@ -101,12 +101,12 @@ For cefepime and ceftriaxone, beware CNS toxicity of encephalopathy, altered men
 Ceftazidime and Cefepime sometimes have activity against certain ESBL producing organisms, but reports of failure in this setting so use with caution.
 Ceftazidime and Cefepime have <1% cross-reactivity for non-anaphylactic allergies/intolerance
 6. 5th Generation - Ceftaroline (IV)
-Spectrum: Gram positive including MRSA, VISA, VRSA, Strep.   Similar gram negative coverage as Ceftriaxone – no Pseudomonas and other nonlactose fermenting GNRs, no ESBL. No entercoccus as monotherapy, though some evidence to support synergy with other drugs (e.g. dapto)
+Spectrum: Gram positive including MRSA, VISA, VRSA, Strep.   Similar gram negative coverage as Ceftriaxone – no Pseudomonas and other nonlactose fermenting GNRs, no ESBL. No enterococcus as monotherapy, though some evidence to support synergy with other drugs (e.g. dapto)
 Used for: complicated SSTI and community-acquired PNA (FDA indications)
 Newest cephalosporin (FDA approved in 2010) and only one with activity vs MRSA.
 Only 2 FDA approved indications, but being used more and more for off-label purposes (bone/joint infections, refractory MRSA/VISA bacteremia, etc.).
 
-### CARBAPENEMS -  Imipenem/Cilastin, Meropenem, Ertapenem, Doripenem (all IV)
+### CARBAPENEMS -  Imipenem/Cilastatin, Meropenem, Ertapenem, Doripenem (all IV)
 
 Spectrum: Broadest spectrum antibiotics, cover Gram positive, Gram negative including Pseudomonas (except Ertapenem) and ESBL (extended spectrum beta lactamase producers), also anaerobes.
 Used for: many serious infections due to resistant gram negatives, including hospital/health-care associated PNA, meningitis, intraabdominal infections, complicated skin and soft tissue infections
@@ -156,7 +156,7 @@ Spectrum: Excellent activity vs. Anaerobes and Gram positive cocci – Strep and
 Used for: skin/soft tissue infections, pelvic infections, lung abscess, sinusitis.  Also has activity vs PCP (combine with primaquine) and toxoplasmosis (combine with pyrimethamine)
 Beware increasing resistance among Bacteroides – not a good choice for severe intraabdominal infections.
 Reasonable empiric drug for cellulitis due to Strep/Staph coverage, but beware of resistant MRSA.   Also, ~10% of MSSA is resistant.
-If MRSA (or MSSA) appears susceptible – always have lab check “D-test” à looks for inducible resistance to Clindamycin in strains that are resistant to Erythromycin.  If D-test positive, do not use Clindamycin.
+If MRSA (or MSSA) appears susceptible – always have lab check “D-test” → looks for inducible resistance to Clindamycin in strains that are resistant to Erythromycin.  If D-test positive, do not use Clindamycin.
 Also used often for its Antitoxin effect in Toxic Shock Syndrome or Necrotizing Fasciitis due to Group A Strep (less evidence for MRSA).
 Does not penetrate CSF – cannot use for brain abscesses.
 Traditionally causes highest rate of C.diff among all Abxs (~10%).
@@ -164,9 +164,9 @@ Traditionally causes highest rate of C.diff among all Abxs (~10%).
 4. Aminoglycosides  - Gentamicin, Tobramycin, Amikacin, Streptomycin -30S inhibitor (all IV)
 Spectrum: Extremely efficacious vs. aerobic Gram negatives including Pseudomonas.  NO activity vs. Gram positives (except when used for synergy) or anaerobes.  
 Used for: serious gram negative infections especially when Pseudomonas is suspected (pneumonia, bacteremia, urinary tract infections). Used with beta-lactams against gram positive organisms for synergistic effect (mainly in endocarditis).
-For synergy, best evidence and utility for Enterococcal endocarditis (if susceptible).  Also strong recommendation for Strep enterocarditis (duration depends on Strep MIC).  Weakest evidence for Staph aureus native valve endocarditis – optional for max 3-5 days (decreases bacteremia by ~1 day, increases renal failure, and no effect on mortality) à most ID physicians now tend to avoid it for Staph infections.  For Staph prosthetic valve endocarditis, aminoglycoside recommended for 2 weeks with Rifampin.
+For synergy, best evidence and utility for Enterococcal endocarditis (if susceptible).  Also strong recommendation for Strep endocarditis (duration depends on Strep MIC).  Weakest evidence for Staph aureus native valve endocarditis – optional for max 3-5 days (decreases bacteremia by ~1 day, increases renal failure, and no effect on mortality) → most ID physicians now tend to avoid it for Staph infections.  For Staph prosthetic valve endocarditis, aminoglycoside recommended for 2 weeks with Rifampin.
 Poor urine and CSF penetration.  Also less effective at low pH such as in lung/bronchial secretions – not great for PNA (avoid monotherapy).
-Ofted used as 2nd agent of “double coverage” when suspecting serious Pseudomonas infection (including for HAP/HCAP/VAP)
+Often used as 2nd agent of “double coverage” when suspecting serious Pseudomonas infection (including for HAP/HCAP/VAP)
 Side effects = ATN/nephrotoxicity (manifests after 3-5 days, usually reversible) and oto/vestibular toxicity (irreversible, unlike Vancomycin).   If using long-term, check baseline audiology test and ~q2 weeks.
 Aminoglycosides exhibit concentration-dependent killing – more effective with higher peak concentration relative to MIC (vs time-dependent killing of beta lactams – more important to maintain levels above MIC)
 Three ways to dose aminoglycosides (doses listed for Gentamicin). Check peak after 3rd dose, trough before 4th dose.
@@ -175,16 +175,16 @@ Once-daily dosing (5-7 mg/kg) – generally do not measure troughs unless critic
 Synergy dosing (~1 mg/kg q8-12 hrs) – goal peak 3-5, trough <1.
 
 5. Chloramphenicol – 50S ribosomal inhibitor.   IV or PO (but PO form unavailable in U.S.)
-Spectrum: Broad spectrum vs Gram positives (including MRSA, E.faecium/VRE); Gram negatives but NOT Pseudomonas; Anaerobes, and unusual pathogens including spirochetes, Rickettsia, Erhlichia, Coxiella, Typhoid/Paratyphoid Salmonella.
+Spectrum: Broad spectrum vs Gram positives (including MRSA, E.faecium/VRE); Gram negatives but NOT Pseudomonas; Anaerobes, and unusual pathogens including spirochetes, Rickettsia, Ehrlichia, Coxiella, Typhoid/Paratyphoid Salmonella.
 Used for: Limited use in the U.S. due to potential toxicity (see below) – mainly for bacterial meningitis in patients with severe beta-lactam allergy (has activity vs S.pneumo, N.meningitidis, and H.influenza).  Used more widely in developing countries where benefit often outweighs risk.
 A typical regimen in patients with bacterial meningitis and severe beta-lactam allergy would be Vancomycin + Chloramphenicol +/- Bactrim (for Listeria in the appropriate patients)
 Toxicity: 1. Bone marrow suppression – direct, dose-related effect that is reversible. 2. Aplastic anemia – rare, idiosyncratic reaction (occurs at rate of 1/40,000), but generally fatal event.  Usually occurs several weeks after drug is stopped.  3. Gray baby syndrome in infants – presents with hypotension, shock, and cyanosis.
 
 ## FLUOROQUINOLONES = DNA Gyrase  and Topoisomerase inhibitors  and bactericidal
 
-- Mechanism: DNA Gyrase  and Topoisomerase inhibitors àbactericidal
+- Mechanism: DNA Gyrase  and Topoisomerase inhibitors → bactericidal
 - Side effects: QT prolongation (recent NEJM article suggested increased risk of cardiovascular death with Levofloxacin, but not Ciprofloxacin), tendon rupture (esp if on steroids), GI intolerance, cartilage damage, rare dysglycemias (Gatifloxacin removed from market for this reason), dizziness/HA’s, rashes, teratogenicity, transaminitis.   Fluoroquinolones also recently associated with increased risk of retinal detachment.  High rate of c.diff.
-- Fluoroquinolones also have excellent TB coverage (Moxifloxacin > Levofloxacin > Ciprofloxacin). If patient has PNA, but suspect TB, do not use FQ’s!!(Do not want to use monotherapy against TB à will develop resistance)
+- Fluoroquinolones also have excellent TB coverage (Moxifloxacin > Levofloxacin > Ciprofloxacin). If patient has PNA, but suspect TB, do not use FQ’s!!(Do not want to use monotherapy against TB → will develop resistance)
 - All fluoroquinolones have atypical coverage (but Cipro – relatively weaker against Chlamydia and Mycoplasma, but good vs Legionella).
 - All fluoroquinolones have excellent bioavailability (except Norfloxacin), so use PO whenever possible.
   
@@ -197,8 +197,8 @@ Spectrum: “Respiratory Fluoroquinolone” -  excellent activity vs. Strep pneu
 Used for: Community Acquired PNA (can use as monotherapy), sinusitis/bronchitis, UTI’s, and double coverage of Pseudomonas including hospital acquired PNA.
 
 3. Moxifloxacin (Avelox) (PO and IV)
-Also a Respiratory FQ, but main difference vs. Levofloxacin is virtually NO urine activity (can't use for UTIs) and NO Pseudomonas activity à no role in hospital/healthcare associated PNA.
-Best gram positive, atypical, and anaerobic coverage out of FQs à approved for complicated intraabdominal infections, although significant rate of resistance in Bacteroides (either avoid for serious intraabdominal infections, or combine with Metronidazole).
+Also a Respiratory FQ, but main difference vs. Levofloxacin is virtually NO urine activity (can't use for UTIs) and NO Pseudomonas activity → no role in hospital/healthcare associated PNA.
+Best gram positive, atypical, and anaerobic coverage out of FQs → approved for complicated intraabdominal infections, although significant rate of resistance in Bacteroides (either avoid for serious intraabdominal infections, or combine with Metronidazole).
 Both Moxifloxacin and Levofloxacin are not typically used for Staph aureus infections due to rapid emergence of resistance.
 Both Moxifloxacin and Levofloxacin have excellent Pneumococcal activity, but are 2nd-line at best for most other streptococcal infections (beta-lactams preferred).
 Norfloxacin (PO) – unlike the other Fluoroquinolones, poorly absorbed.  Main use is for spontaneous bacterial peritonitis (SBP) prophylaxis.
@@ -207,7 +207,7 @@ Norfloxacin (PO) – unlike the other Fluoroquinolones, poorly absorbed.  Main u
 
 - Spectrum: Wide spectrum including typical bacterial pathogens – Gram positives (S.aureus including most CA-MRSA, some S.pneumo), and most Gram negatives but not Pseudomonas.  Notable highlights that set it apart from other agents are: activity vs Pneumocystis jiroveci, Nocardia, Toxoplasmosis, Listeria, Isospora, and Stenotrophomonas.
 - Used for: Many purposes including PCP PNA (drug of choice, both for treatment and prophylaxis), Community-acquired MRSA Skin infections, UTIs, Nocardiosis, Listeria infections in PCN-allergic patients, Salmonella infections, Traveler’s diarrhea, acute bronchitis, and otitis media.
-- Good choice for skin/soft tissue infections due to MRSA coverage (best CA-MRSA coverage out of oral Abxs except for Linezolid), but weak strep coverage à consider adding Cephalexin for strep.
+- Good choice for skin/soft tissue infections due to MRSA coverage (best CA-MRSA coverage out of oral Abxs except for Linezolid), but weak strep coverage → consider adding Cephalexin for strep.
 - ~100% PO bioavailability.  Shortage of IV formulation in the U.S. so use PO whenever possible.
 - Dosing – SS = 400 mg (SMX) /80 mg (TMP), DS – 800/160 mg.  Dosing varies on indication.  Selected few: UTI – 1 DS tab po bid.  SSTI – 2 DS tab po bid.  PCP ppx – 1 DS tab po three times/week or qday, or 1 SS tab po qday.  PCP treatment – 5 mg/kg (TMP component) PO q8 hours x 21 days (usually 2 DS po q8 hours).
 - Many potential side effects:
@@ -224,20 +224,20 @@ Mechanism: Glycopeptide -  inhibits cell wall synthesis in Gram positives (diffe
 Spectrum: gram positive agent with activity vs Staph (including MRSA), Strep, and nonVRE Enterococcus.  No gram negative coverage.   Considered the gold standard for MRSA infections.
 Used for:  all sorts of situations with suspected or proven gram positive infections from above organisms, including bacteremia, meningitis, PNA, skin/soft tissue, and more.  Drug of choice for gram positive infections in patients with severe beta-lactam allergy.
 Considered a slowly cidal drug (compared to beta-lactams), but static vs Enterococcus
-Not as effective as Nafcillin against MSSA, due to slowly cidal nature à increased treatment failure/relapse when used for MSSA bacteremia/endocarditis!
-VISA = MIC 4-8, VRSA = MIC ≥16.  Avoid for MRSA infections with MIC ≥2 à increased treatment failure
+Not as effective as Nafcillin against MSSA, due to slowly cidal nature → increased treatment failure/relapse when used for MSSA bacteremia/endocarditis!
+VISA = MIC 4-8, VRSA = MIC ≥16.  Avoid for MRSA infections with MIC ≥2 → increased treatment failure
 PO form is not absorbed – used for severe C.diff infections (superior to Metronidazole)
-Side effects: Red man syndrome (due to histamine release àcan lessen by slowing the infusion rate and pretreatment with antihistamines), nephrotoxicity (ATN), and ototoxicity (reversible, as compared to aminoglycosides), bone marrow suppression (leukopenia > thrombocytopenia)
+Side effects: Red man syndrome (due to histamine release → can lessen by slowing the infusion rate and pretreatment with antihistamines), nephrotoxicity (ATN), and ototoxicity (reversible, as compared to aminoglycosides), bone marrow suppression (leukopenia > thrombocytopenia)
 Dosing – typical = 15 -20 mg/kg (actual body weight) q12 hrs, can load 25-30 mg/kg in critically ill patients.  The typical 1 g q12 dosing is inadequate for most patients.  For severe renal failure, can dose “by levels” – i.e. load 15 mg/kg, then check daily levels and redose when level <10-15.
 Check trough prior to 4th dose for severe infections or those with unstable renal function.  Goal trough 15-20 for severe/invasive MRSA infections (~20 for CNS infections), 10-15 for less severe infections (i.e. routine cellulitis, coag negative staph, etc.).   Some experts will not even check troughs in non-severe, non-MRSA infections in patients with stable renal function.
 Dalbavancin (IV) - newer 2nd generation lipoglycopeptide antibiotic, with similar spectrum of vancomycin and indicated for skin and soft tissue infection. Main advantage is once a week dosing (injected at depot that slowly releases).
 2. Linezolid (Zyvox) (PO and IV)
 Mechanism: Oxazolidinone class –unique ribosomal inhibitor (acts on 50S subunit).  Bacteriostatic agent.
 Spectrum: covers all Gram positives including strep, MRSA and VRE.  Also has good activity vs tuberculosis.
-Used for:  skin/soft titssue infections, HAP/HCAP/VAP with suspected MRSA, VRE infections
+Used for:  skin/soft tissue infections, HAP/HCAP/VAP with suspected MRSA, VRE infections
 Oral form has virtually 100% bioavailability
-Controversial: may be superior for MRSA pneumonia than Vancomycin à better lung penetration and antitoxin effect?   Also: may be superior vs Vancomycin for complicated skin/soft tissue infections due to MRSA – similar rationale (tissue penetration, antitoxin effect)
-Side effects: Expensive! Also: Bone marrow suppression especially thrombocytopenia (reports of reversal with pyroxidine) - ~5% rate after several weeks, increased risk with renal failure.   If using for >1 week, monitor CBC closely.  Also, Linezolid is a MAO inhibitor – risk of serotonin syndrome with SSRI’s, avoid co-administration.    Long term usage can lead to mitochondrial toxicity à lactic acidosis, peripheral neuropathy, optic neuritis and blindness.  In general, Linezolid is well tolerated for short-term, but not so much long-term.
+Controversial: may be superior for MRSA pneumonia than Vancomycin → better lung penetration and antitoxin effect?   Also: may be superior vs Vancomycin for complicated skin/soft tissue infections due to MRSA – similar rationale (tissue penetration, antitoxin effect)
+Side effects: Expensive! Also: Bone marrow suppression especially thrombocytopenia (reports of reversal with pyridoxine) - ~5% rate after several weeks, increased risk with renal failure.   If using for >1 week, monitor CBC closely.  Also, Linezolid is a MAO inhibitor – risk of serotonin syndrome with SSRI’s, avoid co-administration.    Long term usage can lead to mitochondrial toxicity → lactic acidosis, peripheral neuropathy, optic neuritis and blindness.  In general, Linezolid is well tolerated for short-term, but not so much long-term.
 Since mechanism is static, in general prefer other agents for severe bacteremia, endocarditis.
 3. Daptomycin (IV)
 Mechanism: Lipopeptide antibiotic – forms transmembrane channels and depolarizes cells.  Rapidly cidal drug.
@@ -245,18 +245,18 @@ Spectrum: only covers Gram positives including MRSA, strep, and Enterococcus/VRE
 Used for: complicated skin/soft tissue infections, also being used more for MRSA bacteremia/endocarditis (due to cidal nature)
 Cannot use for pneumonia (lacks activity in lung parenchyma due to inactivation by surfactant)
 Achieves high serum levels, but poor penetration into CNS, bone
-Main side effect = muscle toxicity (myalgias, rhabdomyolysis) àcheck baseline and weekly CK, and discontinue statins.  Also: peripheral neuropathy, GI side effects, pain at injection site
+Main side effect = muscle toxicity (myalgias, rhabdomyolysis) → check baseline and weekly CK, and discontinue statins.  Also: peripheral neuropathy, GI side effects, pain at injection site
 Dosing depends on indication – 6 mg/kg (or higher - 8-10 mg/kg) qday for bacteremia/endocarditis, 4-6 mg/kg qday for skin/soft tissue infections.
 Resistance commonly emerges when used long-term for MRSA and VRE infections.  Also, rise in Vancomycin MIC parallels emergence of Daptomycin resistance (if Vancomycin MIC ≥2, be sure to check for Daptomycin resistance).
 4. Synercid (Quinupristin/Dalfopristin) (IV)
 Mechanism: “Streptogramins”– inhibits sequential steps in ribosomal synthesis
 Spectrum: covers MRSA and VRE due to E.faecium.  Does not cover E.faecalis (has natural efflux pump).
-Used for:Not much, as it is very poorly tolerated due to thrombophlebitis at IV siteà generally need central line.  Also severe myalgis/arthralgias and lots of drug-drug interactions (CYP450 inhibitor).  Poor choice for bacteremia/endocarditis due to static nature.
+Used for:Not much, as it is very poorly tolerated due to thrombophlebitis at IV site → generally need central line.  Also severe myalgias/arthralgias and lots of drug-drug interactions (CYP450 inhibitor).  Poor choice for bacteremia/endocarditis due to static nature.
 5. Tigecycline(IV)
 Mechanism: Glycylcycline class - structurally related to Tetracyclines (bacteriostatic).  Only IV.
 Spectrum: Broad coverage - Gram positive (including MRSA and VRE), Gram negatives, anaerobes, and atypicals.   Notable holes in coverage include Pseudomonas, Proteus, and Providencia.
 Used for: complicated intraabdominal infections, skin/soft tissue infections, and sometimes for pneumonia.
-Beware overall increased risk of death when used for severe infections (2010 metanalysis) – FDA black box warning!
+Beware overall increased risk of death when used for severe infections (2010 meta-analysis) – FDA black box warning!
 High rate of failure for HAP/VAP, use with caution
 Achieves low serum concentrations (distributes widely into tissues) – poor choice for bacteremia (also note its static mechanism)
 Sometimes effective against MDR gram negative pathogens including some ESBL and carbapenemase-producing strains – if dealing with such a bug, should ask micro to test susceptibility to tigecycline.
@@ -281,7 +281,7 @@ Mechanism: cationic detergent – binds to (and disrupts) lipids of bacterial ce
 Spectrum: Active mainly against Gram negative organisms including Pseudomonas, Klebsiella, Enterobacter, Acinetobacter.  No activity vs Gram positives.  Limited activity vs anaerobes.  Proteus and Serratia are generally resistant.
 Used for: generally reserved for multidrug-resistant gram negative infections from above organisms, including pneumonia, bacteremia, and others.
 Can be given in aerosolized form as well as IV (both forms used quite commonly in Cystic Fibrosis patients with resistant gram negative infections)
-Old drugs that had been long abandoned for routine use due to its toxicity à Nephrotoxicity (reversible, dose-dependent) and Neurotoxicity (dizziness, pareshtesias, vertigo, ataxia, etc), but recently experiencing a comeback due to rise in resistant gram negatives.  May be better tolerated than older literature suggests.
+Old drugs that had been long abandoned for routine use due to its toxicity → Nephrotoxicity (reversible, dose-dependent) and Neurotoxicity (dizziness, paresthesias, vertigo, ataxia, etc), but recently experiencing a comeback due to rise in resistant gram negatives.  May be better tolerated than older literature suggests.
 *Treatment of HCAP/HAP/VAP in patients with high risk of MDR organisms: Essential to empirically treat for MRSA, and Gram negatives including Pseudomonas
 Empiric 2-3 Drug Regimen:
 Anti-MRSA Antibiotic: Vancomycin or Linezolid (Not Daptomycin)
@@ -321,7 +321,7 @@ Side effects: nausea, diarrhea, metallic taste, dose-dependent and possibly cumu
 Bactericidal agent that is excreted into urine, where its active metabolites attack multiple sites within bacteria.
 Spectrum:  Broad spectrum vs Gram positives including Staph, Strep, Enterococcus (including some VRE); most Gram negatives including some ESBL’s.  No activity vs Pseudomonas.
 Used for: only for lower tract UTI’s (cystitis).  Generally given for 7 day course.  Cannot use for pyelonephritis (poor kidney tissue penetration).
-Avoid for long-term use due to potential pulmonary side effects: Hypersentivity Pneumonitis(occurs 7-10 days after therapy, usually resolves)  and Chronic Pulmonary Fibrosis (develops after several months of therapy, some recovery but often persistent fibrosis)  
+Avoid for long-term use due to potential pulmonary side effects: Hypersensitivity Pneumonitis(occurs 7-10 days after therapy, usually resolves)  and Chronic Pulmonary Fibrosis (develops after several months of therapy, some recovery but often persistent fibrosis)  
 Contraindicated in renal failure with CrCl < 60 (poor excretion into urine)
 2. Fosfomycin (PO)
 Bactericidal agent that is excreted into the urine and inhibits cell wall synthesis by interfering with peptidoglycan synthesis.
@@ -380,7 +380,7 @@ Nonabsorbable analog of rifampin, used for treatment of traveler’s diarrhea, h
 11. Source control – Abxs will not cure infection if source not controlled – undrained abscess,              infected line, empyema, etc.
 12. Non-infectious causes of fever – DVT’s, hematoma, drug fever, malignancy,  transfusion reactions, pancreatitis, and more
 
-- Note: Typical “Step up” from Vanc/Zosyn à Linezolid/Meropenem – gains VRE and ESBL coverage, also possibly better MRSA PNA coverage.
+- Note: Typical “Step up” from Vanc/Zosyn → Linezolid/Meropenem – gains VRE and ESBL coverage, also possibly better MRSA PNA coverage.
 
 # ANTIFUNGALS
 
@@ -404,7 +404,7 @@ Many drug-drug interactions
 Capsule form has poor bioavailability and absorption depends on acidic environment (avoid PPI/H2 blockers).  Liquid form is superior (must take with empty stomach)
 Poor CNS penetration
 3. Voriconazole(PO or IV)
-Cidal for many molds à drug of choice for Invasive Aspergillosis! (appears to be superior to Ampho B and better tolerated -  NEJM 2002 ).  Active vs Fusarium and Scedosporium.  Also effective against most Candida, but little reason to use over Fluconazole, and ~50% cross-resistance.
+Cidal for many molds → drug of choice for Invasive Aspergillosis! (appears to be superior to Ampho B and better tolerated -  NEJM 2002 ).  Active vs Fusarium and Scedosporium.  Also effective against most Candida, but little reason to use over Fluconazole, and ~50% cross-resistance.
 One important hole in coverage is no Zygomycetes (Mucormycosis)
 Liver toxicity, also Visual toxicity – transient visual changes (common) and visual hallucinations (~4%, also reversible).  Encephalopathy with supratherapeutic levels.
 Usually loaded intravenously, then can transition to oral form.  If given long-term, need to check troughs to ensure adequate dosing (goal trough 1-5).
@@ -422,41 +422,41 @@ Still undergoes CYP metabolism so problem with drug interactions.  Similar toxic
 
 ## ECHINOCANDINS
 
-- Mechanism: Inhibit glucan synthesis in fungal cell wall by blocking beta 1,3 D-glucan synthase à fungicidal agent.  All are IV only.
+- Mechanism: Inhibit glucan synthesis in fungal cell wall by blocking beta 1,3 D-glucan synthase → fungicidal agent.  All are IV only.
 - Cidal vs Candida -> Drug of choice for severe Candida infections – covers virtually all species including Fluconazole-resistant C.krusei and C.glabrata.  But higher MICs in vitro for C.parapsilosis (commonly associated with TPN) – unclear significance as it still usually works clinically.  Also, rare reports of resistance in C.lusitaniae, C.guilliermondii.
 - Static vs Aspergillus -> 2nd-line for Aspergillus infections (often as combination therapy or as salvage therapy, never as initial monotherapy)
 - All Echinocandins lack activity vs Cryptococcus, Zygomycetes, and Fusarium.
 - Remarkably non-toxic, but can rarely cause elevated LFTs, also GI upset (n/v)
 - Poor penetration into urine – not used for UTIs.  Also, not much data on CSF penetration – not recommended for fungal meningitis.
-- Not well studied for Candida endocarditis (prefer Amphoterecin)
+- Not well studied for Candida endocarditis (prefer Amphotericin)
 - All 3 agents are essentially interchangeable in terms of spectrum of activity
   
 1. Caspofungin First approved echinocandin. Load 70 mg IV qday, then 50 mg qday.  Hepatically cleared.
 2. Micafungin Similar to Caspofungin. 100 mg daily, no loading dose.  Hepatically cleared.
-3. Anidulafungin Newest echinocandin.  Unique metabolism: chemically degraded in the blood, no hepatic or renal clearance à safer in liver/renal failure.  Also no significant drug-drug interactions.
+3. Anidulafungin Newest echinocandin.  Unique metabolism: chemically degraded in the blood, no hepatic or renal clearance → safer in liver/renal failure.  Also no significant drug-drug interactions.
 Load 200 mg IV once, then 100 mg IV qday
 
-## POLYENES – Amphoterecin B, Abelcet, Ambisome
+## POLYENES – Amphotericin B, Abelcet, Ambisome
 
 - Mechanism: binds ergosterol in membrane and forms membrane pores and fungicidal.
 - Drug of choice for many severe fungal infections: Zygomycetes, Cryptococcal Meningitis (induction phase with flucytosine), Severe Histoplasmosis/Blastomycosis/Coccidioidomycosis
 - 2nd-line for invasive aspergillosis (voriconazole is drug of choice).  2nd-line for candida infections – because echinocandins are at least as effective, and less toxic.
-- Note that some candida are resistant, often C.lusitaniae and C.guilliermondi
+- Note that some candida are resistant, often C.lusitaniae and C.guilliermondii
 - Significant toxicity: Nephrotoxic (including Mg and K wasting), Hypotension, Bradycardia, Fevers/chills during infusion (“shake and bake”), Seizures
-- Lipid preparations (Ambisome, Abelcet) are designed to reduce binding to mammalian cell membranes.  They are as effective as conventional Amphoterecin and less toxic (especially with renal toxicity), although more expensive.  Ambisome is less toxic than Abelcet
-- Nowadays, rarely use non-liposomal amphoterecin B.
+- Lipid preparations (Ambisome, Abelcet) are designed to reduce binding to mammalian cell membranes.  They are as effective as conventional Amphotericin and less toxic (especially with renal toxicity), although more expensive.  Ambisome is less toxic than Abelcet
+- Nowadays, rarely use non-liposomal amphotericin B.
 
-## Flutycosine
+## Flucytosine
 
 - Mechanism: 5-FC interferes with DNA and protein synthesis.  Only available PO in the US
-- Used in combination with Amphoterecin B for initial management of several severe fungal infections: Severe cryptococcal pneumonia and meningitis, severe candidal infections (endocarditis, meningitis)
+- Used in combination with Amphotericin B for initial management of several severe fungal infections: Severe cryptococcal pneumonia and meningitis, severe candidal infections (endocarditis, meningitis)
 - Virtually never used as monotherapy due to high incidence of primary and acquired resistance (monotherapy reserved for non-severe candida urinary tract infections)
 - Main adverse effects = Hematologic (Leukopenia and Thrombocytopenia) and Hepatic toxicity.  Drug levels should be monitored to reduce toxicity.
   
 ### In Summary
 
 1. Mild-Moderate Candidemia -> Fluconazole
-2. Severe Candidemia -> Echinocandin (> Amphoterecin)
+2. Severe Candidemia -> Echinocandin (> Amphotericin)
    - Other principles of management of Candidemia – remove central lines and foreign bodies, check ophtho exam to evaluate for endophthalmitis, treat for minimum 14 days from clearance of blood cultures**
-3. Invasive Aspergillosis -> Voriconazole (> Amphoterecin, Echinocandin as 2nd-line)
-4. Mucormycosis and Amphoterecin B  
+3. Invasive Aspergillosis -> Voriconazole (> Amphotericin, Echinocandin as 2nd-line)
+4. Mucormycosis and Amphotericin B  

@@ -1,11 +1,11 @@
-﻿---
+---
 title: Vasoplegia in Cardiac Surgery
 tags: [pharm, cardiac]   
 ---
 
 # Vasoplegia
 
-Vasoplegia is a type of distributive shock that follows cardiac surgery in up to 25% of cases. This leads to prolonged ICU stays, renal fialure, and increased mortality. Catecholamine resistant vasoplegia can be lethal with mortality rates approaching 25%. Vasoplegia can also exist in septic shock, end stage liver disease, and glucocorticoid deficiency.
+Vasoplegia is a type of distributive shock that follows cardiac surgery in up to 25% of cases. This leads to prolonged ICU stays, renal failure, and increased mortality. Catecholamine resistant vasoplegia can be lethal with mortality rates approaching 25%. Vasoplegia can also exist in septic shock, end stage liver disease, and glucocorticoid deficiency.
 
 ## Risk Factors
 
@@ -58,13 +58,15 @@ Vasoplegia is a type of distributive shock that follows cardiac surgery in up to
 
 ## Treatment Regimen
 
+See [CV Pharmacology](CVPharm.md#vasoplegia-drugs) for Cyanokit and methylene blue details.
+
 This is in order for the most part. I would recommend angiotensin II or vaso before epinephrine if the cardiac function is okay.
 
 - Norepinephrine (0.02-0.5mcg/kg/min)
 - Vasopressin (0.02-0.1un/min)
 - Epinephrine (0.01-0.2mcg/kg/min)
 - Angiotensin II (5-40ng/kg/min)
-- Methylene Blue (1-2mg/kg bolus in 15min +/- 0.5-1mg/kg/hr infusion)
+- Methylene Blue (2mg/kg bolus in 20min +/- 0.5-1mg/kg/hr infusion)
 - Hydroxocobalamin (5g bolus over 15min can repeat x1)
 - Hydrocortisone (50mg q6h or 100mg q8hr)
 - Ascorbic acid (6g daily in divided doses per pharmacy)

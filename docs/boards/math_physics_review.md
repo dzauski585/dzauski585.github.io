@@ -1,4 +1,4 @@
-﻿---
+---
 title: Anesthesia and Physics Review
 tags: [cardiac, physics]     # TAG names should always be lowercase
 ---
@@ -11,7 +11,7 @@ tags: [cardiac, physics]     # TAG names should always be lowercase
 Pressure, Volume, number of moles, universal gas constant, temperature
 
 $$
-PV = NrT
+PV = nRT
 $$
 
 #### Boyle's Law
@@ -39,13 +39,13 @@ $$
 At a constant temperature the amount of gas that dissolves in the solution is directly proportional to the partial pressure of the gas over the solution...aka higher the gas pressure the more dissolves (overpressurizing the vaporizer). But if temp increases, then the solubility goes down and vice versa...so dec temp inc solubility and therefore prolongs emergence since the gasses are not just staying in the lungs or in circulation. Henry’s constant is more of a coefficient since its value is temperature dependent.
 
 $$
-Partial Pressure = Contstant * Concentration
+Partial Pressure = Constant * Concentration
 $$
 
 #### Dalton's Law
 
 $$
-P_total = P_1 + P_2 + P_3...
+P_{total} = P_1 + P_2 + P_3...
 $$
 
 ### Alveolar Gas Equation
@@ -92,13 +92,13 @@ $$
 
 ![fluiddynamics](../assets/img/fluid.png)
 
-## Inverse Sqare Law and Radiation Safety
+## Inverse Square Law and Radiation Safety
 
 ![radiation safety](../assets/img/rads.png)
 
 ## Time Constant and the Circuit
 
-Volume of the circuit is a known constant and the total fresh gas flow FGF is Q. Three time time constants &tau; are required for 95%  change in concentration. So as the FGF is decreased the time to equillibration is increased.
+Volume of the circuit is a known constant and the total fresh gas flow FGF is Q. Three time constants &tau; are required for 95%  change in concentration. So as the FGF is decreased the time to equilibration is increased.
 
 $$
 {V \over Q} = \tau

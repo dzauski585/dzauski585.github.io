@@ -1,4 +1,4 @@
-﻿---
+---
 title: OB Anesthesia Review and Pearls
 tags: [emergency, ob, pharm, aok]     # TAG names should always be lowercase
 ---
@@ -7,10 +7,13 @@ tags: [emergency, ob, pharm, aok]     # TAG names should always be lowercase
 Used in amniotic fluid embolism
 
 - Atropine 1mg for vagolysis
-- Ondansetron 8mg for serotonin receptro blockade and vagolysis
-- Ketorolac 30mg for thomboxane production blockade
+- Ondansetron 8mg for serotonin receptor blockade and vagolysis
+- Ketorolac 30mg for thromboxane production blockade
 
 ## Breast Feeding and Anesthesia
+
+- No more pump and dump!!!
+- [ASA Statement on Resuming Breastfeeding After Anesthesia](https://www.asahq.org/standards-and-practice-parameters/statement-on-resuming-breastfeeding-after-anesthesia)
 
 ## C-Section Plan
 

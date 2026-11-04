@@ -1,10 +1,10 @@
-﻿---
+---
 title: Gastric Ultrasound
 tags: [anesthesia]     # TAG names should always be lowercase
 ---
 ## Scanning
 
-- Abdominal settings with curved arrway low frequency (2-5mHz) probe
+- Abdominal settings with curved array low frequency (2-5MHz) probe
 - Scan in sagittal plane
 - Sweep between subcostal margins
 - Start supine and follow up with right lateral decubitus

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cardiac Physiology Review
 tags: [cardiac anesthesia, monitors, cvp, swan, svo2, valves]   
 ---
@@ -18,7 +18,7 @@ tags: [cardiac anesthesia, monitors, cvp, swan, svo2, valves]
 **Regurgitation = Faster and Forward** — faster HR reduces regurgitant fraction,
 lower afterload promotes forward flow
 
-## CVSpecificMonitors
+## CV-Specific Monitors
   
 ### PA Catheter
 
@@ -51,7 +51,7 @@ lower afterload promotes forward flow
   - PEEP
   - COPD
   - Pulmonary hypertension
-  - Non west zone III placement of PAC
+  - Non-West zone III placement of PAC
 - Underestimates
   - Aortic insufficiency
 
@@ -59,7 +59,7 @@ lower afterload promotes forward flow
   
 
 $$
-SvO_2 = {SaO_2} - {VO_2 \over 1.38 * 10 * CO * Hgb}
+SvO_2 = {SaO_2} - {VO_2 \over 1.34 * 10 * CO * Hgb}
 $$
 
 ```mermaid
@@ -96,11 +96,11 @@ $$
 
 ## Cardiac and Respiratory
 
-## Starling Curve!
+### Starling Curve!
 
 ![starling](../assets/img/starling.png)
 
-### Ficks Law of Diffusion
+### Fick's Law of Diffusion
 
 Blood to organ can be calculated using a marker substance if the amount of marker uptake per time, concentration venous and arterial of marker are known.
 
@@ -147,11 +147,9 @@ $$
 R = {8L\eta \over \pi r^4 }{(\Delta P)}
 $$
 
-## Subclavian Steal
+### Subclavian Steal
 
 ![sc steal](../assets/img/scsteal.png)
-
-### EKG
 
 ## EKG Basics
 
@@ -163,7 +161,7 @@ For a great video lecture series about 2.75 hrs long check out [EKG interpretati
 
 #### History and Clinical Picture
 
-Clinical picture is arguabley the most important part. History taking is also important but clinical features can be quite informative.
+Clinical picture is arguably the most important part. History taking is also important but clinical features can be quite informative.
 
 #### Rate
 
@@ -209,7 +207,7 @@ Look in all leads for the presence of Q waves. Also note the QRS amplitude and R
 
 #### T
 
-Look in all leads for the presence of T waves. Be sure to note any inverstion, flattening, and the concordance vs discordance with the QURS complex.
+Look in all leads for the presence of T waves. Be sure to note any inversion, flattening, and the concordance vs discordance with the QRS complex.
 
 #### U
 
@@ -219,11 +217,11 @@ Are the U waves present or not?
 
 #### PR
 
-Normal is 0.12-0.2 seconds or 3-5 little squares. Longer means a first degree heart block, but shorter can be mean WPW, junctional rhythms, and some syndromes.
+Normal is 0.12-0.2 seconds or 3-5 little squares. Longer means a first degree heart block, but shorter can mean WPW, junctional rhythms, and some syndromes.
 
 #### QRS
 
-Normal is 0.12seconds or less or less than 3 little squares. Widened QRS indicates a conduction defect or delay.
+Normal is 0.12 seconds or less or less than 3 little squares. Widened QRS indicates a conduction defect or delay.
 
 #### ST
 
